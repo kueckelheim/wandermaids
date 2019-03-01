@@ -1,28 +1,43 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+
+import Home from "./components/home/home";
+import Blog from "./components/blog/blog";
 
 class App extends Component {
+  static propTypes = {
+    blogs: PropTypes.array.isRequired
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <React.Fragment>
+          {/* <Header /> */}
+          <div className="container">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              {this.props.blogs.map((blog, index) => (
+                <Route
+                  key={index}
+                  path={"/" + blog.title}
+                  render={props => <Blog {...props} blog={blog} />}
+                />
+              ))}
+            </Switch>
+          </div>
+        </React.Fragment>
+      </Router>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  blogs: state.blogs.blogs
+});
+
+// connect connectst the home component to the store
+// mapStateToProps allows us to acces the data in this.props.leads
+export default connect(mapStateToProps)(App);
