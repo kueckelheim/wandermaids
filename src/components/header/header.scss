@@ -1,0 +1,13 @@
+@import "../config/config.scss";
+
+header {
+  height: 100px;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+@media (max-width: 740px) {
+  header {
+    height: 70px;
+  }
+}

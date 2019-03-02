@@ -1,0 +1,2 @@
+-work on blog entries in reducer (add categories and coordinates)
+-create a dynamic map for title page

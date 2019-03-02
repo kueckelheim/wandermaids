@@ -3,8 +3,13 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
+import Menu from "./components/header/menu";
+import Header from "./components/header/header";
 import Home from "./components/home/home";
 import Blog from "./components/blog/blog";
+
+import "./components/config/animate.min.css";
+import "./app.scss";
 
 class App extends Component {
   static propTypes = {
@@ -15,7 +20,8 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
-          {/* <Header /> */}
+          <Header />
+          <Menu />
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
