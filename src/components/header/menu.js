@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./menu.scss";
 import { Link } from "react-router-dom";
 
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+
 class Menu extends Component {
   constructor(props) {
     super(props);
@@ -9,9 +12,16 @@ class Menu extends Component {
       btnClass: "menu-btn",
       showMenu: false,
       overlayClass: "menu-overlay",
-      searchClass: "search none"
+      searchClass: "search none",
+      countryClass: "country",
+      countriesShown: false
     };
   }
+
+  static propTypes = {
+    blogs: PropTypes.array.isRequired
+  };
+
   handleClick = () => {
     if (!this.state.showMenu) {
       this.setState({
@@ -34,10 +44,30 @@ class Menu extends Component {
       btnClass: "menu-btn",
       showMenu: false,
       overlayClass: "menu-overlay show animated flipOutX",
-      searchClass: "search none"
+      searchClass: "search none",
+      countryClass: "country",
+      countriesShown: false
     });
   };
+  foldCountry = () => {
+    if (!this.state.countriesShown) {
+      this.setState({
+        countryClass: "country show",
+        countriesShown: true
+      });
+    } else {
+      this.setState({
+        countryClass: "country",
+        countriesShown: false
+      });
+    }
+  };
   render() {
+    // get array of countries
+    let countries = this.props.blogs.map(a => a.country);
+    // remove double occurences
+    countries = [...new Set(countries)];
+
     return (
       <React.Fragment>
         <div className={this.state.btnClass} onClick={this.handleClick}>
@@ -54,10 +84,17 @@ class Menu extends Component {
             <Link to="/" className="link" onClick={this.onLink}>
               <li>Home</li>
             </Link>
-            <Link to="/blogs1" className="link" onClick={this.onLink}>
-              <li>Blog1</li>
-            </Link>
-            <li>About</li>
+            <li onClick={this.foldCountry} className="foldCountry">
+              By Country
+            </li>
+            {countries.map((country, index) => (
+              <div key={index} className={this.state.countryClass}>
+                <Link to={"/" + country} className="link" onClick={this.onLink}>
+                  <li>{country}</li>
+                </Link>
+              </div>
+            ))}
+
             <li>Contact</li>
           </ul>
           <div className={this.state.searchClass}>
@@ -71,4 +108,8 @@ class Menu extends Component {
   }
 }
 
-export default Menu;
+const mapStateToProps = state => ({
+  blogs: state.blogs.blogs
+});
+
+export default connect(mapStateToProps)(Menu);

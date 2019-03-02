@@ -119,6 +119,7 @@
   left: 0;
   background-color: darken($secondary-color, 5%);
   display: none;
+  overflow: scroll;
 }
 .menu-overlay.show {
   opacity: 1;
@@ -135,7 +136,6 @@
   padding: 30px;
   color: $fourth-color;
   transition: 0.2s ease-out;
-  margin-right: 1;
 }
 .menu-overlay ul li:hover {
   background-color: darken($secondary-color, 10%);
@@ -145,6 +145,22 @@
   text-decoration: none;
   color: inherit;
 }
+nav ul li {
+  cursor: pointer;
+}
+
+nav ul .country {
+  display: block;
+  font-size: 25px;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  height: 0px;
+}
+nav ul .country.show {
+  display: block;
+  height: auto;
+}
+
 // search icon
 .search.animated.bounceInLeft {
   animation-delay: 900ms;

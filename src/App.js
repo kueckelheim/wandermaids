@@ -7,6 +7,7 @@ import Menu from "./components/header/menu";
 import Header from "./components/header/header";
 import Home from "./components/home/home";
 import Blog from "./components/blog/blog";
+import CountryList from "./components/blog/countryList";
 
 import "./components/config/animate.min.css";
 import "./app.scss";
@@ -17,6 +18,11 @@ class App extends Component {
   };
 
   render() {
+    // get array of countries
+    let countries = this.props.blogs.map(a => a.country);
+    // remove double occurences
+    countries = [...new Set(countries)];
+
     return (
       <Router>
         <React.Fragment>
@@ -30,6 +36,13 @@ class App extends Component {
                   key={index}
                   path={"/" + blog.title}
                   render={props => <Blog {...props} blog={blog} />}
+                />
+              ))}
+              {countries.map((country, index) => (
+                <Route
+                  key={index}
+                  path={"/" + country}
+                  render={props => <CountryList {...props} country={country} />}
                 />
               ))}
             </Switch>
