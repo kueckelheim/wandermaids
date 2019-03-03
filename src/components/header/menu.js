@@ -13,8 +13,7 @@ class Menu extends Component {
       showMenu: false,
       overlayClass: "menu-overlay",
       searchClass: "search none",
-      countryClass: "country",
-      countriesShown: false
+      countryOverlayClass: "countryOverlay"
     };
   }
 
@@ -35,7 +34,8 @@ class Menu extends Component {
         btnClass: "menu-btn",
         showMenu: false,
         overlayClass: "menu-overlay show animated bounceOutUp",
-        searchClass: "search animated bounceOutLeft"
+        searchClass: "search animated bounceOutLeft",
+        countryOverlayClass: "countryOverlay"
       });
     }
   };
@@ -45,22 +45,18 @@ class Menu extends Component {
       showMenu: false,
       overlayClass: "menu-overlay show animated flipOutX",
       searchClass: "search none",
-      countryClass: "country",
-      countriesShown: false
+      countryOverlayClass: "countryOverlay"
     });
   };
   foldCountry = () => {
-    if (!this.state.countriesShown) {
-      this.setState({
-        countryClass: "country show",
-        countriesShown: true
-      });
-    } else {
-      this.setState({
-        countryClass: "country",
-        countriesShown: false
-      });
-    }
+    this.setState({
+      countryOverlayClass: "countryOverlay show animated bounceInUp"
+    });
+  };
+  foldCountryClose = () => {
+    this.setState({
+      countryOverlayClass: "countryOverlay show animated fadeOutLeft"
+    });
   };
   render() {
     // get array of countries
@@ -87,22 +83,36 @@ class Menu extends Component {
             <li onClick={this.foldCountry} className="foldCountry">
               By Country
             </li>
-            {countries.map((country, index) => (
-              <div key={index} className={this.state.countryClass}>
-                <Link to={"/" + country} className="link" onClick={this.onLink}>
-                  <li>{country}</li>
-                </Link>
-              </div>
-            ))}
-
             <li>Contact</li>
           </ul>
-          <div className={this.state.searchClass}>
-            <div className="circle" />
-            <div className="stiel" />
-            <input className="searchtext" type="text" placeholder="Search..." />
-          </div>
         </nav>
+        <div className={this.state.searchClass}>
+          <div className="circle" />
+          <div className="stiel" />
+          <input className="searchtext" type="text" placeholder="Search..." />
+        </div>
+        <div className={this.state.countryOverlayClass}>
+          <ul>
+            {countries.map((country, index) => (
+              <Link
+                to={"/" + country}
+                className="link"
+                onClick={this.onLink}
+                key={index}
+              >
+                <li>{country}</li>
+              </Link>
+            ))}
+          </ul>
+          <div
+            className="arrowBox animated bounceInDown"
+            onClick={this.foldCountryClose}
+          >
+            <div className="after" onClick={this.foldCountryClose} />
+            <div className="before" onClick={this.foldCountryClose} />
+            Back
+          </div>
+        </div>
       </React.Fragment>
     );
   }

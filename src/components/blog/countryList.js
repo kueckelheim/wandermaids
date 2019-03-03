@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
+import { Link } from "react-router-dom";
+
 class CountryList extends Component {
   static propTypes = {
     blogs: PropTypes.array.isRequired
@@ -16,8 +18,10 @@ class CountryList extends Component {
       <div>
         {countryBlogs.map((country, index) => (
           <div key={index}>
-            <p>{country.title}</p>
-            <p>{country.text}</p>
+            <Link to={"/" + country.title}>
+              <h3>{country.title}</h3>
+            </Link>
+            <p>{country.short_description}</p>
           </div>
         ))}
       </div>

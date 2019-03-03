@@ -1,11 +1,21 @@
 import React, { Component } from "react";
+import "./blog.scss";
 
 class Blog extends Component {
   state = {};
   render() {
     return (
-      <div>
-        <p>{this.props.blog.title}</p>
+      <div className="Blog">
+        <h1>{this.props.blog.title}</h1>
+        <hr />
+        <div className="date">{this.props.blog.date}</div>
+        <hr />
+        <p>{this.props.blog.short_description}</p>
+        <img
+          src={require("../../images/" + this.props.blog.header_image + ".jpg")}
+          alt="test"
+          className="blogImage"
+        />
         <p>{this.props.blog.text}</p>
       </div>
     );

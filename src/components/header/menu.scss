@@ -3,12 +3,11 @@
 // Menu Btn
 
 .menu-btn {
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 35px;
   z-index: 99;
   cursor: pointer;
-  transition: all 0.1s ease-out;
   background: $secondary-color;
   width: 45px;
   height: 39px;
@@ -16,6 +15,11 @@
   display: grid;
   justify-content: center;
   align-content: center;
+  transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
 }
 @media (max-width: 740px) {
   .menu-btn {
@@ -38,6 +42,10 @@
   margin-bottom: 5px;
   background: #f4f4f4;
   transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
 }
 .menu-btn .btn-line-wrapper {
   margin-bottom: -3px;
@@ -48,14 +56,26 @@
   width: 39px;
   height: 39px;
   margin-right: 4px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
 }
 .menu-btn.close .btn-line-wrapper .btn-line:nth-child(2) {
-  transition: 0.2s ease-out;
   opacity: 0;
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
 }
 .menu-btn.close .btn-line:nth-child(1) {
-  transition: 0.2s ease-out;
   opacity: 0;
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
 }
 .menu-btn.close .btn-line:nth-child(3) {
   transition: 0.2s ease-out;
@@ -73,6 +93,10 @@
   width: 100%;
   height: 100%;
   transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
 }
 .menu-btn.close .btn-line-wrapper .btn-line-close1 {
   position: absolute;
@@ -81,6 +105,10 @@
   height: 3px;
   content: "";
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }
 .menu-btn.close .btn-line-wrapper .btn-line-close2 {
   position: absolute;
@@ -89,11 +117,19 @@
   background: #f4f4f4;
   content: "";
   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 .menu-btn.close:hover {
   transform: rotate(180deg);
   width: 42px;
   height: 42px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
 }
 .menu-btn.close:hover .btn-line-wrapper .btn-line-close1 {
   width: 35px;
@@ -119,7 +155,10 @@
   left: 0;
   background-color: darken($secondary-color, 5%);
   display: none;
-  overflow: scroll;
+  -webkit-transition: 0.9s ease-out;
+  -moz-transition: 0.9s ease-out;
+  -ms-transition: 0.9s ease-out;
+  -o-transition: 0.9s ease-out;
 }
 .menu-overlay.show {
   opacity: 1;
@@ -136,6 +175,10 @@
   padding: 30px;
   color: $fourth-color;
   transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
 }
 .menu-overlay ul li:hover {
   background-color: darken($secondary-color, 10%);
@@ -155,6 +198,10 @@ nav ul .country {
   transition: all 0.3s ease-out;
   overflow: hidden;
   height: 0px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
 }
 nav ul .country.show {
   display: block;
@@ -171,7 +218,7 @@ nav ul .country.show {
   height: 30px;
   left: 35px;
   bottom: 20px;
-  z-index: 3;
+  z-index: 99;
   background: darken($secondary-color, 7%);
   display: initial;
   -webkit-box-shadow: 2px 2px 2px 0px darken($secondary-color, 10%);
@@ -210,4 +257,102 @@ nav ul .country.show {
   transform: rotate(50deg);
   left: 13px;
   cursor: pointer;
+}
+
+// countryOverlay
+.countryOverlay {
+  opacity: 0;
+  transition: 0.9s ease-out;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: darken($secondary-color, 7%);
+  display: none;
+}
+.countryOverlay.show {
+  opacity: 1;
+  z-index: 98;
+  display: initial;
+  display: grid;
+}
+.countryOverlay ul {
+  list-style: none;
+  font-size: 30px;
+  align-self: center;
+}
+.countryOverlay ul li {
+  padding: 30px;
+  color: $fourth-color;
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+}
+.countryOverlay ul li:hover {
+  background-color: darken($secondary-color, 10%);
+  color: lighten($fourth-color, 30%);
+}
+.countryOverlay ul .link {
+  text-decoration: none;
+  color: inherit;
+}
+.countryOverlay ul li {
+  cursor: pointer;
+}
+.arrowBox {
+  position: absolute;
+  background: darken($secondary-color, 7%);
+  left: 7vw;
+  top: 3vh;
+  padding: 10px;
+  color: $fourth-color;
+  font-size: 30px;
+  cursor: pointer;
+  animation-delay: 400ms;
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+}
+.arrowBox .after,
+.arrowBox .before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+}
+
+.arrowBox .after {
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: darken($secondary-color, 7%);
+  border-width: 10px;
+  margin-top: -10px;
+}
+.arrowBox .before {
+  border-color: rgba(194, 225, 245, 0);
+  border-right-color: lighten($fourth-color, 20%);
+  border-width: 16px;
+  margin-top: -16px;
+}
+.arrowBox:hover {
+  background-color: darken($secondary-color, 10%);
+}
+.arrowBox:hover .after {
+  border-right-color: darken($secondary-color, 10%);
+}
+.arrowBox:hover .before {
+  border-right-color: darken($secondary-color, 10%);
 }

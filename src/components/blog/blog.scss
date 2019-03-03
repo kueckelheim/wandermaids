@@ -1,0 +1,22 @@
+@import "../config/config.scss";
+
+.Blog {
+  font-size: 20px;
+  line-height: 30px;
+  color: darken($secondary-color, 60%);
+  padding: 40px;
+  margin-top: 20px;
+  font-family: "Lato", sans-serif;
+}
+.Blog .blogImage {
+  width: 100%;
+  height: auto;
+}
+.Blog .date {
+  font-size: 15px;
+  line-height: 10px;
+  text-align: center;
+}
+.Blog h1 {
+  text-align: center;
+}

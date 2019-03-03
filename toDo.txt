@@ -1,2 +1,5 @@
 -work on blog entries in reducer (add categories and coordinates)
+	-add header description
+	-image system
+	-create link to blog pages in all lists
 -create a dynamic map for title page
