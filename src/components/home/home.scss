@@ -1,0 +1,26 @@
+@import "../config/config.scss";
+
+.mapWrapper {
+  position: relative;
+}
+.mapWrapper .map {
+  width: 80%;
+  float: left;
+}
+.map .mapFrame {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgb(71, 64, 34);
+  background: #bfd8dc;
+}
+.mapWrapper .countryList {
+  float: left;
+  font-size: 20px;
+  line-height: 40px;
+}
+.mapWrapper .countryList ul {
+  list-style: none;
+}
+.Home main {
+  clear: both;
+}
