@@ -8,7 +8,8 @@ const initialState = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quas incidunt consequatur molestiae, eligendi corporis quae optio tempora? Odit ipsa laudantium sunt iste deserunt! Officia voluptatum nobis assumenda consectetur praesentium!",
       country: "Thailand",
       header_image: "picsum2.photos",
-      date: "January 28th, 2019"
+      date: "January 28th, 2019",
+      coordinates: [100.523186, 13.736717]
     },
     {
       title: "Bye bye Bangkok",
@@ -18,7 +19,8 @@ const initialState = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quas incidunt consequatur molestiae, eligendi corporis quae optio tempora? Odit ipsa laudantium sunt iste deserunt! Officia voluptatum nobis assumenda consectetur praesentium!",
       country: "Thailand",
       header_image: "picsum1.photos",
-      date: "January 18th, 2019"
+      date: "January 18th, 2019",
+      coordinates: [100.723186, 14.136717]
     },
     {
       title: "Vietnam1",
@@ -28,7 +30,8 @@ const initialState = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quas incidunt consequatur molestiae, eligendi corporis quae optio tempora? Odit ipsa laudantium sunt iste deserunt! Officia voluptatum nobis assumenda consectetur praesentium!",
       country: "Vietnam",
       header_image: "picsum3.photos",
-      date: "January 18th, 2019"
+      date: "January 18th, 2019",
+      coordinates: [105.804817, 21.028511]
     },
     {
       title: "Vietnam2",
@@ -38,7 +41,8 @@ const initialState = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quas incidunt consequatur molestiae, eligendi corporis quae optio tempora? Odit ipsa laudantium sunt iste deserunt! Officia voluptatum nobis assumenda consectetur praesentium!",
       country: "Vietnam",
       header_image: "picsum4.photos",
-      date: "January 18th, 2019"
+      date: "January 18th, 2019",
+      coordinates: [106.660172, 10.762622]
     },
     {
       title: "Diving",
@@ -48,7 +52,8 @@ const initialState = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quas incidunt consequatur molestiae, eligendi corporis quae optio tempora? Odit ipsa laudantium sunt iste deserunt! Officia voluptatum nobis assumenda consectetur praesentium!",
       country: "Philippines",
       header_image: "picsum1.photos",
-      date: "January 18th, 2019"
+      date: "January 18th, 2019",
+      coordinates: [120.984222, 14.599512]
     },
     {
       title: "Manila",
@@ -58,7 +63,8 @@ const initialState = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quas incidunt consequatur molestiae, eligendi corporis quae optio tempora? Odit ipsa laudantium sunt iste deserunt! Officia voluptatum nobis assumenda consectetur praesentium!",
       country: "Philippines",
       header_image: "picsum2.photos",
-      date: "January 18th, 2019"
+      date: "January 18th, 2019",
+      coordinates: [120.984222, 14.599512]
     }
   ]
 };

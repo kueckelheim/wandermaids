@@ -6,17 +6,21 @@ class Blog extends Component {
   render() {
     return (
       <div className="Blog">
-        <h1>{this.props.blog.title}</h1>
-        <hr />
-        <div className="date">{this.props.blog.date}</div>
-        <hr />
-        <p>{this.props.blog.short_description}</p>
-        <img
-          src={require("../../images/" + this.props.blog.header_image + ".jpg")}
-          alt="test"
-          className="blogImage"
-        />
-        <p>{this.props.blog.text}</p>
+        <div className="container">
+          <h1>{this.props.blog.title}</h1>
+          <hr />
+          <div className="date">{this.props.blog.date}</div>
+          <hr />
+          <p>{this.props.blog.short_description}</p>
+          <img
+            src={require("../../images/" +
+              this.props.blog.header_image +
+              ".jpg")}
+            alt="test"
+            className="blogImage"
+          />
+          <p>{this.props.blog.text}</p>
+        </div>
       </div>
     );
   }

@@ -4,13 +4,12 @@
   position: relative;
 }
 .mapWrapper .map {
-  width: 80%;
-  float: left;
+  width: 100%;
+  margin: 0 auto;
 }
 .map .mapFrame {
   width: 100%;
   height: auto;
-  border: 1px solid rgb(71, 64, 34);
   background: #bfd8dc;
 }
 .mapWrapper .countryList {

@@ -11,10 +11,10 @@ countries <- readOGR("C:\\Users\\EK\\Documents\\web\\react\\blog\\shapefiles", "
 b <- bbox(countries)
 
 # create a box with desired subset
-b[2,2] <- 24.5
-b[2,1] <- 5
-b[1,1] <- 95
-b[1,2] <- 130
+b[2,2] <- 29.5
+b[2,1] <- 0
+b[1,1] <- 75
+b[1,2] <- 150
 
 plot(countries, xlim = b[1, ], ylim = b[2, ])
 

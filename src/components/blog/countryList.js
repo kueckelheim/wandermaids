@@ -15,7 +15,7 @@ class CountryList extends Component {
       return el.country === this.props.country;
     });
     return (
-      <div>
+      <div className="container">
         {countryBlogs.map((country, index) => (
           <div key={index}>
             <Link to={"/" + country.title}>

@@ -28,25 +28,23 @@ class App extends Component {
         <React.Fragment>
           <Header />
           <Menu />
-          <div className="container">
-            <Switch>
-              <Route exact path="/" component={Home} />
-              {this.props.blogs.map((blog, index) => (
-                <Route
-                  key={index}
-                  path={"/" + blog.title}
-                  render={props => <Blog {...props} blog={blog} />}
-                />
-              ))}
-              {countries.map((country, index) => (
-                <Route
-                  key={index}
-                  path={"/" + country}
-                  render={props => <CountryList {...props} country={country} />}
-                />
-              ))}
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            {this.props.blogs.map((blog, index) => (
+              <Route
+                key={index}
+                path={"/" + blog.title}
+                render={props => <Blog {...props} blog={blog} />}
+              />
+            ))}
+            {countries.map((country, index) => (
+              <Route
+                key={index}
+                path={"/" + country}
+                render={props => <CountryList {...props} country={country} />}
+              />
+            ))}
+          </Switch>
         </React.Fragment>
       </Router>
     );

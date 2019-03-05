@@ -9,6 +9,7 @@ import {
   ZoomableGroup,
   Geographies,
   Geography,
+  Annotation,
   Markers,
   Marker
 } from "react-simple-maps";
@@ -23,9 +24,9 @@ class Home extends Component {
     super(props);
     this.state = {
       center: [112.5, 14.75],
-      zoom: 1,
+      zoom: 0.7,
       countries: [
-        { name: "Thailand", coordinates: [98.4684384, 11.7996671] },
+        { name: "Thailand", coordinates: [98.4684384, 12.7996671] },
         { name: "Philippines", coordinates: [122.095, 12.26552] },
         { name: "Vietnam", coordinates: [106.597532, 15.911419] },
         { name: "Cambodia", coordinates: [105.393584, 12.686335] },
@@ -34,53 +35,55 @@ class Home extends Component {
     };
   }
 
-  handleCountry = evt => {
-    console.log(evt.target.value);
-    const select = evt.target.value;
-    const select_object = this.state.countries[select];
+  handleHover = () => {
     this.setState({
-      center: select_object.coordinates,
-      zoom: 1
+      zoom: 0.72
     });
   };
-  handleReset = () => {
+  handleOut = () => {
     this.setState({
-      center: [112.5, 14.75],
-      zoom: 1
+      zoom: 0.7
     });
   };
 
   render() {
+    const markers = this.props.blogs.map(blog => ({
+      markerOffset: -35,
+      name: blog.title,
+      coordinates: blog.coordinates
+    }));
+    console.log(markers);
     return (
       <div className="Home">
         <div className="mapWrapper">
-          <div className="map">
+          <div
+            className="map"
+            onMouseOver={this.handleHover}
+            onMouseOut={this.handleOut}
+          >
             <Motion
               defaultStyle={{
-                zoom: 1,
-                x: 112.5,
-                y: 14.75
+                zoom: 0.7
               }}
               style={{
-                zoom: spring(this.state.zoom, { stiffness: 210, damping: 20 }),
-                x: spring(this.state.center[0], {
-                  stiffness: 210,
-                  damping: 20
-                }),
-                y: spring(this.state.center[1], { stiffness: 210, damping: 20 })
+                zoom: spring(this.state.zoom, { stiffness: 110, damping: 20 })
               }}
             >
-              {({ zoom, x, y }) => (
+              {({ zoom }) => (
                 <ComposableMap
                   projectionConfig={{
                     scale: 2005,
-                    rotation: [-11, 0, 0]
+                    rotation: this.state.rotation
                   }}
                   width={820}
-                  height={551}
+                  height={401}
                   className="mapFrame"
                 >
-                  <ZoomableGroup center={[x, y]} zoom={zoom} disablePanning>
+                  <ZoomableGroup
+                    center={this.state.center}
+                    zoom={zoom}
+                    disablePanning
+                  >
                     <Geographies geography={require("../../maps/map.json")}>
                       {(geographies, projection) =>
                         geographies.map(
@@ -291,53 +294,102 @@ class Home extends Component {
                         )
                       }
                     </Geographies>
+                    <Annotation
+                      dx={-20}
+                      dy={24}
+                      subject={[99.4684384, 14.7996671]}
+                      strokeWidth={1}
+                      stroke="#607D8B"
+                    >
+                      <text>{"Thailand"}</text>
+                    </Annotation>
+                    <Annotation
+                      dx={-20}
+                      dy={24}
+                      subject={[103.8684384, 11.7996671]}
+                      strokeWidth={1}
+                      stroke="#607D8B"
+                    >
+                      <text>{"Cambodia"}</text>
+                    </Annotation>
+                    <Annotation
+                      dx={-30}
+                      dy={-4}
+                      subject={[100.8684384, 20.7996671]}
+                      strokeWidth={1}
+                      stroke="#607D8B"
+                    >
+                      <text>{"Laos"}</text>
+                    </Annotation>
+                    <Annotation
+                      dx={30}
+                      dy={-4}
+                      subject={[108.2684384, 15.7996671]}
+                      strokeWidth={1}
+                      stroke="#607D8B"
+                    >
+                      <text>{"Vietnam"}</text>
+                    </Annotation>
+                    <Annotation
+                      dx={60}
+                      dy={-18}
+                      subject={[125.2684384, 12.7996671]}
+                      strokeWidth={1}
+                      stroke="#607D8B"
+                    >
+                      <text>{"Philippines"}</text>
+                    </Annotation>
+                    <Markers>
+                      {markers.map((marker, i) => (
+                        <Marker
+                          key={i}
+                          marker={marker}
+                          style={{
+                            default: { stroke: "black" },
+                            hover: { stroke: "#FF5722" },
+                            pressed: { stroke: "#FF5722" }
+                          }}
+                        >
+                          <g transform="translate(-12, -24)">
+                            <path
+                              fill="white"
+                              strokeWidth="2"
+                              strokeLinecap="square"
+                              strokeMiterlimit="10"
+                              strokeLinejoin="miter"
+                              d="M20,9c0,4.9-8,13-8,13S4,13.9,4,9c0-5.1,4.1-8,8-8S20,3.9,20,9z"
+                            />
+                            <circle
+                              fill="white"
+                              strokeWidth="2"
+                              strokeLinecap="square"
+                              strokeMiterlimit="10"
+                              strokeLinejoin="miter"
+                              cx="12"
+                              cy="9"
+                              r="3"
+                            />
+                          </g>
+                        </Marker>
+                      ))}
+                    </Markers>
                   </ZoomableGroup>
                 </ComposableMap>
               )}
             </Motion>
           </div>
-          <div className="countryList">
-            <ul>
-              <li>
-                <button onClick={this.handleCountry} value="0">
-                  Thailand
-                </button>
-              </li>
-              <li>
-                <button onClick={this.handleCountry} value="1">
-                  Philippines
-                </button>
-              </li>
-              <li>
-                <button onClick={this.handleCountry} value="2">
-                  Vietnam
-                </button>
-              </li>
-              <li>
-                <button onClick={this.handleCountry} value="3">
-                  Cambodia
-                </button>
-              </li>
-              <li>
-                <button onClick={this.handleCountry} value="4">
-                  Laos
-                </button>
-              </li>
-              <li>
-                <button onClick={this.handleReset}>Reset</button>
-              </li>
-            </ul>
-          </div>
         </div>
         <main>
-          {this.props.blogs.map(blog => (
-            <div key={blog.title}>
-              <Link to={"/" + blog.title}>
-                <h3>{blog.title}</h3>
-              </Link>
-              <p>{blog.short_description}</p>
-            </div>
-          ))}
+          <div className="container">
+            {this.props.blogs.map(blog => (
+              <div key={blog.title}>
+                <Link to={"/" + blog.title}>
+                  <h3>{blog.title}</h3>
+                </Link>
+                <p>{blog.short_description}</p>
+              </div>
+            ))}
+          </div>
         </main>
       </div>
     );
