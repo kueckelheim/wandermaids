@@ -12,14 +12,125 @@
   height: auto;
   background: #bfd8dc;
 }
-.mapWrapper .countryList {
-  float: left;
-  font-size: 20px;
-  line-height: 40px;
-}
-.mapWrapper .countryList ul {
-  list-style: none;
+.mapWrapper .marker {
+  cursor: pointer;
 }
 .Home main {
   clear: both;
+}
+.mapOverlay {
+  position: absolute;
+  margin: auto;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  height: 200px;
+  border: 5px solid $primary-color;
+  border-radius: 5px;
+  display: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.mapOverlay.shown {
+  display: initial;
+}
+@media (max-width: 1080px) {
+  .mapOverlay.shown {
+    display: none;
+  }
+}
+
+.mapOverlay .overlayWrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+.mapOverlay .overlayWrapper .overlayImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.mapOverlay .overlayWrapper::before {
+  background: rgba(253, 253, 255, 0.2);
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mapOverlay .overlayWrapper .innerBox {
+  align-self: baseline;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  background: rgba(253, 253, 255, 0.93);
+  color: $secondary-color;
+  font-family: "Oswald", sans-serif;
+  z-index: 2;
+}
+.mapOverlay .overlayWrapper .innerBox h2 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.mapOverlay .overlayWrapper .innerBox .date {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.mapOverlay .overlayWrapper .innerBox .linkWrapper {
+  background: $secondary-color;
+  float: right;
+  padding: 2px;
+  margin-top: 5px;
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+}
+.mapOverlay .overlayWrapper .innerBox .linkWrapper:hover {
+  background: darken($primary-color, 3%);
+  float: right;
+  padding: 2px;
+  margin-top: 5px;
+}
+.mapOverlay .overlayWrapper .innerBox .linkWrapper .link {
+  cursor: pointer;
+  text-decoration: none;
+  color: $primary-color;
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+}
+.mapOverlay .overlayWrapper .innerBox .linkWrapper .link:hover {
+  color: $secondary-color;
+}
+
+// Blog List
+.Home .blogEntry .link {
+  text-decoration: none;
+  color: $secondary-color;
+}
+.Home .blogEntry h2 {
+  margin-bottom: 0;
+}
+.Home .blogEntry h2:hover {
+  color: lighten($secondary-color, 50%);
+}
+.Home .blogEntry .date {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
 }

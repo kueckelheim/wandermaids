@@ -1,6 +1,10 @@
+@import "./components/config/config.scss";
+
 .container {
   margin: 0 auto;
   width: 80%;
+  color: $secondary-color;
+  background: $primary-color;
 }
 @media (max-width: 580px) {
   .container {

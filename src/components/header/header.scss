@@ -1,13 +1,25 @@
 @import "../config/config.scss";
 
 header {
-  height: 100px;
   width: 100%;
-  background: #f4f4f4;
+  font-family: "Oswald", sans-serif;
+  background: $secondary-color;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  z-index: 3;
+  position: relative;
 }
 
-@media (max-width: 740px) {
-  header {
-    height: 70px;
-  }
+header .upper {
+  text-align: center;
+  background: $primary-color;
+}
+header .logo {
+  color: $primary-color;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  position: relative;
 }

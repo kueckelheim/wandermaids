@@ -3,7 +3,6 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-import Menu from "./components/header/menu";
 import Header from "./components/header/header";
 import Home from "./components/home/home";
 import Blog from "./components/blog/blog";
@@ -27,7 +26,6 @@ class App extends Component {
       <Router>
         <React.Fragment>
           <Header />
-          <Menu />
           <Switch>
             <Route exact path="/" component={Home} />
             {this.props.blogs.map((blog, index) => (

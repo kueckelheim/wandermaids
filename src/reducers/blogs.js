@@ -9,7 +9,8 @@ const initialState = {
       country: "Thailand",
       header_image: "picsum2.photos",
       date: "January 28th, 2019",
-      coordinates: [100.523186, 13.736717]
+      coordinates: [100.523186, 13.736717],
+      one_sentence_description: "Our first steps in Bangkok"
     },
     {
       title: "Bye bye Bangkok",
@@ -20,7 +21,8 @@ const initialState = {
       country: "Thailand",
       header_image: "picsum1.photos",
       date: "January 18th, 2019",
-      coordinates: [100.723186, 14.136717]
+      coordinates: [100.723186, 14.136717],
+      one_sentence_description: "We already had to say goodbye to Bangkok"
     },
     {
       title: "Vietnam1",
@@ -31,7 +33,8 @@ const initialState = {
       country: "Vietnam",
       header_image: "picsum3.photos",
       date: "January 18th, 2019",
-      coordinates: [105.804817, 21.028511]
+      coordinates: [105.804817, 21.028511],
+      one_sentence_description: "Our first steps in Vietnam"
     },
     {
       title: "Vietnam2",
@@ -42,7 +45,8 @@ const initialState = {
       country: "Vietnam",
       header_image: "picsum4.photos",
       date: "January 18th, 2019",
-      coordinates: [106.660172, 10.762622]
+      coordinates: [106.660172, 10.762622],
+      one_sentence_description: "In the djungle"
     },
     {
       title: "Diving",
@@ -53,7 +57,8 @@ const initialState = {
       country: "Philippines",
       header_image: "picsum1.photos",
       date: "January 18th, 2019",
-      coordinates: [120.984222, 14.599512]
+      coordinates: [120.984222, 13.599512],
+      one_sentence_description: "Going for Erik's first dive"
     },
     {
       title: "Manila",
@@ -64,7 +69,8 @@ const initialState = {
       country: "Philippines",
       header_image: "picsum2.photos",
       date: "January 18th, 2019",
-      coordinates: [120.984222, 14.599512]
+      coordinates: [120.984222, 14.599512],
+      one_sentence_description: "Crazy Town Manila"
     }
   ]
 };

@@ -22,27 +22,44 @@ class Home extends Component {
 
   constructor(props) {
     super(props);
+    const classes = this.props.blogs.map((blog, index) => ({
+      overlayClass: "mapOverlay",
+      title: blog.title,
+      markerColor: "black"
+    }));
     this.state = {
       center: [112.5, 14.75],
-      zoom: 0.7,
+      zoom: 0.6,
       countries: [
         { name: "Thailand", coordinates: [98.4684384, 12.7996671] },
         { name: "Philippines", coordinates: [122.095, 12.26552] },
         { name: "Vietnam", coordinates: [106.597532, 15.911419] },
         { name: "Cambodia", coordinates: [105.393584, 12.686335] },
         { name: "Laos", coordinates: [103.575512, 17.465869] }
-      ]
+      ],
+      classes: classes
     };
   }
 
-  handleHover = () => {
+  handleBlogClick = evt => {
+    const names = this.props.blogs.map(blog => blog.title);
+    const classes = this.props.blogs.map(blog => ({
+      overlayClass: "mapOverlay",
+      title: blog.title,
+      markerColor: "black"
+    }));
+    classes[names.indexOf(evt.name)].overlayClass = "mapOverlay shown";
+    classes[names.indexOf(evt.name)].markerColor = "#FF5722";
     this.setState({
-      zoom: 0.72
+      classes: classes
     });
   };
-  handleOut = () => {
+
+  handleBlogOver = i => {
+    const classes = this.state.classes;
+    classes[i].overlayClass = "mapOverlay shown";
     this.setState({
-      zoom: 0.7
+      classes: classes
     });
   };
 
@@ -52,18 +69,13 @@ class Home extends Component {
       name: blog.title,
       coordinates: blog.coordinates
     }));
-    console.log(markers);
     return (
       <div className="Home">
         <div className="mapWrapper">
-          <div
-            className="map"
-            onMouseOver={this.handleHover}
-            onMouseOut={this.handleOut}
-          >
+          <div className="map">
             <Motion
               defaultStyle={{
-                zoom: 0.7
+                zoom: 0.6
               }}
               style={{
                 zoom: spring(this.state.zoom, { stiffness: 110, damping: 20 })
@@ -76,7 +88,7 @@ class Home extends Component {
                     rotation: this.state.rotation
                   }}
                   width={820}
-                  height={401}
+                  height={339}
                   className="mapFrame"
                 >
                   <ZoomableGroup
@@ -345,12 +357,15 @@ class Home extends Component {
                           key={i}
                           marker={marker}
                           style={{
-                            default: { stroke: "black" },
+                            default: {
+                              stroke: this.state.classes[i].markerColor
+                            },
                             hover: { stroke: "#FF5722" },
                             pressed: { stroke: "#FF5722" }
                           }}
+                          onClick={this.handleBlogClick}
                         >
-                          <g transform="translate(-12, -24)">
+                          <g transform="translate(-12, -24)" className="marker">
                             <path
                               fill="white"
                               strokeWidth="2"
@@ -377,16 +392,46 @@ class Home extends Component {
                 </ComposableMap>
               )}
             </Motion>
+            {this.props.blogs.map((blog, index) => (
+              <div
+                className={this.state.classes[index].overlayClass}
+                key={index}
+              >
+                <div className="overlayWrapper">
+                  <img
+                    src={require("../../images/" + blog.header_image + ".jpg")}
+                    alt="blogImage"
+                    className="overlayImage"
+                  />
+                  <div className="innerBox">
+                    <h2 className="overlayTitle">{blog.title}</h2>
+                    <div className="date">{blog.date}</div>
+                    <div className="overlayDescription">
+                      {blog.one_sentence_description}
+                    </div>
+                    <div className="linkWrapper">
+                      <Link to={"/" + blog.title} className="link">
+                        Read it...
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         <main>
           <div className="container">
             {this.props.blogs.map(blog => (
-              <div key={blog.title}>
-                <Link to={"/" + blog.title}>
-                  <h3>{blog.title}</h3>
-                </Link>
-                <p>{blog.short_description}</p>
+              <div className="blogEntry" key={blog.title}>
+                <div>
+                  <Link to={"/" + blog.title} className="link">
+                    <h2>{blog.title}</h2>
+                  </Link>
+                  <div className="date">{blog.date}</div>
+                  <p>{blog.short_description}</p>
+                </div>
+                <hr />
               </div>
             ))}
           </div>

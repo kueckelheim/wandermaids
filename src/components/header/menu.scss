@@ -4,11 +4,12 @@
 
 .menu-btn {
   position: absolute;
-  top: 30px;
-  right: 35px;
+  top: 0;
+  right: 20px;
+  top: 10px;
   z-index: 99;
   cursor: pointer;
-  background: $secondary-color;
+  background: darken($primary-color, 5%);
   width: 45px;
   height: 39px;
   border-radius: 2px;
@@ -32,7 +33,7 @@
   height: 42px;
 }
 .menu-btn:hover .btn-line-wrapper .btn-line {
-  background: darken(#f4f4f4, 30%);
+  background: darken($primary-color, 10%);
   width: 30px;
   height: 4px;
 }
@@ -40,7 +41,7 @@
   width: 28px;
   height: 3px;
   margin-bottom: 5px;
-  background: #f4f4f4;
+  background: $secondary-color;
   transition: all 0.1s ease-out;
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
@@ -101,7 +102,7 @@
 .menu-btn.close .btn-line-wrapper .btn-line-close1 {
   position: absolute;
   width: 33px;
-  background: #f4f4f4;
+  background: darken(#f4f4f4, 30%);
   height: 3px;
   content: "";
   transform: rotate(45deg);
@@ -114,7 +115,7 @@
   position: absolute;
   width: 33px;
   height: 3px;
-  background: #f4f4f4;
+  background: darken(#f4f4f4, 30%);
   content: "";
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
@@ -153,7 +154,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: darken($secondary-color, 5%);
+  background-color: darken($primary-color, 5%);
   display: none;
   -webkit-transition: 0.9s ease-out;
   -moz-transition: 0.9s ease-out;
@@ -173,7 +174,8 @@
 }
 .menu-overlay ul li {
   padding: 30px;
-  color: $fourth-color;
+  color: darken($secondary-color, 0%);
+
   transition: 0.2s ease-out;
   -webkit-transition: 0.2s ease-out;
   -moz-transition: 0.2s ease-out;
@@ -181,8 +183,8 @@
   -o-transition: 0.2s ease-out;
 }
 .menu-overlay ul li:hover {
-  background-color: darken($secondary-color, 10%);
-  color: lighten($fourth-color, 30%);
+  background-color: darken($primary-color, 10%);
+  color: lighten($secondary-color, 15%);
 }
 .menu-overlay ul .link {
   text-decoration: none;
@@ -213,17 +215,17 @@ nav ul .country.show {
   animation-delay: 900ms;
 }
 .search {
-  position: absolute;
+  position: fixed;
   width: 105px;
   height: 30px;
   left: 35px;
   bottom: 20px;
   z-index: 99;
-  background: darken($secondary-color, 7%);
+  background: darken($primary-color, 7%);
   display: initial;
-  -webkit-box-shadow: 2px 2px 2px 0px darken($secondary-color, 10%);
-  -moz-box-shadow: 2px 2px 2px 0px darken($secondary-color, 10%);
-  box-shadow: 2px 2px 2px 0px darken($secondary-color, 10%);
+  -webkit-box-shadow: 2px 2px 2px 0px darken($primary-color, 10%);
+  -moz-box-shadow: 2px 2px 2px 0px darken($primary-color, 10%);
+  box-shadow: 2px 2px 2px 0px darken($primary-color, 10%);
 }
 .search.none {
   display: none;
@@ -234,8 +236,8 @@ nav ul .country.show {
   left: 30px;
   width: 62px;
   height: 18px;
-  background: darken($secondary-color, 7%);
-  color: lighten($secondary-color, 35%);
+  background: darken($primary-color, 7%);
+  color: lighten($primary-color, 35%);
   border: 0;
 }
 .circle {
@@ -269,7 +271,7 @@ nav ul .country.show {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: darken($secondary-color, 7%);
+  background-color: darken($primary-color, 7%);
   display: none;
 }
 .countryOverlay.show {
@@ -285,7 +287,8 @@ nav ul .country.show {
 }
 .countryOverlay ul li {
   padding: 30px;
-  color: $fourth-color;
+  color: darken($secondary-color, 0%);
+
   transition: 0.2s ease-out;
   -webkit-transition: 0.2s ease-out;
   -moz-transition: 0.2s ease-out;
@@ -293,8 +296,8 @@ nav ul .country.show {
   -o-transition: 0.2s ease-out;
 }
 .countryOverlay ul li:hover {
-  background-color: darken($secondary-color, 10%);
-  color: lighten($fourth-color, 30%);
+  background-color: darken($primary-color, 10%);
+  color: darken($primary-color, 30%);
 }
 .countryOverlay ul .link {
   text-decoration: none;
@@ -305,7 +308,7 @@ nav ul .country.show {
 }
 .arrowBox {
   position: absolute;
-  background: darken($secondary-color, 7%);
+  background: darken($primary-color, 7%);
   left: 7vw;
   top: 3vh;
   padding: 10px;
@@ -348,11 +351,11 @@ nav ul .country.show {
   margin-top: -16px;
 }
 .arrowBox:hover {
-  background-color: darken($secondary-color, 10%);
+  background-color: darken($fourth-color, 10%);
 }
 .arrowBox:hover .after {
-  border-right-color: darken($secondary-color, 10%);
+  border-right-color: darken($fourth-color, 10%);
 }
 .arrowBox:hover .before {
-  border-right-color: darken($secondary-color, 10%);
+  border-right-color: darken($fourth-color, 10%);
 }
