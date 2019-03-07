@@ -6,11 +6,11 @@
 .mapWrapper .map {
   width: 100%;
   margin: 0 auto;
+  background: #bfd8dc;
 }
 .map .mapFrame {
   width: 100%;
   height: auto;
-  background: #bfd8dc;
 }
 .mapWrapper .marker {
   cursor: pointer;
@@ -119,6 +119,83 @@
   color: $secondary-color;
 }
 
+// Filler
+main .filler {
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  height: 80px;
+  text-align: center;
+  vertical-align: center;
+  line-height: 80px;
+  font-size: 25px;
+  color: $secondary-color;
+}
+
+// Profile
+main .profileWrapper {
+  width: 100%;
+  background: lighten(gray, 45%);
+  margin-bottom: 2%;
+  overflow: hidden;
+  margin-top: 5px;
+  border-top: 2px solid $secondary-color;
+  border-bottom: 2px solid $secondary-color;
+  color: $secondary-color;
+}
+main .profileWrapper .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 0 auto;
+  width: 80%;
+  background: lighten(gray, 45%);
+}
+@media (max-width: 840px) {
+  main .profileWrapper .container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    text-align: center;
+  }
+  main .profileWrapper .image {
+    height: 40vh;
+  }
+}
+main .profileWrapper .description {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+main .profileWrapper .description h1 {
+  margin-top: 0px;
+  font-family: "Oswald", sans-serif;
+}
+main .profileWrapper .image {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+main .profileWrapper .image img {
+  max-width: 75%;
+  max-height: 75%;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  display: inline-block;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  -ms-border-radius: 500px;
+  -o-border-radius: 500px;
+}
+main .profileWrapper .image img::before {
+  background: rgba(253, 253, 255, 0.7);
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 // Blog List
 .Home .blogEntry .link {
   text-decoration: none;

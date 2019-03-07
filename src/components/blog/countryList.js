@@ -11,7 +11,9 @@ class CountryList extends Component {
   static propTypes = {
     blogs: PropTypes.array.isRequired
   };
-
+  onLink = () => {
+    window.scrollTo(0, 0);
+  };
   render() {
     let countryBlogs = this.props.blogs.filter(el => {
       return el.country === this.props.country;
@@ -33,7 +35,11 @@ class CountryList extends Component {
           {countryBlogs.map(country => (
             <div className="blogEntry" key={country.title}>
               <div>
-                <Link to={"/" + country.title} className="link">
+                <Link
+                  to={"/" + country.title}
+                  className="link"
+                  onClick={this.onLink}
+                >
                   <h2>{country.title}</h2>
                 </Link>
                 <div className="date">{country.date}</div>

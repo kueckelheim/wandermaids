@@ -37,9 +37,25 @@ class Home extends Component {
         { name: "Cambodia", coordinates: [105.393584, 12.686335] },
         { name: "Laos", coordinates: [103.575512, 17.465869] }
       ],
-      classes: classes
+      classes: classes,
+      days: "",
+      hours: ""
     };
   }
+
+  componentWillMount() {
+    this.getCountdown();
+  }
+  getCountdown = () => {
+    const startDate = new Date("March 22, 2019 01:10:00").getTime();
+    const now = new Date().getTime();
+    const distance = startDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    this.setState({ days: days, hours: hours });
+  };
 
   handleBlogClick = evt => {
     const names = this.props.blogs.map(blog => blog.title);
@@ -61,6 +77,10 @@ class Home extends Component {
     this.setState({
       classes: classes
     });
+  };
+
+  onLink = () => {
+    window.scrollTo(0, 0);
   };
 
   render() {
@@ -421,11 +441,46 @@ class Home extends Component {
           </div>
         </div>
         <main>
+          {/* Has to be filled yet */}
+          <div className="filler">
+            Our journey will start in: {this.state.days} days and{" "}
+            {this.state.hours} hours.{" "}
+          </div>
+
+          {/* Little profile about us */}
+          <div className="profileWrapper">
+            <div className="container">
+              <div className="description">
+                <h1>Lorem Ipsum</h1>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolorum animi inventore aut expedita enim non? Consectetur
+                  unde aspernatur maxime alias ut laudantium modi sunt quia
+                  debitis. Odit quibusdam ipsa aliquam? Sequi enim error
+                  pariatur ipsa veritatis cumque beatae facilis ipsam iure
+                  repellendus aliquam repellat velit, perferendis officia
+                  provident architecto atque, mollitia ullam expedita
+                  laboriosam, laborum ducimus?
+                </p>
+              </div>
+              <div className="image">
+                <img
+                  src={require("../../images/rsz_1meknes.jpg")}
+                  alt="Caro and Erik"
+                />
+              </div>
+            </div>
+          </div>
+          {/* Blog list */}
           <div className="container">
             {this.props.blogs.map(blog => (
               <div className="blogEntry" key={blog.title}>
                 <div>
-                  <Link to={"/" + blog.title} className="link">
+                  <Link
+                    to={"/" + blog.title}
+                    className="link"
+                    onClick={this.onLink}
+                  >
                     <h2>{blog.title}</h2>
                   </Link>
                   <div className="date">{blog.date}</div>

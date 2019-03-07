@@ -6,7 +6,7 @@
   position: absolute;
   top: 0;
   right: 20px;
-  top: 10px;
+  top: 15px;
   z-index: 99;
   cursor: pointer;
   background: darken($primary-color, 5%);
@@ -54,6 +54,8 @@
 }
 .menu-btn.close {
   transform: rotate(180deg);
+  position: fixed;
+  top: 35px;
   width: 39px;
   height: 39px;
   margin-right: 4px;

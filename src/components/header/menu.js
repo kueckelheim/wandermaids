@@ -40,6 +40,7 @@ class Menu extends Component {
     }
   };
   onLink = () => {
+    window.scrollTo(0, 0);
     this.setState({
       btnClass: "menu-btn",
       showMenu: false,
