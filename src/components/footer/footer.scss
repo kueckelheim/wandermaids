@@ -1,0 +1,19 @@
+@import "../config/config.scss";
+
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: $secondary-color;
+  text-align: center;
+}
+footer .link {
+  text-decoration: none;
+  color: $primary-color;
+}
+.Policy ul {
+  list-style: none;
+}
+.source {
+  font-size: 10px;
+}

@@ -430,7 +430,11 @@ class Home extends Component {
                       {blog.one_sentence_description}
                     </div>
                     <div className="linkWrapper">
-                      <Link to={"/" + blog.title} className="link">
+                      <Link
+                        to={"/" + blog.title}
+                        className="link"
+                        onClick={this.onLink}
+                      >
                         Read it...
                       </Link>
                     </div>

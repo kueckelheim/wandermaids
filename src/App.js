@@ -7,6 +7,9 @@ import Header from "./components/header/header";
 import Home from "./components/home/home";
 import Blog from "./components/blog/blog";
 import CountryList from "./components/blog/countryList";
+import Footer from "./components/footer/footer";
+import Policy from "./components/footer/policy";
+import Impressum from "./components/footer/impressum";
 
 import "./components/config/animate.min.css";
 import "./app.scss";
@@ -42,7 +45,10 @@ class App extends Component {
                 render={props => <CountryList {...props} country={country} />}
               />
             ))}
+            <Route exact path="/privacy policy" component={Policy} />
+            <Route exact path="/impressum" component={Impressum} />
           </Switch>
+          <Footer />
         </React.Fragment>
       </Router>
     );
