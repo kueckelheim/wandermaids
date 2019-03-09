@@ -9,7 +9,7 @@ class Header extends Component {
       <header>
         <div className="upper">Backpacking in South East Asia</div>
         <div className="logo">
-          <Menu />
+          <Menu linkAppend={this.props.linkAppend} />
           <div className="wrapper">
             <div>MEET</div>
             <div>

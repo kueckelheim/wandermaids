@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import "./home.scss";
 import { changeClasses } from "../../actions/form";
 
+import Header from "../header/header";
+import Footer from "../footer/footer";
+
 import {
   ComposableMap,
   ZoomableGroup,
@@ -70,9 +73,9 @@ class Home extends Component {
       name: blog.title,
       coordinates: blog.coordinates
     }));
-
     return (
       <div className="Home">
+        <Header linkAppend={this.props.linkAppend} />
         <div className="mapWrapper">
           <div className="map">
             <Motion
@@ -418,7 +421,7 @@ class Home extends Component {
                     </div>
                     <div className="linkWrapper">
                       <Link
-                        to={"/" + blog.title}
+                        to={this.props.linkAppend + blog.title}
                         className="link"
                         onClick={this.onLink}
                       >
@@ -468,7 +471,7 @@ class Home extends Component {
               <div className="blogEntry" key={blog.title}>
                 <div>
                   <Link
-                    to={"/" + blog.title}
+                    to={this.props.linkAppend + blog.title}
                     className="link"
                     onClick={this.onLink}
                   >
@@ -482,6 +485,7 @@ class Home extends Component {
             ))}
           </div>
         </main>
+        <Footer />
       </div>
     );
   }

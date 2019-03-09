@@ -78,7 +78,11 @@ class Menu extends Component {
         </div>
         <nav className={this.state.overlayClass}>
           <ul>
-            <Link to="/" className="link" onClick={this.onLink}>
+            <Link
+              to={this.props.linkAppend}
+              className="link"
+              onClick={this.onLink}
+            >
               <li>Home</li>
             </Link>
             <li onClick={this.foldCountry} className="foldCountry">
@@ -96,7 +100,7 @@ class Menu extends Component {
           <ul>
             {countries.map((country, index) => (
               <Link
-                to={"/" + country}
+                to={this.props.linkAppend + country}
                 className="link"
                 onClick={this.onLink}
                 key={index}
