@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./home.scss";
+import { changeClasses } from "../../actions/form";
 
 import {
   ComposableMap,
@@ -22,22 +23,9 @@ class Home extends Component {
 
   constructor(props) {
     super(props);
-    const classes = this.props.blogs.map((blog, index) => ({
-      overlayClass: "mapOverlay",
-      title: blog.title,
-      markerColor: "black"
-    }));
     this.state = {
       center: [112.5, 14.75],
       zoom: 0.6,
-      countries: [
-        { name: "Thailand", coordinates: [98.4684384, 12.7996671] },
-        { name: "Philippines", coordinates: [122.095, 12.26552] },
-        { name: "Vietnam", coordinates: [106.597532, 15.911419] },
-        { name: "Cambodia", coordinates: [105.393584, 12.686335] },
-        { name: "Laos", coordinates: [103.575512, 17.465869] }
-      ],
-      classes: classes,
       days: "",
       hours: ""
     };
@@ -69,14 +57,7 @@ class Home extends Component {
     this.setState({
       classes: classes
     });
-  };
-
-  handleBlogOver = i => {
-    const classes = this.state.classes;
-    classes[i].overlayClass = "mapOverlay shown";
-    this.setState({
-      classes: classes
-    });
+    this.props.changeClasses(classes);
   };
 
   onLink = () => {
@@ -89,6 +70,7 @@ class Home extends Component {
       name: blog.title,
       coordinates: blog.coordinates
     }));
+
     return (
       <div className="Home">
         <div className="mapWrapper">
@@ -378,7 +360,7 @@ class Home extends Component {
                           marker={marker}
                           style={{
                             default: {
-                              stroke: this.state.classes[i].markerColor
+                              stroke: this.props.classes[i].markerColor
                             },
                             hover: { stroke: "#FF5722" },
                             pressed: { stroke: "#FF5722" }
@@ -414,12 +396,17 @@ class Home extends Component {
             </Motion>
             {this.props.blogs.map((blog, index) => (
               <div
-                className={this.state.classes[index].overlayClass}
+                className={this.props.classes[index].overlayClass}
                 key={index}
               >
                 <div className="overlayWrapper">
                   <img
-                    src={require("../../images/" + blog.header_image + ".jpg")}
+                    src={
+                      process.env.PUBLIC_URL +
+                      "/image/" +
+                      blog.header_image +
+                      ".jpg"
+                    }
                     alt="blogImage"
                     className="overlayImage"
                   />
@@ -501,9 +488,13 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-  blogs: state.blogs.blogs
+  blogs: state.blogs.blogs,
+  classes: state.blogs.classes
 });
 
 // connect connectst the home component to the store
 // mapStateToProps allows us to acces the data in this.props.leads
-export default connect(mapStateToProps)(Home);
+export default connect(
+  mapStateToProps,
+  { changeClasses }
+)(Home);
