@@ -57,9 +57,6 @@ class Home extends Component {
     }));
     classes[names.indexOf(evt.name)].overlayClass = "mapOverlay shown";
     classes[names.indexOf(evt.name)].markerColor = "#FF5722";
-    this.setState({
-      classes: classes
-    });
     this.props.changeClasses(classes);
   };
 
@@ -73,6 +70,7 @@ class Home extends Component {
       name: blog.title,
       coordinates: blog.coordinates
     }));
+    const classes = this.props.classes;
     return (
       <div className="Home">
         <Header linkAppend={this.props.linkAppend} />
@@ -397,11 +395,8 @@ class Home extends Component {
                 </ComposableMap>
               )}
             </Motion>
-            {this.props.blogs.map((blog, index) => (
-              <div
-                className={this.props.classes[index].overlayClass}
-                key={index}
-              >
+            {this.props.blogs.map((blog, i) => (
+              <div className={classes[i].overlayClass} key={i}>
                 <div className="overlayWrapper">
                   <img
                     src={
@@ -435,7 +430,6 @@ class Home extends Component {
           </div>
         </div>
         <main>
-          {/* Has to be filled yet */}
           <div className="filler">
             Our journey will start in: {this.state.days} days and{" "}
             {this.state.hours} hours.{" "}

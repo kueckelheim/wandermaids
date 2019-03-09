@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getValues } from "../../actions/form";
+import { getValues, updateForm, updateMain } from "../../actions/form";
 import PropTypes from "prop-types";
 import "./form.scss";
+
 class Form extends Component {
   static propTypes = {
     getValues: PropTypes.func.isRequired
@@ -11,21 +12,6 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
-      one_sentence_description: "",
-      short_description: "",
-      country: "",
-      header_image: "",
-      header_image_label: "",
-      date: "",
-      coordinatesLongitude: null,
-      coordinatesAltitude: null,
-      main: [
-        {
-          type: "paragraph",
-          content: ""
-        }
-      ],
       output: ""
     };
   }
@@ -41,60 +27,68 @@ class Form extends Component {
   submitValues = e => {
     e.preventDefault();
     const data = {
-      title: this.state.title,
-      one_sentence_description: this.state.one_sentence_description,
-      short_description: this.state.short_description,
-      country: this.state.country,
-      header_image: this.state.header_image,
-      header_image_label: this.state.header_image_label,
-      date: this.state.date,
+      title: this.props.formValues.title,
+      one_sentence_description: this.props.formValues.one_sentence_description,
+      short_description: this.props.formValues.short_description,
+      country: this.props.formValues.country,
+      header_image: this.props.formValues.header_image,
+      header_image_label: this.props.formValues.header_image_label,
+      date: this.props.formValues.date,
       coordinates: [
-        this.state.coordinatesLongitude,
-        this.state.coordinatesAltitude
+        this.props.formValues.coordinatesLongitude,
+        this.props.formValues.coordinatesAltitude
       ],
-      main: this.state.main
+      main: this.props.formValues.main
     };
     this.props.getValues(data);
   };
-  onChange = e => this.setState({ [e.target.name]: e.target.value });
+  onChange = e => {
+    this.props.updateForm(e.target.value, e.target.name);
+  };
 
   onChangeMain = e => {
-    let main = this.state.main;
+    let main = this.props.formValues.main;
     main[e.target.name].content = e.target.value;
-    this.setState({ main: main });
+    main[e.target.name].value = e.target.value;
+    this.props.updateMain(main);
   };
   onChangeImageLabel = e => {
-    let main = this.state.main;
+    let main = this.props.formValues.main;
     main[e.target.name].image_label = e.target.value;
-    this.setState({ main: main });
+    main[e.target.name].valueLabel = e.target.value;
+
+    this.props.updateMain(main);
   };
   addParagraph = e => {
     e.preventDefault();
-    let main = this.state.main;
+    let main = this.props.formValues.main;
     main.push({
       type: "paragraph",
-      content: ""
+      content: "",
+      value: ""
     });
-    this.setState({ main: main });
+    this.props.updateMain(main);
   };
   deleteElement = e => {
     e.preventDefault();
-    let main = this.state.main;
+    let main = this.props.formValues.main;
     main.splice(-1, 1);
-    this.setState({ main: main });
+    this.props.updateMain(main);
   };
   addImage = e => {
     e.preventDefault();
-    let main = this.state.main;
+    let main = this.props.formValues.main;
     main.push({
       type: "image",
       content: "",
-      image_label: ""
+      image_label: "",
+      valueLabel: "",
+      value: ""
     });
-    this.setState({ main: main });
+    this.props.updateMain(main);
   };
   render() {
-    const main = this.state.main.map((x, index) => {
+    const main = this.props.formValues.main.map((x, index) => {
       if (x.type === "paragraph") {
         return (
           <div key={index}>
@@ -106,6 +100,7 @@ class Form extends Component {
               onChange={this.onChangeMain}
               cols="60"
               rows="7"
+              value={x.value}
             />
           </div>
         );
@@ -119,6 +114,7 @@ class Form extends Component {
               component="input"
               type="text"
               onChange={this.onChangeMain}
+              value={x.value}
             />
             &nbsp; &nbsp;
             <label htmlFor={index}>Image Label</label>
@@ -127,6 +123,7 @@ class Form extends Component {
               component="input"
               type="text"
               onChange={this.onChangeImageLabel}
+              value={x.valueLabel}
             />
           </div>
         );
@@ -145,6 +142,7 @@ class Form extends Component {
                 component="input"
                 type="text"
                 onChange={this.onChange}
+                value={this.props.formValues.title}
               />
             </div>
             <div>
@@ -158,6 +156,7 @@ class Form extends Component {
                 onChange={this.onChange}
                 rows="5"
                 cols="30"
+                value={this.props.formValues.one_sentence_description}
               />
             </div>
             <div>
@@ -171,6 +170,7 @@ class Form extends Component {
                 onChange={this.onChange}
                 rows="5"
                 cols="30"
+                value={this.props.formValues.short_description}
               />
             </div>
             <div>
@@ -182,6 +182,7 @@ class Form extends Component {
                 component="input"
                 type="text"
                 onChange={this.onChange}
+                value={this.props.formValues.country}
               />
             </div>
             <div>
@@ -191,6 +192,7 @@ class Form extends Component {
                 component="input"
                 type="text"
                 onChange={this.onChange}
+                value={this.props.formValues.header_image}
               />
             </div>
             <div>
@@ -202,6 +204,7 @@ class Form extends Component {
                 component="input"
                 type="text"
                 onChange={this.onChange}
+                value={this.props.formValues.header_image_label}
               />
             </div>
             <div>
@@ -211,6 +214,7 @@ class Form extends Component {
                 component="input"
                 type="text"
                 onChange={this.onChange}
+                value={this.props.formValues.date}
               />
             </div>
             <div>
@@ -223,6 +227,7 @@ class Form extends Component {
                 type="number"
                 step="any"
                 onChange={this.onChange}
+                value={this.props.formValues.coordinatesLongitude}
               />
             </div>
             <div>
@@ -233,6 +238,7 @@ class Form extends Component {
                 type="number"
                 step="any"
                 onChange={this.onChange}
+                value={this.props.formValues.coordinatesAltitude}
               />
             </div>
           </div>
@@ -260,10 +266,11 @@ class Form extends Component {
   }
 }
 const mapStateToProps = state => ({
-  blogs: state.blogs
+  blogs: state.blogs,
+  formValues: state.form
 });
 
 export default connect(
   mapStateToProps,
-  { getValues }
+  { getValues, updateForm, updateMain }
 )(Form);

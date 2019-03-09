@@ -47,7 +47,7 @@ export default function(state = initialState, action) {
     case CHANGE_CLASSES:
       return {
         ...state,
-        classes: [action.data[0]]
+        classes: action.data
       };
     default:
       return state;

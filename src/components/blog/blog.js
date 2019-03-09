@@ -20,6 +20,8 @@ class Blog extends Component {
             className="blogImage"
           />
         );
+      } else {
+        return null;
       }
     });
 
@@ -32,7 +34,10 @@ class Blog extends Component {
             <hr />
             <div className="date">{this.props.blog.date}</div>
             <hr />
-            <p>{this.props.blog.short_description}</p>
+            <p>
+              <b style={{ fontSize: "25px" }}>{this.props.blog.country}</b>:{" "}
+              {this.props.blog.short_description}
+            </p>
             <img
               src={
                 process.env.PUBLIC_URL +
