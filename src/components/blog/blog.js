@@ -34,10 +34,7 @@ class Blog extends Component {
             <hr />
             <div className="date">{this.props.blog.date}</div>
             <hr />
-            <p>
-              <b style={{ fontSize: "25px" }}>{this.props.blog.country}</b>:{" "}
-              {this.props.blog.short_description}
-            </p>
+            <p>{this.props.blog.short_description}</p>
             <img
               src={
                 process.env.PUBLIC_URL +

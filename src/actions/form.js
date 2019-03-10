@@ -3,7 +3,9 @@ import { CHANGE_CLASSES } from "./types";
 import { UPDATE_FORM } from "./types";
 import { UPDATE_MAIN } from "./types";
 
-export const getValues = data => ({ type: GET_VALUES, data });
+export const getValues = (data, blogs) => {
+  return { type: GET_VALUES, data };
+};
 
 export const changeClasses = data => ({ type: CHANGE_CLASSES, data });
 

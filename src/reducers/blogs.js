@@ -9,7 +9,11 @@ const classes = blogs.blogs.map(blog => ({
   markerColor: "black"
 }));
 
-const initialState = { blogs: blogs.blogs, classes: classes, added: false };
+const initialState = {
+  blogs: blogs.blogs,
+  classes: classes,
+  added: false
+};
 
 export default function(state = initialState, action) {
   // check for which action
@@ -32,9 +36,9 @@ export default function(state = initialState, action) {
       } else {
         return {
           ...state,
-          blogs: [...state.blogs.splice(0, 1), action.data],
+          blogs: [...state.blogs.slice(0, -1), action.data],
           classes: [
-            ...state.classes.splice(0, 1),
+            ...state.classes.slice(0, -1),
             {
               overlayClass: "mapOverlay",
               title: action.data.title,

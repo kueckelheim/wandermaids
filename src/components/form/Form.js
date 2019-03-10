@@ -26,6 +26,11 @@ class Form extends Component {
   };
   submitValues = e => {
     e.preventDefault();
+
+    if(this.props.formValues.title === null || this.props.formValues.title === "" || this.props.formValues.title === " "){
+      alert("Please add a title")
+    }else{
+
     const data = {
       title: this.props.formValues.title,
       one_sentence_description: this.props.formValues.one_sentence_description,
@@ -40,7 +45,7 @@ class Form extends Component {
       ],
       main: this.props.formValues.main
     };
-    this.props.getValues(data);
+    this.props.getValues(data, this.props.blogs);}
   };
   onChange = e => {
     this.props.updateForm(e.target.value, e.target.name);
@@ -174,16 +179,19 @@ class Form extends Component {
               />
             </div>
             <div>
-              <label htmlFor="country">
-                Name of the country (first letter uppercase)
-              </label>
-              <input
+              <label htmlFor="country">Country (or none)</label>
+              <select
                 name="country"
-                component="input"
-                type="text"
                 onChange={this.onChange}
                 value={this.props.formValues.country}
-              />
+              >
+                <option value=" "> </option>
+                <option value="Thailand">Thailand</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Laos">Laos</option>
+              </select>
             </div>
             <div>
               <label htmlFor="header_image">Name of the main blog image</label>

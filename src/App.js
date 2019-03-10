@@ -25,6 +25,10 @@ class App extends Component {
     let countries = this.props.blogs.map(a => a.country);
     // remove double occurences
     countries = [...new Set(countries)];
+    // remove empty entries
+    countries = countries.filter(el => {
+      return el != null && el != "" && el != " ";
+    });
 
     return (
       <Router>
