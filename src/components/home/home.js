@@ -348,7 +348,7 @@ class Home extends Component {
                     <Annotation
                       dx={60}
                       dy={-18}
-                      subject={[125.2684384, 12.7996671]}
+                      subject={[127.2684384, 8.7996671]}
                       strokeWidth={1}
                       stroke="#607D8B"
                     >
@@ -405,7 +405,7 @@ class Home extends Component {
                       blog.header_image +
                       ".jpg"
                     }
-                    alt="blogImage"
+                    alt={blog.header_image_label}
                     className="overlayImage"
                   />
                   <div className="innerBox">
@@ -439,21 +439,22 @@ class Home extends Component {
           <div className="profileWrapper">
             <div className="container">
               <div className="description">
-                <h1>Lorem Ipsum</h1>
+                <h1>WELCOME</h1>
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolorum animi inventore aut expedita enim non? Consectetur
-                  unde aspernatur maxime alias ut laudantium modi sunt quia
-                  debitis. Odit quibusdam ipsa aliquam? Sequi enim error
-                  pariatur ipsa veritatis cumque beatae facilis ipsam iure
-                  repellendus aliquam repellat velit, perferendis officia
-                  provident architecto atque, mollitia ullam expedita
-                  laboriosam, laborum ducimus?
+                  5 countries in 4 months: Thailand, the Philippines, Vietnam,
+                  Cambodia, and Laos. Exploring different cultures, religions,
+                  floras and faunas and satifying our thirst for adventure. This
+                  is our plan.
+                </p>
+                <p>
+                  Soon, we will describe on this page our most surprising, most
+                  pleasant, and most unpleasant experiences that we will make on
+                  the road. And we will do this the most authentic way possible.
                 </p>
               </div>
               <div className="image">
                 <img
-                  src={require("../../images/rsz_1meknes.jpg")}
+                  src={process.env.PUBLIC_URL + "/image/Caro and Erik.jpg"}
                   alt="Caro and Erik"
                 />
               </div>

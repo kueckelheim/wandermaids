@@ -28,9 +28,12 @@ class CountryList extends Component {
           <div className="container">
             <div className="imageWrapper">
               <img
-                src={require("../../images/" +
+                src={
+                  process.env.PUBLIC_URL +
+                  "/image/" +
                   this.props.country.toLowerCase() +
-                  ".jpg")}
+                  ".jpg"
+                }
                 alt={this.props.country}
               />
               <h1 className="countryHeader">

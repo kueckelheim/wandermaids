@@ -92,7 +92,6 @@ class Menu extends Component {
             <li onClick={this.foldCountry} className="foldCountry">
               By Country
             </li>
-            <li>Contact</li>
           </ul>
         </nav>
         <div className={this.state.searchClass}>

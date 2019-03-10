@@ -200,9 +200,8 @@ class Policy extends Component {
             <p>Pforrgasse 7</p>
             <p>79206 Breisach</p>
             <p>Germany</p>
-            <p>Phone: 07667/940625</p>
-            <p>Email: tesasdat@aol.de</p>
-            <p>Website: www.test.com</p>
+            <p>Phone: +55 11 96644-4270</p>
+            <p>Email: info@meetsoutheast.com </p>
 
             <h4>3. Collection of general data and information</h4>
             <p>
@@ -481,8 +480,7 @@ class Policy extends Component {
 
                 <p>
                   In order to assert the right to data portability, the data
-                  subject may at any time contact any employee of Erik
-                  Kückelheim.
+                  subject may at any time contact Erik Kückelheim.
                 </p>
               </li>
               <li>

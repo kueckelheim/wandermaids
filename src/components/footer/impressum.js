@@ -24,8 +24,8 @@ class Impressum extends Component {
                 <li>79206 Breisach</li>
                 <li>Germany</li>
               </ul>
-              <li>E-Mail: test@test.de</li>
-              <li>Phone: 12398712</li>
+              <li>E-Mail: info@meetsoutheast.com</li>
+              <li>Phone: +55 11 96644-4270</li>
               <li>
                 Verantwortlicher im Sinne des Presserechts (V.i.S.d.P.): Erik
                 Kückelheim

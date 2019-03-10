@@ -20,11 +20,11 @@ class Footer extends Component {
             Impressum
           </Link>
         </p>
-        <p>
+        {/* <p>
           <Link to="/contact" className="link" onClick={this.onLink}>
             Contact
           </Link>
-        </p>
+        </p> */}
       </footer>
     );
   }
