@@ -1,3 +1,9 @@
 -redirect on empty reload
 -make search button work
 -add entry recommendations at the end of each entry (for further reading)
+
+-react snapshot or similar to allow rerendering
+-react helmet to manage meta tags
+
+
+-get indexed
