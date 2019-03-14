@@ -26,6 +26,18 @@ class Blog extends Component {
       }
     });
 
+    let canonical = this.props.linkAppend === "/";
+    if (!canonical) {
+      canonical = (
+        <link
+          rel="canonical"
+          href={"https://www.meetsoutheast.com/" + this.props.blog.title}
+        />
+      );
+    } else {
+      canonical = null;
+    }
+
     return (
       <div>
         <Helmet>
@@ -34,10 +46,7 @@ class Blog extends Component {
             name="description"
             content={this.props.blog.short_description}
           />
-          <link
-            rel="canonical"
-            href={"https://www.meetsoutheast.com/" + this.props.blog.title}
-          />
+          {canonical}
         </Helmet>
         <Header linkAppend={this.props.linkAppend} />
         <div className="Blog">

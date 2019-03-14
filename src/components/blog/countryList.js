@@ -22,6 +22,19 @@ class CountryList extends Component {
     let countryBlogs = this.props.blogs.filter(el => {
       return el.country === this.props.country;
     });
+
+    let canonical = this.props.linkAppend === "/";
+    if (!canonical) {
+      canonical = (
+        <link
+          rel="canonical"
+          href={"https://www.meetsoutheast.com/" + this.props.blog.country}
+        />
+      );
+    } else {
+      canonical = null;
+    }
+
     return (
       <div>
         <Helmet>
@@ -30,10 +43,7 @@ class CountryList extends Component {
             name="description"
             content={"Meet South East: All blogs from " + this.props.country}
           />
-          <link
-            rel="canonical"
-            href={"https://www.meetsoutheast.com/" + this.props.country}
-          />
+          {canonical}
         </Helmet>
         <Header linkAppend={this.props.linkAppend} />
         <div className="countryList">

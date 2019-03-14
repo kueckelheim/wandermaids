@@ -66,6 +66,15 @@ class Home extends Component {
   };
 
   render() {
+    let canonical = this.props.linkAppend === "/";
+    if (!canonical) {
+      canonical = (
+        <link rel="canonical" href={"https://www.meetsoutheast.com/"} />
+      );
+    } else {
+      canonical = null;
+    }
+
     const markers = this.props.blogs.map(blog => ({
       markerOffset: -35,
       name: blog.title,
@@ -76,11 +85,11 @@ class Home extends Component {
       <div className="Home">
         <Helmet>
           <title>Meet South East</title>
-          <link rel="canonical" href={"https://www.meetsoutheast.com"} />
           <meta
             name="description"
             content="5 countries in 5 months: Thailand, the Philippines, Vietnam, Cambodia, and Laos. Exploring different cultures, religions, floras and faunas and satifying our thirst for adventure. This is our plan."
           />
+          {canonical}
         </Helmet>
         <Header linkAppend={this.props.linkAppend} />
         <div className="mapWrapper">
