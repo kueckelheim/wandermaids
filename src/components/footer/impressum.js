@@ -4,11 +4,17 @@ import "./footer.scss";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 
+import { Helmet } from "react-helmet";
+
 class Impressum extends Component {
   state = {};
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Impressum</title>
+          <meta name="robots" content="noindex" />
+        </Helmet>
         <Header linkAppend="/" />
         <div className="Impressum">
           <div className="container">

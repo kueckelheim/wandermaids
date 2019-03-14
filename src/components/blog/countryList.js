@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -23,6 +24,17 @@ class CountryList extends Component {
     });
     return (
       <div>
+        <Helmet>
+          <title>{this.props.country}</title>
+          <meta
+            name="description"
+            content={"Meet South East: All blogs from " + this.props.country}
+          />
+          <link
+            rel="canonical"
+            href={"https://www.meetsoutheast.com/" + this.props.country}
+          />
+        </Helmet>
         <Header linkAppend={this.props.linkAppend} />
         <div className="countryList">
           <div className="container">

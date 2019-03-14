@@ -4,11 +4,17 @@ import "./footer.scss";
 import Header from "../header/header";
 import Footer from "./footer";
 
+import {Helmet} from "react-helmet";
+
 class Policy extends Component {
   state = {};
   render() {
     return (
       <div>
+                <Helmet>
+          <title>Privacy Policy</title>
+          <meta name="robots" content="noindex" />
+        </Helmet>
         <Header linkAppend="/" />
         <div className="Policy">
           <div className="container">

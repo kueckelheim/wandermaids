@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./home.scss";
 import { changeClasses } from "../../actions/form";
+import { Helmet } from "react-helmet";
 
 import Header from "../header/header";
 import Footer from "../footer/footer";
@@ -73,6 +74,14 @@ class Home extends Component {
     const classes = this.props.classes;
     return (
       <div className="Home">
+        <Helmet>
+          <title>Meet South East</title>
+          <link rel="canonical" href={"https://www.meetsoutheast.com"} />
+          <meta
+            name="description"
+            content="5 countries in 5 months: Thailand, the Philippines, Vietnam, Cambodia, and Laos. Exploring different cultures, religions, floras and faunas and satifying our thirst for adventure. This is our plan."
+          />
+        </Helmet>
         <Header linkAppend={this.props.linkAppend} />
         <div className="mapWrapper">
           <div className="map">

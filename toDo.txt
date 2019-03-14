@@ -2,8 +2,15 @@
 -make search button work
 -add entry recommendations at the end of each entry (for further reading)
 
--react snapshot or similar to allow rerendering
--react helmet to manage meta tags
+-react snapshot or similar to allow rerendering (not using snapshot for below reason. babel-polyfill does the job)
+	-problem: htaccess vs. static snaptshots available (at least main page is shown then? ...)
+		-since google can crawl it now perfectly, I gues htaccess values more
+	-rename all urls so that they do not contain spaces
+	-use fetch as google (check)
+	https://adminhacks.com/create-react-google-fetch.html
+	-include babel-polyfill (check)
+	-exclude impressum and privacy policy from crawling (check: done with react helmet)
+-react helmet to manage meta tags (check)
 
 
 -get indexed

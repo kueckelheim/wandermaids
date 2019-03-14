@@ -1,3 +1,43 @@
 {
-  "blogs": []
+  "blogs": [
+    {
+      "title": "Welcome Bangkok",
+      "one_sentence_description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, cupiditate.",
+      "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aperiam vel cupiditate officia odio assumenda totam sapiente accusamus saepe laudantium iste quibusdam tempora maiores rem recusandae dolor, praesentium commodi quas?",
+      "country": "Thailand",
+      "header_image": "test_picture",
+      "header_image_label": "this is a test",
+      "date": "March 11th, 2019",
+      "coordinates": ["100", "20"],
+      "main": [
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem libero corrupti delectus consectetur nisi tempora dolore velit maxime tempore quidem, laudantium quod ut, id enim quaerat reiciendis voluptatibus sit. Est, iste sed blanditiis praesentium eius nesciunt assumenda vitae labore voluptates. Beatae temporibus reprehenderit ex numquam veniam necessitatibus tenetur alias quidem.",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem libero corrupti delectus consectetur nisi tempora dolore velit maxime tempore quidem, laudantium quod ut, id enim quaerat reiciendis voluptatibus sit. Est, iste sed blanditiis praesentium eius nesciunt assumenda vitae labore voluptates. Beatae temporibus reprehenderit ex numquam veniam necessitatibus tenetur alias quidem."
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus ullam asperiores ipsa deleniti nulla possimus architecto ad reiciendis blanditiis.",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus ullam asperiores ipsa deleniti nulla possimus architecto ad reiciendis blanditiis."
+        },
+        {
+          "type": "image",
+          "content": "test_picture2",
+          "image_label": "test_picture2",
+          "valueLabel": "test_picture2",
+          "value": "test_picture2"
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium accusamus quis minima sint eligendi debitis fugit sit quidem asperiores. Ut culpa mollitia provident fugit exercitationem!",
+          "value": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium accusamus quis minima sint eligendi debitis fugit sit quidem asperiores. Ut culpa mollitia provident fugit exercitationem!"
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quae eos tempora dignissimos officia nostrum!",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quae eos tempora dignissimos officia nostrum!"
+        }
+      ]
+    }
+  ]
 }

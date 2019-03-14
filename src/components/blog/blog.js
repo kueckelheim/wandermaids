@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./blog.scss";
+import { Helmet } from "react-helmet";
 
 import Header from "../header/header";
 import Footer from "../footer/footer";
@@ -27,6 +28,17 @@ class Blog extends Component {
 
     return (
       <div>
+        <Helmet>
+          <title>{this.props.blog.title}</title>
+          <meta
+            name="description"
+            content={this.props.blog.short_description}
+          />
+          <link
+            rel="canonical"
+            href={"https://www.meetsoutheast.com/" + this.props.blog.title}
+          />
+        </Helmet>
         <Header linkAppend={this.props.linkAppend} />
         <div className="Blog">
           <div className="container">
