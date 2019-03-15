@@ -1,41 +1,86 @@
 {
   "blogs": [
     {
-      "title": "Welcome Bangkok",
-      "one_sentence_description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, cupiditate.",
-      "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aperiam vel cupiditate officia odio assumenda totam sapiente accusamus saepe laudantium iste quibusdam tempora maiores rem recusandae dolor, praesentium commodi quas?",
-      "country": "Thailand",
-      "header_image": "test_picture",
-      "header_image_label": "this is a test",
-      "date": "March 11th, 2019",
-      "coordinates": ["100", "20"],
+      "title": "Here's the Plan - Four Months on a Budget and 10 Kilos in the Bag",
+      "one_sentence_description": "5 countries in 4 months, on a budget and with 10 kilos each. We are ready.",
+      "short_description": "Waiting has almost come to an end. In a few days we will be flying to Bangkok. There, our 4 month South East Asian adventure begins. But it has already been a long journey packed with planning and travel preparations.",
+      "country": "",
+      "header_image": "Our route",
+      "header_image_label": "A map with our travel destinations",
+      "date": "March 16th, 2019",
+      "coordinates": [0, 0],
       "main": [
         {
           "type": "paragraph",
-          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem libero corrupti delectus consectetur nisi tempora dolore velit maxime tempore quidem, laudantium quod ut, id enim quaerat reiciendis voluptatibus sit. Est, iste sed blanditiis praesentium eius nesciunt assumenda vitae labore voluptates. Beatae temporibus reprehenderit ex numquam veniam necessitatibus tenetur alias quidem.",
-          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem libero corrupti delectus consectetur nisi tempora dolore velit maxime tempore quidem, laudantium quod ut, id enim quaerat reiciendis voluptatibus sit. Est, iste sed blanditiis praesentium eius nesciunt assumenda vitae labore voluptates. Beatae temporibus reprehenderit ex numquam veniam necessitatibus tenetur alias quidem."
+          "content": "<h3>Where we go: </h3>",
+          "value": "<h3>Where we go: </h3>"
         },
         {
           "type": "paragraph",
-          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus ullam asperiores ipsa deleniti nulla possimus architecto ad reiciendis blanditiis.",
-          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus ullam asperiores ipsa deleniti nulla possimus architecto ad reiciendis blanditiis."
+          "content": "Like most South East Asian travellers, we will start our trip in Bangkok, Thailand. From there, we will head south to Phuket where we will explore some of the surrounding islands. After two weeks in Thailand and a one-day stopover in Singapore, we will fly to the Philippines. There, we will spend one month, exploring the regions around Cebu, El Nido, and the main island Luzon. Our final flight will lead us to Hanói, Vietnam. From there, we will travel down south before crossing the border to Cambodia between Ho-Chi-Minh-City and Phnom Penh. After visiting Cambodia, we will go upstream along the Mekong river heading into Laos, the fith country in our itinerary. In Laos' wild north, we want to cross the border and go back to Thailand. There, we will enjoy another two weeks of wildlife and jungle before our journey ends where it started: in Bangkok. ",
+          "value": "Like most South East Asian travellers, we will start our trip in Bangkok, Thailand. From there, we will head south to Phuket where we will explore some of the surrounding islands. After two weeks in Thailand and a one-day stopover in Singapore, we will fly to the Philippines. There, we will spend one month, exploring the regions around Cebu, El Nido, and the main island Luzon. Our final flight will lead us to Hanói, Vietnam. From there, we will travel down south before crossing the border to Cambodia between Ho-Chi-Minh-City and Phnom Penh. After visiting Cambodia, we will go upstream along the Mekong river heading into Laos, the fith country in our itinerary. In Laos' wild north, we want to cross the border and go back to Thailand. There, we will enjoy another two weeks of wildlife and jungle before our journey ends where it started: in Bangkok. "
+        },
+        {
+          "type": "paragraph",
+          "content": "<h3>Our Expectations: </h3>",
+          "value": "<h3>Our Expectations: </h3>"
+        },
+        {
+          "type": "paragraph",
+          "content": "Southeast Asia has become <b>the</b> backpacking destination in recent decades. Offering very low costs of living, the region attracts backpackers from around the world heading to paradise islands and dream beaches with famous parties. While we certainly want to enjoy this part of Southeast Asia and also satisfy our desire for diving and snorkeling, we are aware that the region has way more to offer.",
+          "value": "South East Asia has become <b>the</b> backpacking destination in recent decades. Offering very low living costs, the region attracts backpackers from around the world heading to paradise islands and dream beaches with famous parties. While we certainly want to enjoy this part of South East Asia and also satisfy our desire for diving and snorkeling, we know that this part of the world has way more to offer."
+        },
+        {
+          "type": "paragraph",
+          "content": "<b>Religion</b>: Southeast Asia is a hot spot for different religions. No country is homogeneous when it comes to faith. While Buddhism, Islam, and Christianity dominate, there are also many different regional and tribal religions around. We are especially interested in getting insights into Buddhism which we had almost no contact with before and which is famously known for being more peaceful and tolerant than other religions.",
+          "value": "<b>Religion</b>: Southeast Asia is a hot spot for different religions. No country is homogeneous when it comes to faith. While Buddhism, Islam, and Christianity dominate, there are also many different regional and tribal religions around. We are especially interested in getting insights into Buddhism which we had almost no contact with before and which is famously known for being more peaceful and tolerant than other religions."
+        },
+        {
+          "type": "paragraph",
+          "content": "<b>Culture and history</b>: Southeast Asia has many different cultures with different historic backgrounds and ethnics. We want to learn more about this part of the world that is mostly excluded from western history school books.",
+          "value": "<b>Culture and history</b>: Southeast Asia has many different cultures with different historic backgrounds and ethnics. We want to learn more about this part of the world that is mostly excluded from western history school books."
+        },
+        {
+          "type": "paragraph",
+          "content": "<b>Politics</b>: The countries we will visit are - some more than others - far from what many people consider to be the ideal democratic role model. Unprejudiced but definitely without ignoring problematic features, we want to learn more about the countries' political systems and about how people live with them.",
+          "value": "<b>Politics</b>: The countries we will visit are - some more than others - far from what many people consider to be the ideal democratic role model. Unprejudiced but definitely without ignoring problematic features, we want to learn more about the countries' political systems and about how people live with them."
+        },
+        {
+          "type": "paragraph",
+          "content": "<b>Nature</b>: Last but definitely not least, we want to explore Southeast Asia's rich flora and fauna. As real fans of Mother Nature, we already prepared our snorkels and hiking outfits (except the heavy boots), ready to dive into the wild.",
+          "value": "<b>Nature</b>: Last but definitely not least, we want to explore Southeast Asia's rich flora and fauna. As real fans of Mother Nature, we already prepared our snorkels and hiking outfits (except the heavy boots), ready to dive into the wild."
+        },
+        {
+          "type": "paragraph",
+          "content": "<h3>Living four months on a budget:</h3>",
+          "value": "<h3>Living four months on a budget:</h3>"
+        },
+        {
+          "type": "paragraph",
+          "content": "Coming more or less directly from the university, living on a budget is the only way we can afford this trip. Besides, this is also how we want it. We could not imagine spending our time in resorts and luxury hotels ignoring the reality around us. However, due to the fact that Southeast Asia has gained a reputation as being a backpacker paradise, a big industry has been created around the flows of low budget travelers in many countries of the region. What is only a few bugs for us can mean a valuable income for many inhabitants. Therefore, low budget does not necessarily mean living the dream of experiencing untouched culture, society, and nature. We will try to avoid the so called beaten path whenever we can while being aware that our footsteps might eventually contribute in creating such a path. Right now, we hope that we will find a good balance between our desire to Meet South East and to keep it the way it is.",
+          "value": "Coming more or less directly from the university, living on a budget is the only way we can afford this trip. Besides, this is also how we want it. We could not imagine spending our time in resorts and luxury hotels ignoring the reality around us. However, due to the fact that Southeast Asia has gained a reputation as being a backpacker paradise, a big industry has been created around the flows of low budget travelers in many countries of the region. What is only a few bugs for us can mean a valuable income for many inhabitants. Therefore, low budget does not necessarily mean living the dream of experiencing untouched culture, society, and nature. We will try to avoid the so called beaten path whenever we can while being aware that our footsteps might eventually contribute in creating such a path. Right now, we hope that we will find a good balance between our desire to Meet South East and to keep it the way it is."
+        },
+        {
+          "type": "paragraph",
+          "content": "<h3>Why we only bring 10 kilos in each backpack:</h3> ",
+          "value": "<h3>Why we only bring 10 kilos in each backpack:</h3> "
+        },
+        {
+          "type": "paragraph",
+          "content": "On many of our trips, we made the mistake of bringing too much luggage which has often led to a lot of frustration. Going from A to B, changing means of transportation, and walking to your destinations means that you often have to lift your backpack up and down dozens of times and carry it many kilometers. A lot of weight on your back can be a real fun killer. By reducing our luggage to 10 kilos each we make sure that we will actually be able to fully concentrate on the stunning surroundings we expect to see on the road. Last but not least, 10 kilo bags are accepted as carry-ons in most airlines which will save us a lot of money during our trip. ",
+          "value": "On many of our trips, we made the mistake of bringing too much luggage which has often led to a lot of frustration. Going from A to B, changing means of transportation, and walking to your destinations means that you often have to lift your backpack up and down dozens of times and carry it many kilometers. A lot of weight on your back can be a real fun killer. By reducing our luggage to 10 kilos each we make sure that we will actually be able to fully concentrate on the stunning surroundings we expect to see on the road. Last but not least, 10 kilo bags are accepted as carry-ons in most airlines which will save us a lot of money during our trip. "
+        },
+        {
+          "type": "paragraph",
+          "content": "Will it actually work? No clue. We might end up rebuying all the stuff we left behind on the way.",
+          "value": "Will it actually work? No clue. We might end up rebuying all the stuff we left behind on the way."
         },
         {
           "type": "image",
-          "content": "test_picture2",
-          "image_label": "test_picture2",
-          "valueLabel": "test_picture2",
-          "value": "test_picture2"
-        },
-        {
-          "type": "paragraph",
-          "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium accusamus quis minima sint eligendi debitis fugit sit quidem asperiores. Ut culpa mollitia provident fugit exercitationem!",
-          "value": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium accusamus quis minima sint eligendi debitis fugit sit quidem asperiores. Ut culpa mollitia provident fugit exercitationem!"
-        },
-        {
-          "type": "paragraph",
-          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quae eos tempora dignissimos officia nostrum!",
-          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quae eos tempora dignissimos officia nostrum!"
+          "content": "Packed backpacks",
+          "image_label": "Our packing list. Things we will put in our backpacks to Southeast Asia.",
+          "valueLabel": "Our packing list. Things we will put in our backpacks to Southeast Asia.",
+          "value": "Packed backpacks"
         }
       ]
     }

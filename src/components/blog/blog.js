@@ -10,7 +10,9 @@ class Blog extends Component {
   render() {
     const main = this.props.blog.main.map((x, index) => {
       if (x.type === "paragraph") {
-        return <p key={index}>{x.content}</p>;
+        return (
+          <p key={index} dangerouslySetInnerHTML={{ __html: x.content }} />
+        );
       }
       if (x.type === "image") {
         return (

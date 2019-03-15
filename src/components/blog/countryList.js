@@ -28,7 +28,7 @@ class CountryList extends Component {
       canonical = (
         <link
           rel="canonical"
-          href={"https://www.meetsoutheast.com/" + this.props.blog.country}
+          href={"https://www.meetsoutheast.com/" + this.props.country}
         />
       );
     } else {

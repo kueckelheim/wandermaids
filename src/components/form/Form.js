@@ -27,25 +27,30 @@ class Form extends Component {
   submitValues = e => {
     e.preventDefault();
 
-    if(this.props.formValues.title === null || this.props.formValues.title === "" || this.props.formValues.title === " "){
-      alert("Please add a title")
-    }else{
-
-    const data = {
-      title: this.props.formValues.title,
-      one_sentence_description: this.props.formValues.one_sentence_description,
-      short_description: this.props.formValues.short_description,
-      country: this.props.formValues.country,
-      header_image: this.props.formValues.header_image,
-      header_image_label: this.props.formValues.header_image_label,
-      date: this.props.formValues.date,
-      coordinates: [
-        this.props.formValues.coordinatesLongitude,
-        this.props.formValues.coordinatesAltitude
-      ],
-      main: this.props.formValues.main
-    };
-    this.props.getValues(data, this.props.blogs);}
+    if (
+      this.props.formValues.title === null ||
+      this.props.formValues.title === "" ||
+      this.props.formValues.title === " "
+    ) {
+      alert("Please add a title");
+    } else {
+      const data = {
+        title: this.props.formValues.title,
+        one_sentence_description: this.props.formValues
+          .one_sentence_description,
+        short_description: this.props.formValues.short_description,
+        country: this.props.formValues.country,
+        header_image: this.props.formValues.header_image,
+        header_image_label: this.props.formValues.header_image_label,
+        date: this.props.formValues.date,
+        coordinates: [
+          this.props.formValues.coordinatesLongitude,
+          this.props.formValues.coordinatesAltitude
+        ],
+        main: this.props.formValues.main
+      };
+      this.props.getValues(data, this.props.blogs);
+    }
   };
   onChange = e => {
     this.props.updateForm(e.target.value, e.target.name);
@@ -194,6 +199,15 @@ class Form extends Component {
               </select>
             </div>
             <div>
+              <p>
+                Image must be in image folder for you to be able to see it.
+                Before putting it in the folder make sure to resize it. You can
+                do that on https://resizeimage.net/. Under "2. Crop your image",
+                select "Fixed Aspect Ration" and choose 800 to 578. Then select
+                from image and crop. Under "4. Resize your image", select "Keep
+                Aspect Ratio". Then you can resize the image. The output file
+                has to be a jpg file.
+              </p>
               <label htmlFor="header_image">Name of the main blog image</label>
               <input
                 name="header_image"
@@ -251,6 +265,9 @@ class Form extends Component {
             </div>
           </div>
           <div>
+            <p>Formatting paragraphs:</p>
+            <p><b>Headlines:</b> For headlines enclose text by &lt;h3&gt; in the beginning and &lt;/h3&gt; in the end.</p>
+            <p><b>Bold:</b> For bold text enclose text by &lt;b&gt; in the beginning and &lt;/b&gt; in the end.</p>
             {main}
             <p />
 

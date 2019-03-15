@@ -429,9 +429,9 @@ class Home extends Component {
                   <div className="innerBox">
                     <h2 className="overlayTitle">{blog.title}</h2>
                     <div className="date">{blog.date}</div>
-                    <div className="overlayDescription">
+                    {/* <div className="overlayDescription">
                       {blog.one_sentence_description}
-                    </div>
+                    </div> */}
                     <div className="linkWrapper">
                       <Link
                         to={this.props.linkAppend + blog.title}
