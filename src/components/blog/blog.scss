@@ -8,6 +8,26 @@
   margin-top: 20px;
   font-family: "Lato", sans-serif;
 }
+@media (max-width: 1200px) {
+  .Blog .container {
+    margin: 0 auto;
+    width: 97%;
+  }
+}
+@media (max-width: 880px) {
+  .Blog {
+    padding: 0;
+  }
+  .Blog .container {
+    margin: 0 auto;
+    width: 97%;
+  }
+}
+@media (max-width: 580px) {
+  .Blog {
+    padding: 0;
+  }
+}
 .Blog .blogImage {
   width: 100%;
   height: auto;
