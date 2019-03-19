@@ -1,35 +1,6 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# image_working_folder
-/working_with_images
-
-# blog writing folder
-/working_on_blogs
-
-# django stuff
-superuser.txt
+# Created by https://www.gitignore.io/api/django
+# Edit at https://www.gitignore.io/?templates=django
 
 ### Django ###
 *.log
@@ -37,7 +8,7 @@ superuser.txt
 *.pyc
 __pycache__/
 local_settings.py
-/backend/db.sqlite3
+db.sqlite3
 media
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
@@ -156,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# End of https://www.gitignore.io/api/django

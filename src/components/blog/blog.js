@@ -5,9 +5,29 @@ import { Helmet } from "react-helmet";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 
+import axios from "axios";
+
 class Blog extends Component {
-  state = {};
+
+    componentDidMount() {
+      this.getComments();
+    }
+
+
+getComments(){
+  axios.get('https://ek578.pythonanywhere.com/api/getcomments')
+      .then((response) => {
+        
+          console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+});
+}
+
   render() {
+
+
     const main = this.props.blog.main.map((x, index) => {
       if (x.type === "paragraph") {
         return (
@@ -77,4 +97,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog;
+export default (Blog);

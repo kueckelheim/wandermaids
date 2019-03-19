@@ -12,5 +12,4 @@
 	-exclude impressum and privacy policy from crawling (check: done with react helmet)
 -react helmet to manage meta tags (check)
 
-
--get indexed
+-make backend api not to send email-addresses
