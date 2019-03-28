@@ -4,14 +4,14 @@ import "./footer.scss";
 import Header from "../header/header";
 import Footer from "./footer";
 
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 class Policy extends Component {
   state = {};
   render() {
     return (
       <div>
-                <Helmet>
+        <Helmet>
           <title>Privacy Policy</title>
           <meta name="robots" content="noindex" />
         </Helmet>
@@ -243,8 +243,58 @@ class Policy extends Component {
               anonymous data of the server log files are stored separately from
               all personal data provided by a data subject.
             </p>
+            <h4 id="comments">
+              4. Comments function in the blog on the website
+            </h4>
+            <p>
+              The controler of www.meetsoutheast.com offers users the
+              possibility to leave individual comments on individual blog
+              contributions on a blogpost. Blogposts may usually be commented by
+              third parties.
+            </p>
 
-            <h4>4. Routine erasure and blocking of personal data</h4>
+            <p>
+              If a data subject leaves a comment on the blog published on this
+              website, the comments made by the data subject are also stored and
+              published, as well as information on the date of the commentary
+              and on the user's pseudonym chosen by the data subject. In
+              addition, the EMail address provided by the data subject is also
+              stored. This storage of the EMail address takes place for security
+              reasons, and in case the data subject violates the rights of third
+              parties, or posts illegal content through a given comment. The
+              storage of these personal data is, therefore, in the own interest
+              of the data controller, so that he can exculpate in the event of
+              an infringement. This collected personal data will not be passed
+              to third parties, unless such a transfer is required by law or
+              serves the aim of the defense of the data controller. Furthermore,
+              the pseudonym as well as the EMail address provided by the data
+              subject are used to identify multiple comments posted on
+              www.meetsoutheast.com by the same data subjects and for further
+              statistical reasons that help to improve the quality of the
+              content provided on www.meetsoutheast.com. The EMail address
+              provided by the data subject will not be published.
+            </p>
+            <p>
+              The data provided by the data subject by posting a comment on
+              www.meetsoutheast.com are stored on servers locted in the United
+              States of America. These datacenters are run by Amazon Web
+              Services. This service is covered by the{" "}
+              <a href="https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/eu-us-data-transfers_en">
+                EU-U.S. Privacy Shield Framework
+              </a>{" "}
+              -- an agreement that allows certain US-based hosting solutions to
+              be treated as "as good as" EU-based systems for the purposes of
+              the GDPR. Transferring data is only done through a shared Secure
+              Sockets Layer (SSL), a cryptographic protocol.
+            </p>
+            <p>
+              The controller of www.meetsoutheast.com does not guarantee the
+              publishment of any comments made by a data subject. He reserves
+              the right to deny publishment of any comments and to delete
+              already published comments.
+            </p>
+
+            <h4>5. Routine erasure and blocking of personal data</h4>
             <p>
               The data controller shall process and store the personal data of
               the data subject only for the period necessary to achieve the
@@ -260,7 +310,7 @@ class Policy extends Component {
               erased in accordance with legal requirements.
             </p>
 
-            <h4>5. Rights of the data subject</h4>
+            <h4>6. Rights of the data subject</h4>
             <ul>
               <li>
                 <h4>a) Right of confirmation</h4>
@@ -589,7 +639,7 @@ class Policy extends Component {
                 </p>
               </li>
             </ul>
-            <h4>6. Legal basis for the processing </h4>
+            <h4>7. Legal basis for the processing </h4>
             <p>
               Art. 6(1) lit. a GDPR serves as the legal basis for processing
               operations for which we obtain consent for a specific processing
@@ -625,7 +675,7 @@ class Policy extends Component {
             </p>
 
             <h4>
-              7. The legitimate interests pursued by the controller or by a
+              8. The legitimate interests pursued by the controller or by a
               third party
             </h4>
             <p>
@@ -635,7 +685,7 @@ class Policy extends Component {
               shareholders.
             </p>
 
-            <h4>8. Period for which the personal data will be stored</h4>
+            <h4>9. Period for which the personal data will be stored</h4>
             <p>
               The criteria used to determine the period of storage of personal
               data is the respective statutory retention period. After
@@ -645,7 +695,7 @@ class Policy extends Component {
             </p>
 
             <h4>
-              9. Provision of personal data as statutory or contractual
+              10. Provision of personal data as statutory or contractual
               requirement; Requirement necessary to enter into a contract;
               Obligation of the data subject to provide the personal data;
               possible consequences of failure to provide such data.
@@ -669,7 +719,7 @@ class Policy extends Component {
               the personal data.
             </p>
 
-            <h4>10. Existence of automated decision-making</h4>
+            <h4>11. Existence of automated decision-making</h4>
             <p>
               As a responsible company, we do not use automatic decision-making
               or profiling.

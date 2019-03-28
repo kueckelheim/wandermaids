@@ -8,6 +8,7 @@
   margin-top: 20px;
   font-family: "Lato", sans-serif;
 }
+
 @media (max-width: 1200px) {
   .Blog .container {
     margin: 0 auto;
@@ -40,4 +41,18 @@
 .Blog h1 {
   text-align: center;
   line-height: 50px;
+}
+
+.Blog .commentsWrapper .comment {
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+.Blog .commentsWrapper .comment .name {
+  color: #3399e6;
+  font-size: 25px;
+  margin-right: 10px;
+}
+.Blog .commentsWrapper .comment .date {
+  font-size: 15px;
+  text-align: left;
 }

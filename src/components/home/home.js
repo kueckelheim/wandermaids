@@ -41,7 +41,7 @@ class Home extends Component {
   getCountdown = () => {
     const startDate = new Date("March 22, 2019 01:10:00").getTime();
     const now = new Date().getTime();
-    const distance = startDate - now;
+    const distance = now - startDate;
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -449,8 +449,7 @@ class Home extends Component {
         </div>
         <main>
           <div className="filler">
-            Our journey will start in: {this.state.days} days and{" "}
-            {this.state.hours} hours.{" "}
+            {this.state.days} days and {this.state.hours} hours on the road.
           </div>
 
           {/* Little profile about us */}

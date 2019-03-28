@@ -1,0 +1,74 @@
+@import "../config/config.scss";
+
+.Comments .formStyle {
+  max-width: 400px;
+  padding: 0px 0px 10px 0px;
+  font-family: "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 13px;
+}
+
+.Comments .formStyle li {
+  padding: 0;
+  display: block;
+  list-style: none;
+  margin: 10px 0 0 0;
+}
+.Comments .formStyle li {
+  margin: 0 0 3px 0;
+  padding: 0px;
+  display: block;
+  font-weight: bold;
+}
+.Comments .formStyle input[type="text"],
+.Comments .formStyle input[type="number"],
+.Comments .formStyle input[type="email"],
+textarea,
+select {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #bebebe;
+  padding: 7px;
+  margin: 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+}
+.Comments .formStyle input[type="text"]:focus,
+.Comments .formStyle input[type="number"]:focus,
+.Comments .formStyle input[type="email"]:focus,
+.Comments .formStyle textarea:focus,
+.Comments .formStyle select:focus {
+  -moz-box-shadow: 0 0 8px #88d5e9;
+  -webkit-box-shadow: 0 0 8px #88d5e9;
+  box-shadow: 0 0 8px #88d5e9;
+  border: 1px solid #88d5e9;
+}
+.Comments .formStyle .field-long {
+  width: 100%;
+}
+.Comments .formStyle .field-textarea {
+  height: 100px;
+}
+.Comments .formStyle input[type="submit"],
+.Comments .formStyle input[type="button"] {
+  background: #4b99ad;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  color: #fff;
+}
+.Comments .formStyle input[type="submit"]:hover,
+.Comments .formStyle input[type="button"]:hover {
+  background: #4691a4;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.Comments .formStyle .required {
+  color: red;
+}
+.Comments .lastName {
+  display: none;
+}

@@ -27,7 +27,7 @@ class App extends Component {
     countries = [...new Set(countries)];
     // remove empty entries
     countries = countries.filter(el => {
-      return el != null && el != "" && el != " ";
+      return el !== null && el !== "" && el !== " ";
     });
 
     return (

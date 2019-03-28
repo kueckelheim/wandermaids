@@ -3,5 +3,5 @@
     "vue-html": "html",
     "javascript": "javascriptreact"
   },
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
 }
