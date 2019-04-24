@@ -53,13 +53,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# allows meetsoutheast domain to retrieve and send data from and to the api
+# allows foreign domains to retrieve and send data from and to the api
 CORS_ORIGIN_ALLOW_ALL = False
 
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
-    'https://www.meetsoutheast.com/',
-)
+CORS_ORIGIN_REGEX_WHITELIST = (r'^https://www[.]meetsoutheast[.]com', )
 
 ROOT_URLCONF = 'backend.urls'
 
