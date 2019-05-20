@@ -24,6 +24,25 @@ class Blog extends Component {
             className="blogImage"
           />
         );
+      }
+      if (x.type === "youtube") {
+        return (
+          <div className="videoContainer">
+            <iframe
+              width="560"
+              height="315"
+              src={x.content}
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen="allowfullscreen"
+              mozallowfullscreen="mozallowfullscreen"
+              msallowfullscreen="msallowfullscreen"
+              oallowfullscreen="oallowfullscreen"
+              webkitallowfullscreen="webkitallowfullscreen"
+              title="video"
+            />
+          </div>
+        );
       } else {
         return null;
       }

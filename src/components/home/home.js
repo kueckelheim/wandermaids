@@ -460,8 +460,8 @@ class Home extends Component {
                 <p>
                   5 countries in 4 months: Thailand, the Philippines, Vietnam,
                   Cambodia, and Laos. Exploring different cultures, religions,
-                  floras and faunas and satifying our thirst for adventure. This
-                  is our plan.
+                  floras and faunas and satisfying our thirst for adventure.
+                  This is our plan.
                 </p>
                 <p>
                   Soon, we will describe on this page our most surprising, most

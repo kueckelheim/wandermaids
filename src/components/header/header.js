@@ -2,13 +2,22 @@ import React, { Component } from "react";
 import "./header.scss";
 import Menu from "./menu";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
+import CookieConsent from "react-cookie-consent";
 
 class Header extends Component {
   state = {};
   render() {
     return (
       <header>
-        <div className="upper">Backpacking in South East Asia</div>
+        <CookieConsent>
+          This website uses cookies to enhance the user experience. &nbsp;
+          <HashLink to="/privacy policy#cookies" className="link">
+            Read more information.
+          </HashLink>
+        </CookieConsent>
+        <div className="upper">Backpacking in Southeast Asia</div>
         <div className="logo">
           <Menu linkAppend={this.props.linkAppend} />
 

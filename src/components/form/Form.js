@@ -17,7 +17,8 @@ class Form extends Component {
   }
   createCode = e => {
     e.preventDefault();
-    const output = JSON.stringify(this.props.blogs.blogs);
+    let output = this.props.blogs.blogs[this.props.blogs.blogs.length - 1];
+    output = JSON.stringify(output);
     this.setState({ output: output });
   };
   deleteCode = e => {
@@ -97,6 +98,16 @@ class Form extends Component {
     });
     this.props.updateMain(main);
   };
+  addYoutube = e => {
+    e.preventDefault();
+    let main = this.props.formValues.main;
+    main.push({
+      type: "youtube",
+      content: "",
+      value: ""
+    });
+    this.props.updateMain(main);
+  };
   render() {
     const main = this.props.formValues.main.map((x, index) => {
       if (x.type === "paragraph") {
@@ -134,6 +145,20 @@ class Form extends Component {
               type="text"
               onChange={this.onChangeImageLabel}
               value={x.valueLabel}
+            />
+          </div>
+        );
+      }
+      if (x.type === "youtube") {
+        return (
+          <div key={index}>
+            <label htmlFor={index}>Youtube</label>
+            <input
+              name={index}
+              component="input"
+              type="text"
+              onChange={this.onChangeMain}
+              value={x.value}
             />
           </div>
         );
@@ -266,14 +291,21 @@ class Form extends Component {
           </div>
           <div>
             <p>Formatting paragraphs:</p>
-            <p><b>Headlines:</b> For headlines enclose text by &lt;h3&gt; in the beginning and &lt;/h3&gt; in the end.</p>
-            <p><b>Bold:</b> For bold text enclose text by &lt;b&gt; in the beginning and &lt;/b&gt; in the end.</p>
+            <p>
+              <b>Headlines:</b> For headlines enclose text by &lt;h3&gt; in the
+              beginning and &lt;/h3&gt; in the end.
+            </p>
+            <p>
+              <b>Bold:</b> For bold text enclose text by &lt;b&gt; in the
+              beginning and &lt;/b&gt; in the end.
+            </p>
             {main}
             <p />
 
             <button onClick={this.deleteElement}>Delete Last Element</button>
             <button onClick={this.addParagraph}>Add paragraph</button>
             <button onClick={this.addImage}>Add image</button>
+            <button onClick={this.addYoutube}>Add Youtube</button>
 
             <p />
             <hr />
