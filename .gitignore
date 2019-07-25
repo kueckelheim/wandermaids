@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # images
-/public/image
+# /public/image
 
 # image_working_folder
 /working_with_images
