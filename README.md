@@ -6,8 +6,8 @@
 
 ## Author
 
-[Erik Kückelheim](https://github.com/kueckelheim)
-[Portfolio](https://erik-kueckelheim.com/)
+- [Erik Kückelheim](https://github.com/kueckelheim)
+- [Portfolio](https://erik-kueckelheim.com/)
 
 ## Built With
 
