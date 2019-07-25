@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Blog about our 4-month trip to Southeast Asia
 
-## Available Scripts
+## Visit website
 
-In the project directory, you can run:
+[Visit Blog](https://www.meetsoutheast.com/)
 
-### `npm start`
+## Author
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Erik Kückelheim](https://github.com/kueckelheim)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- React - The JavaScript web-framework used
+- [Create React App](https://github.com/facebook/create-react-app) - easy to use React-Babel-Webpack configuration
+- [npm](https://github.com/npm/cli) - a JavaScript package manager
+- [django](https://www.djangoproject.com/) - a Python web-framework used for developing the backend managing the blog's commenting system
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## JavaScript libraries
 
-### `npm run build`
+- [redux](https://github.com/reduxjs/redux) - Predictable state container for JavaScript apps. Used to make some props accessible accross components
+- [react-redux](https://github.com/reduxjs/react-redux) - React binding for [Redux](https://github.com/reduxjs/redux)
+- [redux-thunk](https://github.com/reduxjs/redux-thunk) - used for asynchronous axios calls
+- [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension) - Used during development. Gives you an overview of the current store and its changes in a browser's DevTools.
+- [axios](https://github.com/axios/axios) - HTTP client used for XMLHttpRequests to access the backend API
+- [node-sass](https://github.com/sass/node-sass) - used in order to be able to work with Sass
+- [react-router-dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) - DOM bindings for React Router
+- [react-router-hash-link](https://github.com/rafrex/react-router-hash-link) - Hash link functionality for React
+- [react-helmet](https://github.com/nfl/react-helmet) - document head manager for react (SEO purposes)
+- [animate.css](https://github.com/daneden/animate.css/) - animations used for the navigation menu
+- [react-simple-maps](https://github.com/zcreativelabs/react-simple-maps) - An svg map component built with and for React
+- [react-motion](https://github.com/chenglou/react-motion) - used to zoom into the map on the home-page
+- [react-cookie-consent](https://github.com/Mastermindzh/react-cookie-consent) - used to make a cookie consent bar
+- babel-polyfill - used for SEO reasons
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Django APPS
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [django-rest-framework](https://www.django-rest-framework.org/) - used to build the commenting web API (only) accessible by the frontend
+- [django-cors-headers](https://pypi.org/project/django-cors-headers/) - used to let the django web API add Cross-Origin Resource Sharing (CORS) headers to responses. Allows the frontend (which is on a different server) to access the API
