@@ -1,7 +1,7 @@
 import { GET_VALUES } from "./types";
 import { CHANGE_CLASSES } from "./types";
 import { UPDATE_FORM } from "./types";
-import { UPDATE_MAIN } from "./types";
+import { UPDATE_MAIN, UPDATE_IMAGES } from "./types";
 
 export const getValues = (data, blogs) => {
   return { type: GET_VALUES, data };
@@ -16,3 +16,4 @@ export const updateForm = (data, e) => ({
 });
 
 export const updateMain = data => ({ type: UPDATE_MAIN, data });
+export const updateImages = data => ({ type: UPDATE_IMAGES, data });

@@ -2,11 +2,8 @@
   "blogs": [
     {
       "title": "Banaue and the Rice Terraces. Where the Hearth of the Philippines Lies",
-      "one_sentence_description": "Stunning views, an exciting native culture, good food, and friendly locals. The small town Banaue, situated in the middle of the famous rice terraces, gave us truly unforgettable memories from the Philippines. Read further to find out how we ended up performing traditional Ifugao dances in front of the entire town.",
       "short_description": "Stunning views, an exciting native culture, good food, and friendly locals. The small town Banaue, situated in the middle of the famous rice terraces, gave us truly unforgettable memories from the Philippines. Read further to find out how we ended up performing traditional Ifugao dances in front of the entire town.",
       "country": "Philippines",
-      "header_image": "Traditional Ifugao Hunting Technique With Darts Imbayah Festival Banaue",
-      "header_image_label": "Traditional Ifugao Hunting Technique With Darts Imbayah Festival Banaue",
       "date": "April 29th, 2019",
       "coordinates": ["121.05249979", "16.906329708"],
       "main": [
@@ -24,13 +21,6 @@
           "type": "paragraph",
           "content": "<h3>The Banaue Rice Terraces</h3>",
           "value": "<h3>The Banaue Rice Terraces</h3>"
-        },
-        {
-          "type": "image",
-          "content": "Banaue Rice Terraces Viewpoint",
-          "image_label": "View over the Banaue Rice Terraces",
-          "valueLabel": "View over the Banaue Rice Terraces",
-          "value": "Banaue Rice Terraces Viewpoint"
         },
         {
           "type": "paragraph",
@@ -58,13 +48,6 @@
           "value": "<h3>Ifugao Culture and the Imbayah Festival in Banaue</h3>"
         },
         {
-          "type": "image",
-          "content": "Traditional Ifugao Dance Imbayah Festival Banaue",
-          "image_label": "Traditional Ifugao Dance Imbayah Festival Banaue",
-          "valueLabel": "Traditional Ifugao Dance Imbayah Festival Banaue",
-          "value": "Traditional Ifugao Dance Imbayah Festival Banaue"
-        },
-        {
           "type": "paragraph",
           "content": "If you want to experience the Ifugao culture in every detail, it is probably best to visit Banaue when the Imbayah festival takes place, which usually is in late April. This festival celebrates tribal traditions of the region. To our luck and without previous knowledge, we came exactly at the right time.",
           "value": "If you want to experience the Ifugao culture in every detail, it is probably best to visit Banaue when the Imbayah festival takes place, which usually is in late April. This festival celebrates tribal traditions of the region. To our luck and without previous knowledge, we came exactly at the right time."
@@ -80,13 +63,6 @@
           "value": "In order to attend the Imbayah festival, tribal people from the whole region had come to Banaue from their villages in the mountains. The town was filled with energy and a vivid hustle. During the festival, we learned about traditional wood crafting, hunting with dart-guns, and we experienced the tribal chanting and dancing of the Ifugao ethnicity. "
         },
         {
-          "type": "image",
-          "content": "Imbayah festival lunch for the whole town",
-          "image_label": "Imbayah festival in Banaue lunch for the whole town",
-          "valueLabel": "Imbayah festival in Banaue lunch for the whole town",
-          "value": "Imbayah festival lunch for the whole town"
-        },
-        {
           "type": "paragraph",
           "content": "One of the most positive memories that we take away from these days in Banaue is how its citizens welcome their guests. Only few foreigners attended the festival. Most of them did not stay in Banaue and went on to visit other rice terraces like the ones in Batad. This means that we were mainly surrounded by native people and these people treated us in a truly warm and friendly manner. When we were attending a ceremony of ritual dances in the town hall, we were suddenly dragged into the middle of the hall and encouraged to join the dance. Performing an unfamiliar dance in front of the whole town was admittedly slightly uncomfortable, but for sure a memorable experience. After that, we were invited to join a free lunch at which the whole town participated.",
           "value": "One of the most positive memories that we take away from these days in Banaue is how its citizens welcome their guests. Only few foreigners attended the festival. Most of them did not stay in Banaue and went on to visit other rice terraces like the ones in Batad. This means that we were mainly surrounded by native people and these people treated us in a truly warm and friendly manner. When we were attending a ceremony of ritual dances in the town hall, we were suddenly dragged into the middle of the hall and encouraged to join the dance. Performing an unfamiliar dance in front of the whole town was admittedly slightly uncomfortable, but for sure a memorable experience. After that, we were invited to join a free lunch at which the whole town participated."
@@ -95,13 +71,6 @@
           "type": "paragraph",
           "content": "<h3>Why the Rice Fields are not Enough to Make a Living</h3>",
           "value": "<h3>Why the Rice Fields are not Enough to Make a Living</h3>"
-        },
-        {
-          "type": "image",
-          "content": "Banaue Rice Fields Working Woman",
-          "image_label": "Banaue Rice Fields Working Woman",
-          "valueLabel": "Banaue Rice Fields Working Woman",
-          "value": "Banaue Rice Fields Working Woman"
         },
         {
           "type": "paragraph",
@@ -114,13 +83,6 @@
           "value": "This is why many Filipinos decide to work abroad in countries like Katar or Saudi Arabia. As you can see in the picture below, migrant workers are also recruited from Banaue. The workers are cheap, flexible, and do not enjoy any rights, hence, no wonder that they are in high demand. However, recently, mistreating of these migrant workers has become more public, especially in the context of construction works for the Football World Cup 2022 in Katar."
         },
         {
-          "type": "image",
-          "content": "Recruitment of Migrant Workers from the Philippines in Banaue",
-          "image_label": "Recruitment of Migrant Workers from the Philippines in Banaue",
-          "valueLabel": "Recruitment of Migrant Workers from the Philippines in Banaue",
-          "value": "Recruitment of Migrant Workers from the Philippines in Banaue"
-        },
-        {
           "type": "paragraph",
           "content": "<h3>Why you should plan on visiting Banaue</h3>",
           "value": "<h3>Why you should plan on visiting Banaue</h3>"
@@ -130,16 +92,27 @@
           "content": "The Philippines are mostly known for sandy beaches and crystal clear water. Banaue is proof that the country has more to offer than that. If you are keen on having some cultural experiences and are ready for one or the other hike in a stunning surrounding, then you should definitely plan on visiting the region. For us, it was the best thing we could have done since our finest memories from the Philippines come from here.",
           "value": "The Philippines are mostly known for sandy beaches and crystal clear water. Banaue is proof that the country has more to offer than that. If you are keen on having some cultural experiences and are ready for one or the other hike in a stunning surrounding, then you should definitely plan on visiting the region. For us, it was the best thing we could have done since our finest memories from the Philippines come from here."
         }
+      ],
+      "images": [
+        {
+          "name": "Traditional Ifugao Hunting Technique With Darts Imbayah Festival Banaue",
+          "comment": "Traditional Ifugao Hunting Technique With Darts Imbayah Festival Banaue"
+        },
+        {
+          "name": "Banaue Rice Fields Working Woman",
+          "comment": "Banaue Rice Fields Working Woman"
+        },
+        {
+          "name": "Recruitment of Migrant Workers from the Philippines in Banaue",
+          "comment": "Recruitment of Migrant Workers from the Philippines in Banaue"
+        }
       ]
     },
 
     {
       "title": "Here's the Plan - Four Months on a Budget and 10 Kilos in the Bag",
-      "one_sentence_description": "5 countries in 4 months, on a budget and with 10 kilos each. We are ready.",
       "short_description": "Waiting has almost come to an end. In a few days we will be flying to Bangkok. There, our 4 month Southeast Asian adventure begins. But it has already been a long journey packed with planning and travel preparations.",
       "country": "",
-      "header_image": "Our route",
-      "header_image_label": "A map with our travel destinations",
       "date": "March 16th, 2019",
       "coordinates": [0, 0],
       "main": [
@@ -207,13 +180,6 @@
           "type": "paragraph",
           "content": "Will it actually work? No clue. We might end up rebuying all the stuff we left behind on the way.",
           "value": "Will it actually work? No clue. We might end up rebuying all the stuff we left behind on the way."
-        },
-        {
-          "type": "image",
-          "content": "packing list for southeast asia",
-          "image_label": "Our packing list. Things we will put in our backpacks to Southeast Asia.",
-          "valueLabel": "Our packing list. Things we will put in our backpacks to Southeast Asia.",
-          "value": "Packed backpacks"
         }
       ]
     }

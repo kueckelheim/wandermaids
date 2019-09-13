@@ -19,25 +19,41 @@ class Home extends Component {
     this.state = {
       center: [112.5, 14.75],
       zoom: 0.6,
-      days: "",
-      hours: ""
+      country: ""
     };
   }
 
   // not needed anymore since travel is over
-  // componentWillMount() {
-  //   this.getCountdown();
-  // }
-  // getCountdown = () => {
-  //   const startDate = new Date("March 22, 2019 01:10:00").getTime();
-  //   const now = new Date().getTime();
-  //   const distance = now - startDate;
-  //   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  //   const hours = Math.floor(
-  //     (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  //   );
-  //   this.setState({ days: days, hours: hours });
-  // };
+  componentWillMount() {
+    const now = new Date().getTime();
+    const asia = new Date("October 2, 2019 10:00:00").getTime();
+    let distanceAsia = asia - now;
+    distanceAsia = distanceAsia / (1000 * 60 * 60 * 24);
+    if (distanceAsia >= 0) {
+      const days = Math.floor(
+        (distanceAsia * (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 * 24)
+      );
+      const hours = Math.floor(
+        ((distanceAsia * (1000 * 60 * 60 * 24)) % (1000 * 60 * 60 * 24)) /
+          (1000 * 60 * 60)
+      );
+      const country =
+        "Unsere Reise beginnt in " + days + " Tagen und " + hours + " Stunden.";
+      this.setState({ country: country });
+    }
+    if (distanceAsia < 0 && distanceAsia >= -26) {
+      this.setState({ country: "Zurzeit sind wir in Südostasien" });
+    }
+    if (distanceAsia < -26 && distanceAsia >= -57) {
+      this.setState({ country: "Zurzeit sind wir in Neuseeland" });
+    }
+    if (distanceAsia < -57 && distanceAsia >= -79) {
+      this.setState({ country: "Zurzeit sind wir in Peru" });
+    }
+    if (distanceAsia < -79 && distanceAsia >= -88) {
+      this.setState({ country: "Zurzeit sind wir in den USA" });
+    }
+  }
 
   onLink = () => {
     window.scrollTo(0, 0);
@@ -63,27 +79,19 @@ class Home extends Component {
         <Header linkAppend={this.props.linkAppend} />
         <Map linkAppend={this.props.linkAppend} />
         <main>
-          <div className="filler">
-            We were 123 days on the road.
-            {/* not needed anymore since travel is over */}
-            {/* {this.state.days} days and {this.state.hours} hours on the road. */}
-          </div>
+          <div className="filler">{this.state.country}</div>
 
           {/* Little profile about us */}
           <div className="profileWrapper">
             <div className="container">
               <div className="description">
-                <h1>WELCOME</h1>
+                <h1>In 91 Tagen um die Welt</h1>
+                <span className="hashTag">#wandermaidsontour </span>
+                <span className="hashTag">#in91TagenumdieWelt</span>
                 <p>
-                  5 countries in 4 months: Thailand, the Philippines, Vietnam,
-                  Cambodia, and Laos. Exploring different cultures, religions,
-                  floras and faunas and satisfying our thirst for adventure.
-                  This is our plan.
-                </p>
-                <p>
-                  Soon, we will describe on this page our most surprising, most
-                  pleasant, and most unpleasant experiences that we will make on
-                  the road. And we will do this the most authentic way possible.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore aliquid repellendus dicta hic, alias totam earum
+                  aliquam magni voluptatem velit!
                 </p>
               </div>
               <div className="image">

@@ -54,7 +54,7 @@
 }
 .menu-btn.close {
   transform: rotate(180deg);
-  position: fixed;
+  position: absolute;
   top: 15px;
   width: 39px;
   height: 39px;
@@ -151,7 +151,7 @@
   opacity: 0;
   transition: 0.4s ease-out;
   text-align: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 70%;

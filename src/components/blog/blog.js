@@ -8,21 +8,61 @@ import Footer from "../footer/footer";
 import Comments from "../comments/comments";
 
 class Blog extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imgSelect: 0,
+      overlayClass: "overlay",
+      max: 1
+    };
+  }
+
+  componentWillMount() {
+    const max = this.props.blog.images.length;
+    this.setState({ max });
+  }
+
+  onClickImg = e => {
+    const index = e.target.name;
+    this.setState({ imgSelect: index, overlayClass: "overlay shown" });
+  };
+
+  onClose = () => {
+    this.setState({ overlayClass: "overlay" });
+  };
+
+  onLeft = () => {
+    const imgSelect = this.state.imgSelect;
+    if (imgSelect > 0) {
+      this.setState({ imgSelect: imgSelect - 1 });
+    }
+  };
+
+  onRight = () => {
+    const imgSelect = Number(this.state.imgSelect);
+    const max = this.props.blog.images.length - 1;
+    if (max > imgSelect) {
+      this.setState({ imgSelect: imgSelect + 1 });
+    }
+  };
+
   render() {
+    const gallery = this.props.blog.images.map((x, index) => (
+      <div className="imageCont" key={index}>
+        <img
+          src={process.env.PUBLIC_URL + "/image/" + x.name + ".jpg"}
+          alt={x.comment}
+          className="blogImage"
+          name={index}
+          onClick={this.onClickImg}
+        />
+        {/* <div className="commentImg">{x.comment}</div> */}
+      </div>
+    ));
     const main = this.props.blog.main.map((x, index) => {
       if (x.type === "paragraph") {
         return (
           <p key={index} dangerouslySetInnerHTML={{ __html: x.content }} />
-        );
-      }
-      if (x.type === "image") {
-        return (
-          <img
-            key={index}
-            src={process.env.PUBLIC_URL + "/image/" + x.content + ".jpg"}
-            alt={x.image_label}
-            className="blogImage"
-          />
         );
       }
       if (x.type === "youtube") {
@@ -53,7 +93,7 @@ class Blog extends Component {
       canonical = (
         <link
           rel="canonical"
-          href={"https://www.meetsoutheast.com/" + this.props.blog.title}
+          href={"https://www.wandermaidsontour.com/" + this.props.blog.title}
         />
       );
     } else {
@@ -78,17 +118,38 @@ class Blog extends Component {
             <div className="date">{this.props.blog.date}</div>
             <hr />
             <p>{this.props.blog.short_description}</p>
-            <img
-              src={
-                process.env.PUBLIC_URL +
-                "/image/" +
-                this.props.blog.header_image +
-                ".jpg"
-              }
-              alt={this.props.blog.header_image_label}
-              className="blogImage"
-            />
+
             {main}
+            <hr />
+            <div className="gallery">{gallery}</div>
+            <div className={this.state.overlayClass}>
+              <div className="image">
+                <img
+                  src={
+                    process.env.PUBLIC_URL +
+                    "/image/" +
+                    this.props.blog.images[this.state.imgSelect].name +
+                    ".jpg"
+                  }
+                  className="blogImage"
+                />
+                <div className="text">
+                  {this.props.blog.images[this.state.imgSelect].comment}
+                </div>
+              </div>
+              <div className="arrowLeft" onClick={this.onLeft}>
+                <div className="left" />
+              </div>
+              <div className="arrowRight">
+                <div className="right" onClick={this.onRight} />
+              </div>
+              <div className="close" onClick={this.onClose}>
+                zurück
+              </div>
+              <div className="count">
+                {Number(this.state.imgSelect) + 1}/{this.state.max}
+              </div>
+            </div>
             <Comments title={this.props.blog.title} />
           </div>
         </div>

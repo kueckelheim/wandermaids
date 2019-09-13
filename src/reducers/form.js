@@ -1,13 +1,13 @@
 import { UPDATE_FORM } from "../actions/types";
-import { UPDATE_MAIN } from "../actions/types";
+import { UPDATE_MAIN, UPDATE_IMAGES } from "../actions/types";
 
 const initialState = {
   title: "",
-  one_sentence_description: "",
+  // one_sentence_description: "",
   short_description: "",
   country: "",
-  header_image: "",
-  header_image_label: "",
+  // header_image: "",
+  // header_image_label: "",
   date: "",
   coordinatesLongitude: 0,
   coordinatesAltitude: 0,
@@ -16,6 +16,12 @@ const initialState = {
       type: "paragraph",
       content: "",
       value: ""
+    }
+  ],
+  images: [
+    {
+      name: "",
+      comment: ""
     }
   ],
   output: ""
@@ -33,6 +39,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         main: action.data
+      };
+    case UPDATE_IMAGES:
+      return {
+        ...state,
+        images: action.data
       };
 
     default:

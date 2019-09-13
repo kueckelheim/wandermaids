@@ -159,6 +159,10 @@ main .profileWrapper .container {
   width: 80%;
   background: lighten(gray, 45%);
 }
+main .profileWrapper .description .hashTag {
+  // font-size: 17px;
+  color: black;
+}
 @media (max-width: 840px) {
   main .profileWrapper .container {
     grid-template-columns: 1fr;
