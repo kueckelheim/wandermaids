@@ -55,7 +55,7 @@
 .menu-btn.close {
   transform: rotate(180deg);
   position: fixed;
-  top: 35px;
+  top: 15px;
   width: 39px;
   height: 39px;
   margin-right: 4px;
@@ -149,19 +149,18 @@
 
 .menu-overlay {
   opacity: 0;
-  transition: 0.9s ease-out;
+  transition: 0.4s ease-out;
   text-align: center;
   position: fixed;
   top: 0;
-  bottom: 0;
   right: 0;
-  left: 0;
+  left: 70%;
   background-color: darken($primary-color, 5%);
   display: none;
-  -webkit-transition: 0.9s ease-out;
-  -moz-transition: 0.9s ease-out;
-  -ms-transition: 0.9s ease-out;
-  -o-transition: 0.9s ease-out;
+  -webkit-transition: 0.4s ease-out;
+  -moz-transition: 0.4s ease-out;
+  -ms-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
 }
 .menu-overlay.show {
   opacity: 1;
@@ -171,16 +170,24 @@
 }
 .menu-overlay ul {
   list-style: none;
-  font-size: 30px;
+  font-size: 20px;
   align-self: center;
+  padding-top: 6vh;
 }
-@media (max-width: 740px) {
+@media (max-width: 800px) {
+  .menu-overlay {
+    top: 0;
+    bottom: 0%;
+    right: 0%;
+    left: 25%;
+  }
   .menu-overlay ul {
-    font-size: 25px;
+    font-size: 20px;
+    padding-top: 0;
   }
 }
 .menu-overlay ul li {
-  padding: 30px;
+  padding: 10px;
   color: darken($secondary-color, 0%);
 
   transition: 0.2s ease-out;

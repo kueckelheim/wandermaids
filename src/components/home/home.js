@@ -47,7 +47,7 @@ class Home extends Component {
     let canonical = this.props.linkAppend === "/";
     if (!canonical) {
       canonical = (
-        <link rel="canonical" href={"https://www.meetsoutheast.com/"} />
+        <link rel="canonical" href={"https://www.wandermaidsontour.de/"} />
       );
     } else {
       canonical = null;
@@ -56,11 +56,8 @@ class Home extends Component {
     return (
       <div className="Home">
         <Helmet>
-          <title>Meet South East</title>
-          <meta
-            name="description"
-            content="5 countries in 5 months: Thailand, the Philippines, Vietnam, Cambodia, and Laos. Exploring different cultures, religions, floras and faunas and satifying our thirst for adventure. This is our plan."
-          />
+          <title>wandermaidsontour</title>
+          <meta name="description" content="" />
           {canonical}
         </Helmet>
         <Header linkAppend={this.props.linkAppend} />

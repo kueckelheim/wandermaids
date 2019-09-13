@@ -89,38 +89,18 @@ class Menu extends Component {
             >
               <li>Home</li>
             </Link>
-            <li onClick={this.foldCountry} className="foldCountry">
-              By Country
-            </li>
+            <hr />
+            <li>Über Uns</li>
+            <hr />
+            <li>Asien</li>
+            <hr />
+            <li>Neuseeland</li>
+            <hr />
+            <li>Peru</li>
+            <hr />
+            <li>Galerie</li>
           </ul>
         </nav>
-        <div className={this.state.searchClass}>
-          <div className="circle" />
-          <div className="stiel" />
-          <input className="searchtext" type="text" placeholder="Search..." />
-        </div>
-        <div className={this.state.countryOverlayClass}>
-          <ul>
-            {countries.map((country, index) => (
-              <Link
-                to={this.props.linkAppend + country}
-                className="link"
-                onClick={this.onLink}
-                key={index}
-              >
-                <li>{country}</li>
-              </Link>
-            ))}
-          </ul>
-          <div
-            className="arrowBox animated bounceInDown"
-            onClick={this.foldCountryClose}
-          >
-            <div className="after" onClick={this.foldCountryClose} />
-            <div className="before" onClick={this.foldCountryClose} />
-            Back
-          </div>
-        </div>
       </React.Fragment>
     );
   }

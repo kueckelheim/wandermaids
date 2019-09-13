@@ -17,7 +17,7 @@ class Header extends Component {
             Read more information.
           </HashLink>
         </CookieConsent>
-        <div className="upper">Backpacking in Southeast Asia</div>
+        {/* <div className="upper">Backpacking in Southeast Asia</div> */}
         <div className="logo">
           <Menu linkAppend={this.props.linkAppend} />
 
@@ -27,9 +27,9 @@ class Header extends Component {
               className="link"
               onClick={this.onLink}
             >
-              <div>MEET</div>
+              <div>WANDERMAIDS</div>
               <div>
-                <span>SOUTH</span>EAST
+                <span>ON </span>TOUR
               </div>
             </Link>
           </div>

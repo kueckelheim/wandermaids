@@ -25,8 +25,8 @@ class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      center: [112.5, 14.75],
-      zoom: 0.6,
+      center: [28.5, 0],
+      zoom: 0.103,
       days: "",
       hours: ""
     };
@@ -56,7 +56,7 @@ class Map extends Component {
         <div className="map">
           <Motion
             defaultStyle={{
-              zoom: 0.6
+              zoom: 0.103
             }}
             style={{
               zoom: spring(this.state.zoom, { stiffness: 110, damping: 20 })
@@ -104,41 +104,6 @@ class Map extends Component {
                                   fill: "#e6e6e6",
                                   stroke: "#607D8B",
                                   strokeWidth: 0.45,
-                                  outline: "none"
-                                }
-                              }}
-                            />
-                          )
-                      )
-                    }
-                  </Geographies>
-                  {/* Thailand shapes */}
-                  <Geographies geography={require("./maps/thailand.json")}>
-                    {(geographies, projection) =>
-                      geographies.map(
-                        (geography, i) =>
-                          geography.id !== "ATA" && (
-                            <Geography
-                              key={i}
-                              geography={geography}
-                              projection={projection}
-                              style={{
-                                default: {
-                                  fill: "#f7eb89",
-                                  stroke: "#607D8B",
-                                  strokeWidth: 0.65,
-                                  outline: "none"
-                                },
-                                hover: {
-                                  fill: "#f7eb89",
-                                  stroke: "#607D8B",
-                                  strokeWidth: 0.65,
-                                  outline: "none"
-                                },
-                                pressed: {
-                                  fill: "#f7eb89",
-                                  stroke: "#607D8B",
-                                  strokeWidth: 0.65,
                                   outline: "none"
                                 }
                               }}
@@ -217,41 +182,6 @@ class Map extends Component {
                       )
                     }
                   </Geographies>
-                  {/* Philippines shapes */}
-                  <Geographies geography={require("./maps/philippines.json")}>
-                    {(geographies, projection) =>
-                      geographies.map(
-                        (geography, i) =>
-                          geography.id !== "ATA" && (
-                            <Geography
-                              key={i}
-                              geography={geography}
-                              projection={projection}
-                              style={{
-                                default: {
-                                  fill: "#c3abd4",
-                                  stroke: "#607D8B",
-                                  strokeWidth: 0.65,
-                                  outline: "none"
-                                },
-                                hover: {
-                                  fill: "#c3abd4",
-                                  stroke: "#607D8B",
-                                  strokeWidth: 0.65,
-                                  outline: "none"
-                                },
-                                pressed: {
-                                  fill: "#c3abd4",
-                                  stroke: "#607D8B",
-                                  strokeWidth: 0.65,
-                                  outline: "none"
-                                }
-                              }}
-                            />
-                          )
-                      )
-                    }
-                  </Geographies>
                   {/* Vietnam shapes */}
                   <Geographies geography={require("./maps/vietnam.json")}>
                     {(geographies, projection) =>
@@ -287,38 +217,133 @@ class Map extends Component {
                       )
                     }
                   </Geographies>
-                  {/* Labeling Thailand */}
-                  <Annotation
-                    dx={-20}
-                    dy={24}
-                    subject={[99.4684384, 14.7996671]}
-                    strokeWidth={1}
-                    stroke="#607D8B"
-                  >
-                    <text>{"Thailand"}</text>
-                  </Annotation>
+                  {/* New Zealand shapes */}
+                  <Geographies geography={require("./maps/new_zealand.json")}>
+                    {(geographies, projection) =>
+                      geographies.map(
+                        (geography, i) =>
+                          geography.id !== "ATA" && (
+                            <Geography
+                              key={i}
+                              geography={geography}
+                              projection={projection}
+                              style={{
+                                default: {
+                                  fill: "#c3abd4",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                },
+                                hover: {
+                                  fill: "#c3abd4",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                },
+                                pressed: {
+                                  fill: "#c3abd4",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                }
+                              }}
+                            />
+                          )
+                      )
+                    }
+                  </Geographies>
+                  {/* Peru shapes */}
+                  <Geographies geography={require("./maps/peru.json")}>
+                    {(geographies, projection) =>
+                      geographies.map(
+                        (geography, i) =>
+                          geography.id !== "ATA" && (
+                            <Geography
+                              key={i}
+                              geography={geography}
+                              projection={projection}
+                              style={{
+                                default: {
+                                  fill: "#f7eb89",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                },
+                                hover: {
+                                  fill: "#f7eb89",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                },
+                                pressed: {
+                                  fill: "#f7eb89",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                }
+                              }}
+                            />
+                          )
+                      )
+                    }
+                  </Geographies>
+                  {/* USA shapes */}
+                  <Geographies geography={require("./maps/usa.json")}>
+                    {(geographies, projection) =>
+                      geographies.map(
+                        (geography, i) =>
+                          geography.id !== "ATA" && (
+                            <Geography
+                              key={i}
+                              geography={geography}
+                              projection={projection}
+                              style={{
+                                default: {
+                                  fill: "#e6ccb3",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                },
+                                hover: {
+                                  fill: "#e6ccb3",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                },
+                                pressed: {
+                                  fill: "#e6ccb3",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                }
+                              }}
+                            />
+                          )
+                      )
+                    }
+                  </Geographies>
                   {/* Labeling Cambodia */}
-                  <Annotation
+                  {/* <Annotation
                     dx={-20}
                     dy={24}
                     subject={[103.8684384, 11.7996671]}
-                    strokeWidth={1}
+                    strokeWidth={2}
                     stroke="#607D8B"
                   >
                     <text>{"Cambodia"}</text>
                   </Annotation>
-                  {/* Labeling Laos */}
-                  <Annotation
+                  Labeling Laos */}
+                  {/* <Annotation
                     dx={-30}
                     dy={-4}
                     subject={[100.8684384, 20.7996671]}
-                    strokeWidth={1}
+                    strokeWidth={10}
                     stroke="#607D8B"
                   >
                     <text>{"Laos"}</text>
                   </Annotation>
-                  {/* Labeling Vietnam */}
-                  <Annotation
+                  Labeling Vietnam */}
+                  {/* <Annotation
                     dx={30}
                     dy={-4}
                     subject={[108.2684384, 15.7996671]}
@@ -327,8 +352,8 @@ class Map extends Component {
                   >
                     <text>{"Vietnam"}</text>
                   </Annotation>
-                  {/* Labeling the Philippines */}
-                  <Annotation
+                  Labeling the Philippines */}
+                  {/* <Annotation
                     dx={60}
                     dy={-18}
                     subject={[127.2684384, 8.7996671]}
@@ -336,8 +361,8 @@ class Map extends Component {
                     stroke="#607D8B"
                   >
                     <text>{"Philippines"}</text>
-                  </Annotation>
-                  {/* Add clickable Markers for each blog entry with coordinates */}
+                  </Annotation> */}
+                  {/*   Add clickable Markers for each blog entry with coordinates */}
                   <Markers>
                     {markers.map((marker, i) => (
                       <Marker
@@ -353,24 +378,24 @@ class Map extends Component {
                         // When maker is clicked, show overlay
                         onClick={this.handleBlogClick}
                       >
-                        <g transform="translate(-12, -24)" className="marker">
+                        <g transform="translate(-6, -12)" className="marker">
                           <path
                             fill="white"
-                            strokeWidth="2"
+                            strokeWidth="1"
                             strokeLinecap="square"
-                            strokeMiterlimit="10"
+                            strokeMiterlimit="5"
                             strokeLinejoin="miter"
-                            d="M20,9c0,4.9-8,13-8,13S4,13.9,4,9c0-5.1,4.1-8,8-8S20,3.9,20,9z"
+                            d="M10,4.5c0,2.45-4,6.5-4,6.5S2,6.95,2,4.5c0-2.55,2.05-4,4-4S10,1.95,10,4.5z"
                           />
                           <circle
                             fill="white"
-                            strokeWidth="2"
+                            strokeWidth="1"
                             strokeLinecap="square"
-                            strokeMiterlimit="10"
+                            strokeMiterlimit="5"
                             strokeLinejoin="miter"
-                            cx="12"
-                            cy="9"
-                            r="3"
+                            cx="6"
+                            cy="4.5"
+                            r="1.5"
                           />
                         </g>
                       </Marker>
