@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import Home from "./components/home/home";
 import Blog from "./components/blog/blog";
 import CountryList from "./components/blog/countryList";
+import Gallery from "./components/gallery/gallery";
 import Policy from "./components/footer/policy";
 import Impressum from "./components/footer/impressum";
 import Secret from "./components/secret/secret";
@@ -21,14 +22,15 @@ class App extends Component {
   };
 
   render() {
-    // get array of countries
-    let countries = this.props.blogs.map(a => a.country);
-    // remove double occurences
-    countries = [...new Set(countries)];
-    // remove empty entries
-    countries = countries.filter(el => {
-      return el !== null && el !== "" && el !== " ";
-    });
+    // // get array of countries
+    // let countries = this.props.blogs.map(a => a.country);
+    // // remove double occurences
+    // countries = [...new Set(countries)];
+    // // remove empty entries
+    // countries = countries.filter(el => {
+    //   return el !== null && el !== "" && el !== " ";
+    // });
+    const countries = ["Südostasien", "Peru", "Neuseeland", "USA"];
 
     return (
       <Router>
@@ -55,6 +57,12 @@ class App extends Component {
                 )}
               />
             ))}
+            <Route
+              path={"/galerie"}
+              render={props => (
+                <Gallery {...props} blogs={this.props.blogs} linkAppend="/" />
+              )}
+            />
             <Route path="/privacy policy" component={Policy} />
             <Route path="/impressum" component={Impressum} />
             {/* +++++++++++ "Admin" area +++++++++++++ */}
@@ -85,6 +93,16 @@ class App extends Component {
                 )}
               />
             ))}
+            {/* <Route
+              path={"/secretpath/galerie"}
+              render={props => (
+                <Gallery
+                  {...props}
+                  blogs={this.props.blogs}
+                  linkAppend="/secretpath/"
+                />
+              )}
+            /> */}
           </Switch>
         </React.Fragment>
       </Router>

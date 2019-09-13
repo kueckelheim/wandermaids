@@ -42,18 +42,19 @@ class Form extends Component {
     } else {
       const data = {
         title: this.props.formValues.title,
-        one_sentence_description: this.props.formValues
-          .one_sentence_description,
+        // one_sentence_description: this.props.formValues
+        // .one_sentence_description,
         short_description: this.props.formValues.short_description,
         country: this.props.formValues.country,
-        header_image: this.props.formValues.header_image,
-        header_image_label: this.props.formValues.header_image_label,
+        // header_image: this.props.formValues.header_image,
+        // header_image_label: this.props.formValues.header_image_label,
         date: this.props.formValues.date,
         coordinates: [
           this.props.formValues.coordinatesLongitude,
           this.props.formValues.coordinatesAltitude
         ],
-        main: this.props.formValues.main
+        main: this.props.formValues.main,
+        images: this.props.formValues.images
       };
       this.props.getValues(data, this.props.blogs);
     }
@@ -67,6 +68,16 @@ class Form extends Component {
     main[e.target.name].content = e.target.value;
     main[e.target.name].value = e.target.value;
     this.props.updateMain(main);
+  };
+  onChangeGalleryName = e => {
+    let images = this.props.formValues.images;
+    images[e.target.name].name = e.target.value;
+    this.props.updateImages(images);
+  };
+  onChangeGalleryCom = e => {
+    let images = this.props.formValues.images;
+    images[e.target.name].comment = e.target.value;
+    this.props.updateImages(images);
   };
   // onChangeImageLabel = e => {
   //   let main = this.props.formValues.main;
@@ -127,15 +138,15 @@ class Form extends Component {
           component="input"
           type="text"
           onChange={this.onChangeGalleryName}
-          value={x.value}
+          value={x.name}
         />
         <label htmlFor={index}>&nbsp;Bild Kommentar</label>
         <input
           name={index}
           component="input"
           type="text"
-          onChange={this.onChangeGalleryName}
-          value={x.value}
+          onChange={this.onChangeGalleryCom}
+          value={x.comment}
         />
       </div>
     ));
@@ -248,7 +259,7 @@ class Form extends Component {
               value={this.props.formValues.country}
             >
               <option value=" "> </option>
-              <option value="Asia">Asia</option>
+              <option value="Südostasien">Südostasien</option>
               <option value="Neuseeland">Neuseeland</option>
               <option value="Peru">Peru</option>
               <option value="USA">USA</option>

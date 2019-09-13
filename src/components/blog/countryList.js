@@ -28,7 +28,7 @@ class CountryList extends Component {
       canonical = (
         <link
           rel="canonical"
-          href={"https://www.meetsoutheast.com/" + this.props.country}
+          href={"https://www.wandermaidsontour.de/" + this.props.country}
         />
       );
     } else {
@@ -41,13 +41,18 @@ class CountryList extends Component {
           <title>{this.props.country}</title>
           <meta
             name="description"
-            content={"Meet South East: All blogs from " + this.props.country}
+            content={
+              "Wandermaidsontour: Alle Einträge über " + this.props.country
+            }
           />
           {canonical}
         </Helmet>
         <Header linkAppend={this.props.linkAppend} />
         <div className="countryList">
           <div className="container">
+            <h1 className="countryHeader">
+              {this.props.country.toUpperCase()}
+            </h1>
             <div className="imageWrapper">
               <img
                 src={
@@ -58,9 +63,6 @@ class CountryList extends Component {
                 }
                 alt={this.props.country}
               />
-              <h1 className="countryHeader">
-                {this.props.country.toUpperCase()}
-              </h1>
             </div>
             {countryBlogs.map(country => (
               <div className="blogEntry" key={country.title}>

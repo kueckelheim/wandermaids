@@ -96,8 +96,8 @@ class Home extends Component {
               </div>
               <div className="image">
                 <img
-                  src={process.env.PUBLIC_URL + "/image/Caro and Erik.jpg"}
-                  alt="Caro and Erik"
+                  src={process.env.PUBLIC_URL + "/image/Johannes und Anna.jpg"}
+                  alt="Wandermaids Johannes und Anna"
                 />
               </div>
             </div>

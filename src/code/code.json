@@ -3,7 +3,7 @@
     {
       "title": "Banaue and the Rice Terraces. Where the Hearth of the Philippines Lies",
       "short_description": "Stunning views, an exciting native culture, good food, and friendly locals. The small town Banaue, situated in the middle of the famous rice terraces, gave us truly unforgettable memories from the Philippines. Read further to find out how we ended up performing traditional Ifugao dances in front of the entire town.",
-      "country": "Philippines",
+      "country": "Neuseeland",
       "date": "April 29th, 2019",
       "coordinates": ["121.05249979", "16.906329708"],
       "main": [
@@ -180,6 +180,20 @@
           "type": "paragraph",
           "content": "Will it actually work? No clue. We might end up rebuying all the stuff we left behind on the way.",
           "value": "Will it actually work? No clue. We might end up rebuying all the stuff we left behind on the way."
+        }
+      ],
+      "images": [
+        {
+          "name": "El Nido off-the-beaten-track",
+          "comment": "Traditional Ifugao Hunting Technique With Darts Imbayah Festival Banaue"
+        },
+        {
+          "name": "Erlitop Garden budget accommodation in El Nido",
+          "comment": "Banaue Rice Fields Working Woman"
+        },
+        {
+          "name": "Monkeys crossing a street in Koh Lanta",
+          "comment": "Recruitment of Migrant Workers from the Philippines in Banaue"
         }
       ]
     }
