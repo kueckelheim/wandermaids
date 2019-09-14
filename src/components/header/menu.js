@@ -26,14 +26,14 @@ class Menu extends Component {
       this.setState({
         btnClass: "menu-btn close",
         showMenu: true,
-        overlayClass: "menu-overlay show animated lightSpeedIn",
+        overlayClass: "menu-overlay show animated slideInRight",
         searchClass: "search animated bounceInLeft"
       });
     } else {
       this.setState({
         btnClass: "menu-btn",
         showMenu: false,
-        overlayClass: "menu-overlay show animated bounceOutUp",
+        overlayClass: "menu-overlay show animated slideOutRight",
         searchClass: "search animated bounceOutLeft",
         countryOverlayClass: "countryOverlay"
       });
@@ -90,15 +90,53 @@ class Menu extends Component {
               <li>Home</li>
             </Link>
             <hr />
-            <li>Über Uns</li>
+            <Link
+              to={this.props.linkAppend + "ueber uns"}
+              className="link"
+              onClick={this.onLink}
+            >
+              <li>Über Uns</li>
+            </Link>
             <hr />
-            <li>Asien</li>
+            <Link
+              to={this.props.linkAppend + "suedostasien"}
+              className="link"
+              onClick={this.onLink}
+            >
+              <li>Asien</li>
+            </Link>
             <hr />
-            <li>Neuseeland</li>
+            <Link
+              to={this.props.linkAppend + "neuseeland"}
+              className="link"
+              onClick={this.onLink}
+            >
+              <li>Neuseeland</li>
+            </Link>
             <hr />
-            <li>Peru</li>
+            <Link
+              to={this.props.linkAppend + "peru"}
+              className="link"
+              onClick={this.onLink}
+            >
+              <li>Peru</li>
+            </Link>
             <hr />
-            <li>Galerie</li>
+            <Link
+              to={this.props.linkAppend + "usa"}
+              className="link"
+              onClick={this.onLink}
+            >
+              <li>USA</li>
+            </Link>
+            <hr />
+            <Link
+              to={this.props.linkAppend + "galerie"}
+              className="link"
+              onClick={this.onLink}
+            >
+              <li>Galerie</li>
+            </Link>
           </ul>
         </nav>
       </React.Fragment>

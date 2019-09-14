@@ -39,7 +39,6 @@ class Gallery extends Component {
   };
 
   render() {
-    console.log(this.state.imgSelect);
     let canonical = this.props.linkAppend === "/";
     if (!canonical) {
       canonical = (

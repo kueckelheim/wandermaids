@@ -6,12 +6,15 @@ import PropTypes from "prop-types";
 import Home from "./components/home/home";
 import Blog from "./components/blog/blog";
 import CountryList from "./components/blog/countryList";
+import About from "./components/about/about";
 import Gallery from "./components/gallery/gallery";
 import Policy from "./components/footer/policy";
 import Impressum from "./components/footer/impressum";
 import Secret from "./components/secret/secret";
 import SecretBlog from "./components/secret/secretblog";
+import SecretGallery from "./components/secret/secretgallery";
 import SecretCountryList from "./components/secret/secretcountrylist";
+import SecretAbout from "./components/secret/secretabout";
 
 import "./components/config/animate.min.css";
 import "./app.scss";
@@ -30,7 +33,7 @@ class App extends Component {
     // countries = countries.filter(el => {
     //   return el !== null && el !== "" && el !== " ";
     // });
-    const countries = ["Südostasien", "Peru", "Neuseeland", "USA"];
+    const countries = ["Suedostasien", "Peru", "Neuseeland", "USA"];
 
     return (
       <Router>
@@ -63,6 +66,10 @@ class App extends Component {
                 <Gallery {...props} blogs={this.props.blogs} linkAppend="/" />
               )}
             />
+            <Route
+              path={"/ueber uns"}
+              render={() => <About linkAppend="/" />}
+            />
             <Route path="/privacy policy" component={Policy} />
             <Route path="/impressum" component={Impressum} />
             {/* +++++++++++ "Admin" area +++++++++++++ */}
@@ -93,16 +100,22 @@ class App extends Component {
                 )}
               />
             ))}
-            {/* <Route
+            <Route
               path={"/secretpath/galerie"}
               render={props => (
-                <Gallery
+                <SecretGallery
                   {...props}
                   blogs={this.props.blogs}
                   linkAppend="/secretpath/"
                 />
               )}
-            /> */}
+            />
+            <Route
+              path={"/secretpath/ueber uns"}
+              render={props => (
+                <SecretAbout {...props} linkAppend="/secretpath/" />
+              )}
+            />
           </Switch>
         </React.Fragment>
       </Router>

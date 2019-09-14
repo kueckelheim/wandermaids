@@ -1,0 +1,189 @@
+.about {
+  .grid {
+    // set your height and width value, custom = full screen;
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    align-items: center;
+    justify-items: center;
+    .left {
+      height: 250px;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 500px;
+        -webkit-border-radius: 500px;
+        -moz-border-radius: 500px;
+        display: inline-block;
+        -ms-border-radius: 500px;
+        -o-border-radius: 500px;
+      }
+    }
+    .right {
+      height: 250px;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 500px;
+        -webkit-border-radius: 500px;
+        -moz-border-radius: 500px;
+        display: inline-block;
+        -ms-border-radius: 500px;
+        -o-border-radius: 500px;
+      }
+    }
+    .text {
+      padding: 25px;
+      padding-top: 40px;
+      padding-bottom: 0;
+      font-size: 23px;
+      h1 {
+        text-align: left;
+      }
+    }
+    .text.lower {
+      padding-top: 0;
+    }
+  }
+  .grid .left.one {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .grid .left.two {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .grid .left.three {
+    grid-row-start: 5;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .grid .text.upper {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 7;
+  }
+  .grid .text.lower {
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 7;
+  }
+  .grid .right.one {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 7;
+    grid-column-end: 9;
+  }
+  .grid .right.two {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 7;
+    grid-column-end: 9;
+  }
+  .grid .right.three {
+    grid-row-start: 5;
+    grid-row-end: 7;
+    grid-column-start: 7;
+    grid-column-end: 9;
+  }
+
+  @media (max-width: 1000px) {
+    .grid {
+      // set your height and width value, custom = full screen;
+      width: 100vw;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(6, 16.666666666666668%);
+    }
+    .grid .left.one {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .grid .left.two {
+      grid-row-start: 3;
+      grid-row-end: 5;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .grid .left.three {
+      grid-row-start: 5;
+      grid-row-end: 7;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .grid .text.upper {
+      grid-row-start: 1;
+      grid-row-end: 4;
+      grid-column-start: 3;
+      grid-column-end: 7;
+    }
+    .grid .text.lower {
+      grid-row-start: 4;
+      grid-row-end: 7;
+      grid-column-start: 3;
+      grid-column-end: 7;
+    }
+    .grid .right {
+      display: none;
+    }
+  }
+  @media (max-width: 800px) {
+    .grid {
+      // set your height and width value, custom = full screen;
+      width: 100vw;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(1, 100%);
+    }
+    .grid .text.upper {
+      grid-row-start: 1;
+      grid-row-end: 4;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    .grid .left.one {
+      grid-row-start: 4;
+      grid-row-end: 5;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    .grid .text.lower {
+      grid-row-start: 5;
+      grid-row-end: 8;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    .grid .left.two {
+      grid-row-start: 8;
+      grid-row-end: 9;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    .grid .left.three,
+    .grid .right {
+      display: none;
+    }
+  }
+  @media (min-width: 1250px) {
+    .grid {
+      .left {
+        padding-bottom: 30px;
+        padding-top: 30px;
+      }
+      .right {
+        padding-bottom: 30px;
+        padding-top: 30px;
+      }
+    }
+  }
+}

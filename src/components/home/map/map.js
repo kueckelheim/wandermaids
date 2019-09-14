@@ -11,7 +11,7 @@ import {
   ZoomableGroup,
   Geographies,
   Geography,
-  Annotation,
+  // Annotation,
   Markers,
   Marker
 } from "react-simple-maps";
@@ -409,7 +409,7 @@ class Map extends Component {
           {this.props.blogs.map((blog, i) => (
             <div className={classes[i].overlayClass} key={i}>
               <div className="overlayWrapper">
-                <img
+                {/* <img
                   src={
                     process.env.PUBLIC_URL +
                     "/image/" +
@@ -418,20 +418,18 @@ class Map extends Component {
                   }
                   alt={blog.header_image_label}
                   className="overlayImage"
-                />
+                /> */}
                 <div className="innerBox">
                   <h2 className="overlayTitle">{blog.title}</h2>
                   <div className="date">{blog.date}</div>
 
-                  <div className="linkWrapper">
-                    <Link
-                      to={this.props.linkAppend + blog.title}
-                      className="link"
-                      onClick={this.onLink}
-                    >
-                      Read it...
-                    </Link>
-                  </div>
+                  <Link
+                    to={this.props.linkAppend + blog.title}
+                    className="link"
+                    onClick={this.onLink}
+                  >
+                    <div className="linkWrapper">Zum Artikel...</div>
+                  </Link>
                 </div>
               </div>
             </div>

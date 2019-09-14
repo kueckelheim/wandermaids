@@ -1,11 +1,108 @@
 {
   "blogs": [
     {
-      "title": "Banaue and the Rice Terraces. Where the Hearth of the Philippines Lies",
-      "short_description": "Stunning views, an exciting native culture, good food, and friendly locals. The small town Banaue, situated in the middle of the famous rice terraces, gave us truly unforgettable memories from the Philippines. Read further to find out how we ended up performing traditional Ifugao dances in front of the entire town.",
+      "title": "wandermaids in südostasien",
+      "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?",
+      "country": "Suedostasien",
+      "date": "October 2nd, 2019",
+      "coordinates": ["105.8341598", "21.0277644"],
+      "main": [
+        {
+          "type": "paragraph",
+          "content": "<h3>Was bisher geschah</h3>",
+          "value": "<h3>Was bisher geschah</h3>"
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?"
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?"
+        },
+        {
+          "type": "paragraph",
+          "content": "<h3>Test wandermaids on tour</h3>",
+          "value": "<h3>Test wandermaids on tour</h3>"
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?"
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?"
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis amet accusamus culpa rerum eos voluptates numquam ipsam blanditiis ratione. Unde eum quo ducimus sit, officia nisi libero. Corporis, temporibus?"
+        }
+      ],
+      "images": [
+        { "name": "wandermaids eins", "comment": "test" },
+        { "name": "wandermaids zwei", "comment": "test" },
+        { "name": "wandermaids drei", "comment": "test" },
+        { "name": "wandermaids vier", "comment": "test" }
+      ]
+    },
+    {
+      "title": "wandermaids in neuseeland",
+      "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores.",
       "country": "Neuseeland",
-      "date": "April 29th, 2019",
-      "coordinates": ["121.05249979", "16.906329708"],
+      "date": "November 4th, 2019",
+      "coordinates": ["174.776236", "-41.286460"],
+      "main": [
+        {
+          "type": "paragraph",
+          "content": "<h3>Was bisher geschah</h3>",
+          "value": "<h3>Was bisher geschah</h3>"
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores.suscipit consequuntur eveniet ratione maiores.",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores.suscipit consequuntur eveniet ratione maiores."
+        },
+        {
+          "type": "paragraph",
+          "content": "<h3>Und dann</h3>",
+          "value": "<h3>Und dann</h3>"
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores.",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores."
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores.",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores."
+        },
+        {
+          "type": "paragraph",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores.",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequatur et voluptatum nostrum perferendis voluptates suscipit consequuntur eveniet ratione maiores."
+        }
+      ],
+      "images": [
+        { "name": "wandermaids eins", "comment": "kommentar" },
+        { "name": "wandermaids zwei", "comment": "text unter bild" },
+        { "name": "wandermaids drei", "comment": "text unter bild" },
+        { "name": "wandermaids vier", "comment": "text unter bild" },
+        { "name": "wandermaids fuenf", "comment": "text unter bild" },
+        { "name": "wandermaids sechs", "comment": "text unter bild" }
+      ]
+    },
+    {
+      "title": "wandermaids in den usa",
+      "short_description": "Stunning views, an exciting native culture, good food, and friendly locals. The small town Banaue, situated in the middle of the famous rice terraces, gave us truly unforgettable memories from the Philippines. Read further to find out how we ended up performing traditional Ifugao dances in front of the entire town.",
+      "country": "USA",
+      "date": "December 29th, 2019",
+      "coordinates": ["-74.015719", "40.709564"],
       "main": [
         {
           "type": "paragraph",
@@ -110,11 +207,11 @@
     },
 
     {
-      "title": "Here's the Plan - Four Months on a Budget and 10 Kilos in the Bag",
+      "title": "wandermaids in peru",
       "short_description": "Waiting has almost come to an end. In a few days we will be flying to Bangkok. There, our 4 month Southeast Asian adventure begins. But it has already been a long journey packed with planning and travel preparations.",
       "country": "",
       "date": "March 16th, 2019",
-      "coordinates": [0, 0],
+      "coordinates": [-77.042793, -12.046374],
       "main": [
         {
           "type": "paragraph",

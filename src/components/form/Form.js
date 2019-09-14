@@ -259,7 +259,7 @@ class Form extends Component {
               value={this.props.formValues.country}
             >
               <option value=" "> </option>
-              <option value="Südostasien">Südostasien</option>
+              <option value="Suedostasien">Südostasien</option>
               <option value="Neuseeland">Neuseeland</option>
               <option value="Peru">Peru</option>
               <option value="USA">USA</option>
