@@ -6,31 +6,38 @@
   position: relative;
   text-align: center;
 }
-.countryList .imageWrapper .countryHeader {
-  font-size: 4vw;
-  position: absolute;
-  top: 1vh;
-  left: 1vw;
+.countryList .countryHeader {
   background: rgba(253, 253, 255, 0.74);
-  padding: 1vw;
+  font-family: $headline;
+  font-size: 55px;
+  padding-bottom: 10px;
+}
+@media (max-width: 1000px) {
+  .countryList .countryHeader {
+    font-size: 35px;
+  }
 }
 
 .countryList .imageWrapper img {
   width: 100%;
   height: auto;
 }
-
+.countryList .blogEntry {
+  font-family: $main;
+}
 .countryList .blogEntry .link {
   text-decoration: none;
   color: $secondary-color;
 }
 .countryList .blogEntry h2 {
   margin-bottom: 0;
+  font-family: $headline;
 }
 .countryList .blogEntry h2:hover {
   color: lighten($secondary-color, 50%);
 }
 .countryList .blogEntry .date {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: $date;
   font-size: 15px;
+  text-align: right;
 }

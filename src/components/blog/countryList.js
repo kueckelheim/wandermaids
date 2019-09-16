@@ -74,8 +74,8 @@ class CountryList extends Component {
                   >
                     <h2>{country.title}</h2>
                   </Link>
-                  <div className="date">{country.date}</div>
                   <p>{country.short_description}</p>
+                  <div className="date">{country.date}</div>
                 </div>
                 <hr />
               </div>

@@ -1,5 +1,10 @@
 // Colors
 $primary-color: #fdfdff;
-$secondary-color: #2b2d42;
-$third-color: #f8f32b;
-$fourth-color: grey;
+$secondary-color: lighten(#2b2d42, 0%);
+$third-color: #fdfdff;
+$fourth-color: lighten(#2b2d42, 0%);
+
+// fonts
+$headline: "Montserrat", sans-serif;
+$main: "Merriweather", serif;
+$date: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;

@@ -113,9 +113,13 @@ class Blog extends Component {
         <Header linkAppend={this.props.linkAppend} />
         <div className="Blog">
           <div className="container">
-            <h1>{this.props.blog.title}</h1>
+            <h1 className="title">{this.props.blog.title}</h1>
             <hr />
-            <div className="date">{this.props.blog.date}</div>
+            <div className="charWrapper">
+              <div className="country">{this.props.blog.country}</div>
+              <div className="date">{this.props.blog.date}</div>
+            </div>
+            <p></p>
             <hr />
             <p>{this.props.blog.short_description}</p>
 

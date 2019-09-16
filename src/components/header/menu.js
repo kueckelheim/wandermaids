@@ -97,13 +97,13 @@ class Menu extends Component {
             >
               <li>Über Uns</li>
             </Link>
-            <hr />
+            {/* <hr />
             <Link
               to={this.props.linkAppend + "suedostasien"}
               className="link"
               onClick={this.onLink}
             >
-              <li>Asien</li>
+              <li>Südostasien</li>
             </Link>
             <hr />
             <Link
@@ -128,7 +128,7 @@ class Menu extends Component {
               onClick={this.onLink}
             >
               <li>USA</li>
-            </Link>
+            </Link> */}
             <hr />
             <Link
               to={this.props.linkAppend + "galerie"}

@@ -11,7 +11,9 @@ import {
   ZoomableGroup,
   Geographies,
   Geography,
-  // Annotation,
+  Lines,
+  Line,
+  Annotation,
   Markers,
   Marker
 } from "react-simple-maps";
@@ -25,7 +27,7 @@ class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      center: [28.5, 0],
+      center: [28.5, 4],
       zoom: 0.103,
       days: "",
       hours: ""
@@ -69,7 +71,7 @@ class Map extends Component {
                   rotation: this.state.rotation
                 }}
                 width={820}
-                height={339}
+                height={359}
                 className="mapFrame"
               >
                 <ZoomableGroup
@@ -322,46 +324,97 @@ class Map extends Component {
                       )
                     }
                   </Geographies>
-                  {/* Labeling Cambodia */}
-                  {/* <Annotation
+                  {/* Germany shapes */}
+                  <Geographies geography={require("./maps/germany.json")}>
+                    {(geographies, projection) =>
+                      geographies.map(
+                        (geography, i) =>
+                          geography.id !== "ATA" && (
+                            <Geography
+                              key={i}
+                              geography={geography}
+                              projection={projection}
+                              style={{
+                                default: {
+                                  fill: "#b3ffb3",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                },
+                                hover: {
+                                  fill: "#b3ffb3",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                },
+                                pressed: {
+                                  fill: "#b3ffb3",
+                                  stroke: "#607D8B",
+                                  strokeWidth: 0.65,
+                                  outline: "none"
+                                }
+                              }}
+                            />
+                          )
+                      )
+                    }
+                  </Geographies>
+
+                  <Annotation
+                    dx={-258}
+                    dy={-100}
+                    subject={[105.84117, 21.0245]}
+                    strokeWidth={4}
+                    curve={0.5}
+                    style={{ strokeDasharray: 50 }}
+                    stroke="#000033"
+                  ></Annotation>
+                  <Annotation
+                    dx={155}
+                    dy={172}
+                    subject={[106.660172, 10.762622]}
+                    strokeWidth={4}
+                    curve={0.5}
+                    style={{ strokeDasharray: 50 }}
+                    stroke="#000033"
+                  ></Annotation>
+                  <Annotation
+                    dx={155}
+                    dy={-102}
+                    subject={[174.763336, -36.848461]}
+                    strokeWidth={4}
+                    curve={0.5}
+                    style={{ strokeDasharray: 50 }}
+                    stroke="#000033"
+                  ></Annotation>
+                  <Annotation
+                    dx={-205}
+                    dy={122}
+                    subject={[-77.042793, -12.046374]}
+                    strokeWidth={4}
+                    curve={-0.5}
+                    style={{ strokeDasharray: 50 }}
+                    stroke="#000033"
+                  ></Annotation>
+                  <Annotation
                     dx={-20}
-                    dy={24}
-                    subject={[103.8684384, 11.7996671]}
-                    strokeWidth={2}
-                    stroke="#607D8B"
-                  >
-                    <text>{"Cambodia"}</text>
-                  </Annotation>
-                  Labeling Laos */}
-                  {/* <Annotation
-                    dx={-30}
-                    dy={-4}
-                    subject={[100.8684384, 20.7996671]}
-                    strokeWidth={10}
-                    stroke="#607D8B"
-                  >
-                    <text>{"Laos"}</text>
-                  </Annotation>
-                  Labeling Vietnam */}
-                  {/* <Annotation
-                    dx={30}
-                    dy={-4}
-                    subject={[108.2684384, 15.7996671]}
-                    strokeWidth={1}
-                    stroke="#607D8B"
-                  >
-                    <text>{"Vietnam"}</text>
-                  </Annotation>
-                  Labeling the Philippines */}
-                  {/* <Annotation
-                    dx={60}
-                    dy={-18}
-                    subject={[127.2684384, 8.7996671]}
-                    strokeWidth={1}
-                    stroke="#607D8B"
-                  >
-                    <text>{"Philippines"}</text>
-                  </Annotation> */}
+                    dy={-150}
+                    subject={[-77.042793, -7.046374]}
+                    strokeWidth={4}
+                    curve={0.5}
+                    style={{ strokeDasharray: 50 }}
+                    stroke="#000033"
+                  ></Annotation>
+                  <Annotation
+                    dx={245}
+                    dy={-30}
+                    subject={[-87.623177, 41.881832]}
+                    strokeWidth={4}
+                    curve={0.5}
+                    style={{ strokeDasharray: 50 }}
+                    stroke="#000033"
+                  ></Annotation>
+
                   {/*   Add clickable Markers for each blog entry with coordinates */}
                   <Markers>
                     {markers.map((marker, i) => (

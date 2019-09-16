@@ -1,4 +1,8 @@
+@import "../config/config.scss";
+
 .about {
+  font-family: $headline;
+  color: $secondary-color;
   .grid {
     // set your height and width value, custom = full screen;
     width: 100vw;
@@ -37,9 +41,10 @@
       padding: 25px;
       padding-top: 40px;
       padding-bottom: 0;
-      font-size: 23px;
-      h1 {
-        text-align: left;
+      font-size: 20px;
+      .signature {
+        font-family: "Dancing Script", cursive;
+        font-size: 28px;
       }
     }
     .text.lower {

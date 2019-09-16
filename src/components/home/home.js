@@ -37,8 +37,7 @@ class Home extends Component {
         ((distanceAsia * (1000 * 60 * 60 * 24)) % (1000 * 60 * 60 * 24)) /
           (1000 * 60 * 60)
       );
-      const country =
-        "Unsere Reise beginnt in " + days + " Tagen und " + hours + " Stunden.";
+      const country = "Start in " + days + " Tagen und " + hours + " Stunden.";
       this.setState({ country: country });
     }
     if (distanceAsia < 0 && distanceAsia >= -26) {
@@ -85,14 +84,28 @@ class Home extends Component {
           <div className="profileWrapper">
             <div className="container">
               <div className="description">
-                <h1>In 91 Tagen um die Welt</h1>
+                <h1 className="headline">In 91 Tagen um die Welt</h1>
                 <span className="hashTag">#wandermaidsontour </span>
                 <span className="hashTag">#in91TagenumdieWelt</span>
+                <p>Hallo, wir sind die Wandermaids!</p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore aliquid repellendus dicta hic, alias totam earum
-                  aliquam magni voluptatem velit!
+                  Wie die meisten von euch sicher wissen, haben wir beide im
+                  Frühjahr unser Studium beendet. Bevor Anna im Februar ihr
+                  Referendariat startet und es Johannes für sechs Monate nach
+                  Stockholm verschlägt, nehmen wir uns eine dreimonatige
+                  Auszeit.
                 </p>
+                <p>
+                  Unsere Route führt uns durch Südostasien, Neuseeland und Peru
+                  und endet bei Annas Freundin Leyla in Indiana, bei der wir
+                  Weihnachten verbringen werden.
+                </p>
+                <p>
+                  Wir freuen uns, dass ihr unsere Reise verfolgt und versuchen
+                  natürlich, euch regelmäßig auf dem Laufenden zu halten.
+                </p>
+                <p>Liebste Grüße von den Wandermaids,</p>
+                <p className="signature">Anna &#38; Johannes</p>
               </div>
               <div className="image">
                 <img
@@ -114,8 +127,9 @@ class Home extends Component {
                   >
                     <h2>{blog.title}</h2>
                   </Link>
-                  <div className="date">{blog.date}</div>
+                  <div className="country">{blog.country}</div>
                   <p>{blog.short_description}</p>
+                  <div className="date">{blog.date}</div>
                 </div>
                 <hr />
               </div>

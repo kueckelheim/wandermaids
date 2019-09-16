@@ -27,10 +27,8 @@ class Header extends Component {
               className="link"
               onClick={this.onLink}
             >
-              <div>WANDERMAIDS</div>
-              <div>
-                <span>ON </span>TOUR
-              </div>
+              <span>Wandermaids&nbsp;</span>
+              <span>On </span>Tour
             </Link>
           </div>
         </div>

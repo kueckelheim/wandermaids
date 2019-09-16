@@ -1,1 +1,4 @@
 -overflow menu
+-pictures not shown in secretpath
+-overflow homepage secretpath blocked
+-blogeintrag ganz oben welches land

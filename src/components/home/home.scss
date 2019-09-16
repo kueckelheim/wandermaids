@@ -73,7 +73,7 @@
   height: 100%;
   background: rgba(253, 253, 255, 1);
   color: $secondary-color;
-  font-family: "Oswald", sans-serif;
+  font-family: $main;
   z-index: 2;
 }
 .mapOverlay .overlayWrapper .innerBox h2 {
@@ -112,7 +112,7 @@
 // Filler
 main .filler {
   width: 100%;
-  font-family: "Oswald", sans-serif;
+  font-family: $date;
   height: 80px;
   text-align: center;
   vertical-align: center;
@@ -149,9 +149,10 @@ main .profileWrapper .container {
   width: 80%;
   background: lighten(gray, 45%);
 }
-main .profileWrapper .description .hashTag {
-  // font-size: 17px;
-  color: black;
+
+main .profileWrapper .description .signature {
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
 }
 @media (max-width: 840px) {
   main .profileWrapper .container {
@@ -162,22 +163,25 @@ main .profileWrapper .description .hashTag {
   main .profileWrapper .image {
     height: 50vh;
   }
-  main .profileWrapper .description p {
-    margin: 0;
-  }
+  // main .profileWrapper .description p {
+  //   margin: 0;
+  // }
   main .profileWrapper .image {
     padding-top: 0;
   }
 }
 main .profileWrapper .description {
   font-size: 18px;
-  font-family: "Montserrat", sans-serif;
+  font-family: $headline;
   margin-top: 20px;
   margin-bottom: 28px;
 }
 main .profileWrapper .description h1 {
   margin-top: 10px;
-  font-family: "Oswald", sans-serif;
+  font-family: $main;
+}
+main .profileWrapper .description .hashTag {
+  font-family: $main;
 }
 main .profileWrapper .image {
   display: grid;
@@ -214,12 +218,14 @@ main .profileWrapper .image img::before {
   color: $secondary-color;
 }
 .Home .blogEntry h2 {
-  margin-bottom: 0;
+  margin-bottom: 2px;
+  font-family: $headline;
 }
 .Home .blogEntry h2:hover {
   color: lighten($secondary-color, 50%);
 }
 .Home .blogEntry .date {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: $date;
   font-size: 15px;
+  text-align: right;
 }

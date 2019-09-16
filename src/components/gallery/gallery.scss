@@ -1,3 +1,17 @@
+@import "../config/config.scss";
+
+.gal .container h1 {
+  background: rgba(253, 253, 255, 0.74);
+  font-family: $headline;
+  font-size: 55px;
+  padding-bottom: 10px;
+}
+@media (max-width: 1000px) {
+  .gal .container h1 {
+    font-size: 35px;
+  }
+}
+
 .gal .gallery {
   display: grid;
   grid-gap: 20px;

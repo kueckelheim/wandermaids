@@ -1,3 +1,6 @@
+# transform created shapefiles into svg files on https://mapshaper.org/
+# export as topo json
+
 rm(list = ls())
 setwd("C:\\Users\\EK\\Documents\\web\\wandermaids\\shapefiles")
 
@@ -42,11 +45,12 @@ p.df$country[82] <- "Peru"
 p.df$country[94] <- "New Zealand"
 p.df$country[17] <- "USA"
 p.df$country[128] <- "Laos"
+p.df$country[157] <- "Germany"
 
 # Try coersion again and check class
 country2 <- SpatialPolygonsDataFrame(countries, p.df)
 
-test <- country2[which(country2$country=="Laos"),]
+test <- country2[which(country2$country=="Germany"),]
 plot(test)
 
 # writeOGR(asia2, "C:\\Users\\EK\\Documents\\web\\react\\blog\\shapefiles", "asia_frame", driver="ESRI Shapefile")
@@ -57,6 +61,7 @@ laos <- country2[which(country2$country=="Laos"),]
 peru <- country2[which(country2$country=="Peru"),]
 new_zealand <- country2[which(country2$country=="New Zealand"),]
 usa <- country2[which(country2$country=="USA"),]
+ger <- country2[which(country2$country=="Germany"),]
 
 
 writeOGR(vietnam, "C:\\Users\\EK\\Documents\\web\\wandermaids\\shapefiles", "vietnam", driver="ESRI Shapefile")
@@ -64,3 +69,4 @@ writeOGR(laos, "C:\\Users\\EK\\Documents\\web\\wandermaids\\shapefiles", "laos",
 writeOGR(peru, "C:\\Users\\EK\\Documents\\web\\wandermaids\\shapefiles", "peru", driver="ESRI Shapefile")
 writeOGR(new_zealand, "C:\\Users\\EK\\Documents\\web\\wandermaids\\shapefiles", "new_zealand", driver="ESRI Shapefile")
 writeOGR(usa, "C:\\Users\\EK\\Documents\\web\\wandermaids\\shapefiles", "usa", driver="ESRI Shapefile")
+writeOGR(ger, "C:\\Users\\EK\\Documents\\web\\wandermaids\\shapefiles", "germany", driver="ESRI Shapefile")
