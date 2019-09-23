@@ -72,7 +72,7 @@ class Home extends Component {
       <div className="Home">
         <Helmet>
           <title>wandermaidsontour</title>
-          <meta name="description" content="" />
+          <meta name="description" content="In 91 Tagen um die Welt" />
           {canonical}
         </Helmet>
         <Header linkAppend={this.props.linkAppend} />
@@ -84,7 +84,11 @@ class Home extends Component {
           <div className="profileWrapper">
             <div className="container">
               <div className="description">
-                <h1 className="headline">In 91 Tagen um die Welt</h1>
+                <h1 className="headline">
+                  In 91 Tagen um die Welt. Unsere Route führt uns durch
+                  Südostasien, Neuseeland und Peru und endet bei Annas Freundin
+                  Leyla in Indiana, bei der wir Weihnachten verbringen werden.
+                </h1>
                 <span className="hashTag">#wandermaidsontour </span>
                 <span className="hashTag">#in91TagenumdieWelt</span>
                 <p>Hallo, wir sind die Wandermaids!</p>

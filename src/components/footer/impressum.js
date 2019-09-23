@@ -19,47 +19,30 @@ class Impressum extends Component {
         <div className="Impressum">
           <div className="container">
             <h4>Impressum</h4>
-            <p>
-              The following information (Impressum) is required under German
-              law:
-            </p>
+            <p>Verantwortlich für den Inhalt dieser Seite:</p>
             <ul>
-              <li>Erik Kückelheim</li>
+              <li>Johannes Eckert und Anna Rudmann</li>
               <ul>
-                <li>Pforrgasse 7</li>
-                <li>79206 Breisach</li>
-                <li>Germany</li>
+                <li>Moltkestraße 19</li>
+                <li>79098 Freiburg</li>
+                <li>Deutschland</li>
               </ul>
-              <li>E-Mail: info@meetsoutheast.com</li>
-              <li>Phone: +55 11 96644-4270</li>
-              <li>
-                Verantwortlicher im Sinne des Presserechts (V.i.S.d.P.): Erik
-                Kückelheim
-              </li>
+              <li>E-Mail: johnny0815@gmx.de</li>
+              <li>Phone: +49 1769 3176738</li>
             </ul>
             <p>
-              Online Dispute Resolution website of the EU Commission In order
-              for consumers and traders to resolve a dispute out-of-court, the
-              European Commission developed the Online Dispute Resolution
-              Website:{" "}
+              Die EU-Kommission bietet eine Plattform zur Online-Streitbeilegung
+              zwischen Verbrauchern und Unternehmern an, die Sie unter folgendem
+              Link erreichen:{" "}
               <a
                 href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage"
                 rel="nofollow"
               >
-                Online Dispute Resolution Website
+                Online-Streitbeilegung Website
               </a>
               .
             </p>
-            <h4>Legal Disclaimer</h4>
-            <p>
-              The contents of these pages were prepared with utmost care.
-              Nonetheless, we cannot assume liability for the timeless accuracy
-              and completeness of the information. Our website contains links to
-              external websites. As the contents of these third-party websites
-              are beyond our control, we cannot accept liability for them.
-              Responsibility for the contents of the linked pages is always held
-              by the provider or operator of the pages.
-            </p>
+
             <div className="source">
               <p>
                 Source:

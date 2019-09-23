@@ -162,13 +162,17 @@ main .profileWrapper .description .signature {
   }
   main .profileWrapper .image {
     height: 50vh;
+    padding-top: 0;
+    margin: 0;
   }
+  main .profileWrapper .description .signature {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
   // main .profileWrapper .description p {
   //   margin: 0;
   // }
-  main .profileWrapper .image {
-    padding-top: 0;
-  }
 }
 main .profileWrapper .description {
   font-size: 18px;

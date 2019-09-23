@@ -53,18 +53,52 @@ class Gallery extends Component {
 
     // Get all images
     let images = this.props.blogs.map(x => x.images).flat();
-    const gallery = images.map((x, index) => (
-      <div className="imageCont" key={index}>
-        <img
-          src={process.env.PUBLIC_URL + "/image/" + x.name + ".jpg"}
-          alt={x.comment}
-          className="blogImage"
-          name={index}
-          onClick={this.onClickImg}
-        />
-        {/* <div className="commentImg">{x.comment}</div> */}
-      </div>
-    ));
+    let gallery;
+    if (this.props.blogs.length !== 0) {
+      gallery = images.map((x, index) => (
+        <div className="imageCont" key={index}>
+          <img
+            src={process.env.PUBLIC_URL + "/image/" + x.name + ".jpg"}
+            alt={x.comment}
+            className="blogImage"
+            name={index}
+            onClick={this.onClickImg}
+          />
+          {/* <div className="commentImg">{x.comment}</div> */}
+        </div>
+      ));
+    }
+    let overlay;
+    if (this.props.blogs.length !== 0) {
+      overlay = (
+        <div className={this.state.overlayClass}>
+          <div className="image">
+            <img
+              src={
+                process.env.PUBLIC_URL +
+                "/image/" +
+                images[this.state.imgSelect].name +
+                ".jpg"
+              }
+              className="blogImage"
+            />
+            <div className="text">{images[this.state.imgSelect].comment}</div>
+          </div>
+          <div className="arrowLeft" onClick={this.onLeft}>
+            <div className="left" />
+          </div>
+          <div className="arrowRight">
+            <div className="right" onClick={this.onRight} />
+          </div>
+          <div className="close" onClick={this.onClose}>
+            zurück
+          </div>
+          <div className="count">
+            {Number(this.state.imgSelect) + 1}/{images.length}
+          </div>
+        </div>
+      );
+    }
     return (
       <div className="gal">
         <Helmet>
@@ -80,32 +114,7 @@ class Gallery extends Component {
           <h1>Galerie</h1>
           <p />
           <div className="gallery">{gallery}</div>
-          <div className={this.state.overlayClass}>
-            <div className="image">
-              <img
-                src={
-                  process.env.PUBLIC_URL +
-                  "/image/" +
-                  images[this.state.imgSelect].name +
-                  ".jpg"
-                }
-                className="blogImage"
-              />
-              <div className="text">{images[this.state.imgSelect].comment}</div>
-            </div>
-            <div className="arrowLeft" onClick={this.onLeft}>
-              <div className="left" />
-            </div>
-            <div className="arrowRight">
-              <div className="right" onClick={this.onRight} />
-            </div>
-            <div className="close" onClick={this.onClose}>
-              zurück
-            </div>
-            <div className="count">
-              {Number(this.state.imgSelect) + 1}/{images.length}
-            </div>
-          </div>
+          {overlay}
           <p />
         </div>
         <Footer />

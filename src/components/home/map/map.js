@@ -126,19 +126,19 @@ class Map extends Component {
                               projection={projection}
                               style={{
                                 default: {
-                                  fill: "#f3d8c5",
+                                  fill: "#bbd8b9",
                                   stroke: "#607D8B",
                                   strokeWidth: 0.65,
                                   outline: "none"
                                 },
                                 hover: {
-                                  fill: "#f3d8c5",
+                                  fill: "#bbd8b9",
                                   stroke: "#607D8B",
                                   strokeWidth: 0.65,
                                   outline: "none"
                                 },
                                 pressed: {
-                                  fill: "#f3d8c5",
+                                  fill: "#bbd8b9",
                                   stroke: "#607D8B",
                                   strokeWidth: 0.65,
                                   outline: "none"
@@ -150,7 +150,7 @@ class Map extends Component {
                     }
                   </Geographies>
                   {/* Laos shapes */}
-                  <Geographies geography={require("./maps/laos.json")}>
+                  {/* <Geographies geography={require("./maps/laos.json")}>
                     {(geographies, projection) =>
                       geographies.map(
                         (geography, i) =>
@@ -183,7 +183,7 @@ class Map extends Component {
                           )
                       )
                     }
-                  </Geographies>
+                  </Geographies> */}
                   {/* Vietnam shapes */}
                   <Geographies geography={require("./maps/vietnam.json")}>
                     {(geographies, projection) =>
@@ -365,7 +365,7 @@ class Map extends Component {
                     dy={-100}
                     subject={[105.84117, 21.0245]}
                     strokeWidth={4}
-                    curve={0.5}
+                    curve={-0.3}
                     style={{ strokeDasharray: 50 }}
                     stroke="#000033"
                   ></Annotation>
@@ -410,7 +410,7 @@ class Map extends Component {
                     dy={-30}
                     subject={[-87.623177, 41.881832]}
                     strokeWidth={4}
-                    curve={0.5}
+                    curve={0.9}
                     style={{ strokeDasharray: 50 }}
                     stroke="#000033"
                   ></Annotation>

@@ -4,19 +4,18 @@ import Menu from "./menu";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-import CookieConsent from "react-cookie-consent";
+// import CookieConsent from "react-cookie-consent";
 
 class Header extends Component {
-  state = {};
   render() {
     return (
       <header>
-        <CookieConsent>
+        {/* <CookieConsent>
           This website uses cookies to enhance the user experience. &nbsp;
           <HashLink to="/privacy policy#cookies" className="link">
             Read more information.
           </HashLink>
-        </CookieConsent>
+        </CookieConsent> */}
         {/* <div className="upper">Backpacking in Southeast Asia</div> */}
         <div className="logo">
           <Menu linkAppend={this.props.linkAppend} />
@@ -27,8 +26,10 @@ class Header extends Component {
               className="link"
               onClick={this.onLink}
             >
-              <span>Wandermaids&nbsp;</span>
-              <span>On </span>Tour
+              <div>WANDERMAIDS</div>
+              <div>
+                <span>ON </span>TOUR
+              </div>
             </Link>
           </div>
         </div>

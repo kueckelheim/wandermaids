@@ -18,24 +18,24 @@ header {
 header .logo {
   color: $third-color;
   padding-left: 15px;
-  padding-top: 4px;
-  padding-bottom: 13px;
-  font-size: 40px;
+  padding-top: 6px;
+  padding-bottom: 9px;
+  font-size: 20px;
   position: relative;
-  font-family: "Dancing Script", cursive;
+  font-family: $main;
 }
-@media (max-width: 500px) {
-  header .logo {
-    font-size: 30px;
-    line-height: 50px;
-  }
-}
-@media (max-width: 350px) {
-  header .logo {
-    font-size: 20px;
-    line-height: 60px;
-  }
-}
+// @media (max-width: 500px) {
+//   header .logo {
+//     font-size: 30px;
+//     line-height: 50px;
+//   }
+// }
+// @media (max-width: 350px) {
+//   header .logo {
+//     font-size: 20px;
+//     line-height: 60px;
+//   }
+// }
 header .logo .wrapper {
   display: inline-block;
 }

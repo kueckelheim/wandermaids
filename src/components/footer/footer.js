@@ -11,8 +11,12 @@ class Footer extends Component {
       <footer>
         <p>Copyright &copy; 2019</p>
         <p>
-          <Link to="/privacy policy" className="link" onClick={this.onLink}>
-            Privacy Policy
+          <Link
+            to="/datenschutzerklaerung"
+            className="link"
+            onClick={this.onLink}
+          >
+            Datenschutzerklärung
           </Link>
         </p>
         <p>

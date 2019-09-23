@@ -70,7 +70,7 @@ class App extends Component {
               path={"/ueber uns"}
               render={() => <About linkAppend="/" />}
             />
-            <Route path="/privacy policy" component={Policy} />
+            <Route path="/datenschutzerklaerung" component={Policy} />
             <Route path="/impressum" component={Impressum} />
             {/* +++++++++++ "Admin" area +++++++++++++ */}
             <Route exact path="/secretpath/" component={Secret} />
