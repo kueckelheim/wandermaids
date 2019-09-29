@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./header.scss";
 import Menu from "./menu";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+// import { HashLink } from "react-router-hash-link";
 
 // import CookieConsent from "react-cookie-consent";
 

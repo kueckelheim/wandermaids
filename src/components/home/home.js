@@ -72,7 +72,12 @@ class Home extends Component {
       <div className="Home">
         <Helmet>
           <title>wandermaidsontour</title>
-          <meta name="description" content="In 91 Tagen um die Welt" />
+          <meta
+            name="description"
+            content="In 91 Tagen um die Welt. Unsere Route führt uns durch
+                  Südostasien, Neuseeland und Peru und endet bei Annas Freundin
+                  Leyla in Indiana, bei der wir Weihnachten verbringen werden."
+          />
           {canonical}
         </Helmet>
         <Header linkAppend={this.props.linkAppend} />
@@ -84,13 +89,21 @@ class Home extends Component {
           <div className="profileWrapper">
             <div className="container">
               <div className="description">
-                <h1 className="headline">
-                  In 91 Tagen um die Welt. Unsere Route führt uns durch
-                  Südostasien, Neuseeland und Peru und endet bei Annas Freundin
-                  Leyla in Indiana, bei der wir Weihnachten verbringen werden.
-                </h1>
-                <span className="hashTag">#wandermaidsontour </span>
-                <span className="hashTag">#in91TagenumdieWelt</span>
+                <h1 className="headline">In 91 Tagen um die Welt.</h1>
+                <div className="insta">
+                  <div className="symbol">
+                    <img
+                      src={
+                        process.env.PUBLIC_URL + "/image/glyph-logo_May2016.png"
+                      }
+                      alt="Instagram tag"
+                    />
+                  </div>
+                  <div className="hash">
+                    <span className="hashTag">#wandermaidsontour </span>
+                    <span className="hashTag">#in91TagenumdieWelt</span>
+                  </div>
+                </div>
                 <p>Hallo, wir sind die Wandermaids!</p>
                 <p>
                   Wie die meisten von euch sicher wissen, haben wir beide im
