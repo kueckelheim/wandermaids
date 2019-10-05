@@ -1,6 +1,105 @@
 {
   "blogs": [
     {
+      "title": "Auf Schnuppertour in Hanoi",
+      "short_description": "Unsere ersten 2 Tage haben wir in Hanoi verbracht. Unser Zimmer war einigermaßen sauber und der nächtliche Regen auf das Wellblechdach hatte nach ein bisschen Eingewöhnung etwas Einschläferndes.",
+      "country": "Suedostasien",
+      "date": "5.10.19",
+      "coordinates": ["106.604817", "21.628511"],
+      "main": [
+        {
+          "type": "paragraph",
+          "content": "Hanoi haben wir fast ausschließlich zu Fuß erkundet und unter anderem eine food tour gemacht. Dabei haben wir Rindfleischsalate, Banh Mi (Subway Sandwiches, nur vietnamesisch und viel besser!) und süße Desserts mit egg coffee probiert. Nach Sonnenuntergang haben wir die berühmte und wunderschöne Bahnlinie Hanois inmitten von Häusern angeschaut. Die typisch platt gewalzten Bierdeckel Souvenirs gab es gratis.",
+          "value": "Hanoi haben wir fast ausschließlich zu Fuß erkundet und unter anderem eine food tour gemacht. Dabei haben wir Rindfleischsalate, Banh Mi (Subway Sandwiches, nur vietnamesisch und viel besser!) und süße Desserts mit egg coffee probiert. Nach Sonnenuntergang haben wir die berühmte und wunderschöne Bahnlinie Hanois inmitten von Häusern angeschaut. Die typisch platt gewalzten Bierdeckel Souvenirs gab es gratis."
+        },
+        {
+          "type": "paragraph",
+          "content": "Wir wollten auch Ho Chi Minh noch einen Besuch in seinem Mausoleum abstatten, aber leider ist er um die Jahreszeit auf Reisen im Mutterland des Sozialismus um frisch einbalsamiert zu werden. Für den Weg dorthin haben wir das Uber Pendant „Grab\" benutzt und bis jetzt durchweg gute Erfahrungen gemacht. Nach endlosem Gewatschle durch die Altstadt zu einigen Sehenswürdigkeiten war unsere Zeit in Hanoi schon wieder zu Ende und es geht weiter an die Küste und in den Norden. ",
+          "value": "Wir wollten auch Ho Chi Minh noch einen Besuch in seinem Mausoleum abstatten, aber leider ist er um die Jahreszeit auf Reisen im Mutterland des Sozialismus um frisch einbalsamiert zu werden. Für den Weg dorthin haben wir das Uber Pendant „Grab\" benutzt und bis jetzt durchweg gute Erfahrungen gemacht. Nach endlosem Gewatschle durch die Altstadt zu einigen Sehenswürdigkeiten war unsere Zeit in Hanoi schon wieder zu Ende und es geht weiter an die Küste und in den Norden. "
+        },
+        {
+          "type": "paragraph",
+          "content": "Liebste Grüße von den Wandermaids,",
+          "value": "Liebste Grüße von den Wandermaids,"
+        },
+        {
+          "type": "paragraph",
+          "content": "Anna und Johannes",
+          "value": "Anna und Johannes"
+        }
+      ],
+      "images": [
+        {
+          "name": "Foto 03.10.19, 10 35 47",
+          "comment": "Foto 03.10.19, 10 35 47"
+        },
+        {
+          "name": "Foto 03.10.19, 10 54 03",
+          "comment": "Foto 03.10.19, 10 54 03"
+        },
+        {
+          "name": "Foto 03.10.19, 12 13 01",
+          "comment": "Foto 03.10.19, 12 13 01"
+        },
+        {
+          "name": "Foto 03.10.19, 12 14 45",
+          "comment": "Foto 03.10.19, 12 14 45"
+        },
+        {
+          "name": "Foto 03.10.19, 13 46 54",
+          "comment": "Foto 03.10.19, 13 46 54"
+        },
+        {
+          "name": "Foto 03.10.19, 14 07 16",
+          "comment": "Foto 03.10.19, 14 07 16"
+        },
+        {
+          "name": "Foto 03.10.19, 14 07 49",
+          "comment": "Foto 03.10.19, 14 07 49"
+        },
+        {
+          "name": "Foto 03.10.19, 16 44 04",
+          "comment": "Foto 03.10.19, 16 44 04"
+        },
+        {
+          "name": "Foto 03.10.19, 17 21 38",
+          "comment": "Foto 03.10.19, 17 21 38"
+        },
+        {
+          "name": "Foto 03.10.19, 17 43 46",
+          "comment": "Foto 03.10.19, 17 43 46"
+        },
+        {
+          "name": "Foto 04.10.19, 08 44 49",
+          "comment": "Foto 04.10.19, 08 44 49"
+        },
+        {
+          "name": "Foto 04.10.19, 09 19 53",
+          "comment": "Foto 04.10.19, 09 19 53"
+        },
+        {
+          "name": "Foto 04.10.19, 09 28 21",
+          "comment": "Foto 04.10.19, 09 28 21"
+        },
+        {
+          "name": "Foto 04.10.19, 10 41 46",
+          "comment": "Foto 04.10.19, 10 41 46"
+        },
+        {
+          "name": "Foto 04.10.19, 10 41 52",
+          "comment": "Foto 04.10.19, 10 41 52"
+        },
+        {
+          "name": "Foto 04.10.19, 14 28 17",
+          "comment": "Foto 04.10.19, 14 28 17"
+        },
+        {
+          "name": "Foto 04.10.19, 18 30 24",
+          "comment": "Foto 04.10.19, 18 30 24"
+        }
+      ]
+    },
+    {
       "title": "Das lange Warten hat ein Ende: hier ist er, unser erster Blogeintrag!",
       "short_description": "Nach einer knapp 24-stündigen Reise melden wir uns müde, aber glücklich aus unserem Hostel in Hanoi (hier hat Anna auch schon Bekanntschaft mit der ersten Kakerlake gemacht).",
       "country": "Suedostasien",

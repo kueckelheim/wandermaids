@@ -50,7 +50,7 @@ class Blog extends Component {
     const gallery = this.props.blog.images.map((x, index) => (
       <div className="imageCont" key={index}>
         <img
-          src={process.env.PUBLIC_URL + "/image/" + x.name + ".jpg"}
+          src={process.env.PUBLIC_URL + "/image/" + x.name + ".png"}
           alt={x.comment}
           className="blogImage"
           name={index}
@@ -133,7 +133,7 @@ class Blog extends Component {
                     process.env.PUBLIC_URL +
                     "/image/" +
                     this.props.blog.images[this.state.imgSelect].name +
-                    ".jpg"
+                    ".png"
                   }
                   className="blogImage"
                 />
