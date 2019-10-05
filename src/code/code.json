@@ -1,3 +1,56 @@
 {
-  "blogs": []
+  "blogs": [
+    {
+      "title": "Das lange Warten hat ein Ende: hier ist er, unser erster Blogeintrag!",
+      "short_description": "Nach einer knapp 24-stündigen Reise melden wir uns müde, aber glücklich aus unserem Hostel in Hanoi (hier hat Anna auch schon Bekanntschaft mit der ersten Kakerlake gemacht).",
+      "country": "Suedostasien",
+      "date": "02.10.2019",
+      "coordinates": ["105.804817", "21.028511"],
+      "main": [
+        {
+          "type": "paragraph",
+          "content": "Abgesehen von kleinen Hürden wie Stau und einer kleinen Flugverspätung sind wir gut angekommen. \nUnser Hostel ist so schmal, dass es sich eher wie ein schmales Türmchen anfühlt und wir damit prahlen können, dass sich unser Zimmer über eine ganze Etage erstreck. Wir fühlen uns fast wie zuhause in unserer kleinen Wohnung in Freiburg. Die Hostelbesitzerin hat uns heute Abend schon gleich unzählige Tipps und Empfehlungen aufgeschrieben und macht der Freundlichkeit die man den Vietnamesen nachsagt alle Ehre.",
+          "value": "Abgesehen von kleinen Hürden wie Stau und einer kleinen Flugverspätung sind wir gut angekommen. \nUnser Hostel ist so schmal, dass es sich eher wie ein schmales Türmchen anfühlt und wir damit prahlen können, dass sich unser Zimmer über eine ganze Etage erstreck. Wir fühlen uns fast wie zuhause in unserer kleinen Wohnung in Freiburg. Die Hostelbesitzerin hat uns heute Abend schon gleich unzählige Tipps und Empfehlungen aufgeschrieben und macht der Freundlichkeit die man den Vietnamesen nachsagt alle Ehre."
+        },
+        {
+          "type": "paragraph",
+          "content": "Wir (besonders eine der Wandermaids) freut sich schon seit Wochen auf das vietnamesische Essen und so haben wir uns gleich nach unserer Ankunft in den nächtliche Treiben von Hanoi gestürzt und unsere erste Phở, eine Art Nudelsuppe, gegessen. ",
+          "value": "Wir (besonders eine der Wandermaids) freut sich schon seit Wochen auf das vietnamesische Essen und so haben wir uns gleich nach unserer Ankunft in den nächtliche Treiben von Hanoi gestürzt und unsere erste Phở, eine Art Nudelsuppe, gegessen. "
+        },
+        {
+          "type": "paragraph",
+          "content": "Da der Jetlag und die ersten Eindrücke von Hanoi uns aber ziemlich erschöpft haben, lassen wir den Abend gemütlich ausklingen und freuen uns auf die nächsten Tage, in denen wir Hanoi und die Umgebung genauer erkunden wollen. ",
+          "value": "Da der Jetlag und die ersten Eindrücke von Hanoi uns aber ziemlich erschöpft haben, lassen wir den Abend gemütlich ausklingen und freuen uns auf die nächsten Tage, in denen wir Hanoi und die Umgebung genauer erkunden wollen. "
+        },
+        {
+          "type": "paragraph",
+          "content": "Liebste Grüße von den Wandermaids",
+          "value": "Liebste Grüße von den Wandermaids"
+        },
+        {
+          "type": "paragraph",
+          "content": "Johannes und Anna",
+          "value": "Johannes und Anna"
+        }
+      ],
+      "images": [
+        {
+          "name": "Foto 01.10.19, 18 00 38",
+          "comment": "Foto 01.10.19, 18 00 38"
+        },
+        {
+          "name": "Foto 02.10.19, 16 46 12",
+          "comment": "Foto 02.10.19, 16 46 12"
+        },
+        {
+          "name": "Foto 02.10.19, 20 38 56",
+          "comment": "Foto 02.10.19, 20 38 56"
+        },
+        {
+          "name": "Foto 02.10.19, 20 38 58",
+          "comment": "Foto 02.10.19, 20 38 58"
+        }
+      ]
+    }
+  ]
 }

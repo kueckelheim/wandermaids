@@ -53,7 +53,7 @@ class Comments extends Component {
         this.postComment(comment);
       } else {
         alert(
-          "You need to agree to our terms and conditions before being able to post a comment."
+          "Bevor du einen Kommentar abgeben kannst, musst du unseren Teilnahmebedingungen zustimmen."
         );
       }
     }
@@ -63,7 +63,7 @@ class Comments extends Component {
     axios
       .post("https://ek578.pythonanywhere.com/api/postcomment/", comment)
       .then(res => {
-        alert("Thank you for your comment. It will be shown upon approval.");
+        alert("Danke für deinen Kommentar!");
         this.setState({
           name: "",
           email: "",
@@ -80,7 +80,7 @@ class Comments extends Component {
             if (err.response.data.message) {
               alert(`Email: ${err.response.data.message.join()}`);
             } else {
-              alert("Sorry. Something went wrong.");
+              alert("Sorry. Irgendetwas ist schief gelaufen.");
             }
           }
         }

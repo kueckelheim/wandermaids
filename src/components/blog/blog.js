@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 
-// import Comments from "../comments/comments";
+import Comments from "../comments/comments";
 
 class Blog extends Component {
   constructor(props) {
@@ -154,7 +154,7 @@ class Blog extends Component {
                 {Number(this.state.imgSelect) + 1}/{this.state.max}
               </div>
             </div>
-            {/* <Comments title={this.props.blog.title} /> */}
+            <Comments title={this.props.blog.title} />
           </div>
         </div>
         <Footer />
