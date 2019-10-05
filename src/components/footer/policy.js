@@ -198,6 +198,28 @@ Vor einer Bereitstellung personenbezogener Daten durch den Betroffenen muss sich
 <h4>10. Bestehen einer automatisierten Entscheidungsfindung</h4>
 <p>Als verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische Entscheidungsfindung oder ein Profiling.</p>
 
+<h4 id="comments">
+              11. Kommentarfunktion im Blog auf der Internetseite
+            </h4>
+            <p>
+            Hinterlässt eine betroffene Person einen Kommentar in dem auf dieser Internetseite veröffentlichten Blog, werden neben den von der betroffenen Person hinterlassenen Kommentaren auch Angaben zum Zeitpunkt der Kommentareingabe sowie zu dem von der betroffenen Person gewählten Nutzernamen (Pseudonym) gespeichert und veröffentlicht. Ferner wird die vom Nutzer angegebene E-Mail Adresse gespeichert. Diese Speicherung der E-Mail Adresse erfolgt aus Sicherheitsgründen und für den Fall, dass die betroffene Person durch einen abgegebenen Kommentar die Rechte Dritter verletzt oder rechtswidrige Inhalte postet. Die Speicherung dieser personenbezogenen Daten erfolgt daher im eigenen Interesse des für die Verarbeitung Verantwortlichen, damit sich dieser im Falle einer Rechtsverletzung gegebenenfalls exkulpieren könnte. Es erfolgt keine Weitergabe dieser erhobenen personenbezogenen Daten an Dritte, sofern eine solche Weitergabe nicht gesetzlich vorgeschrieben ist oder der Rechtsverteidigung des für die Verarbeitung Verantwortlichen dient.
+            </p>
+
+            <p>
+              Die Daten des Nutzers der Kommentarfunktion werden auf Servern in den Vereinigten Staaten von Amerika gespeichert. Die Datencenter sind von den Amazon Web Services betrieben.
+              Dieser Service wird gedeckt von dem 
+              <a href="https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/eu-us-data-transfers_en">
+                EU-U.S. Privacy Shield Framework
+              </a>{" "}
+              -- ein Vertrag der bestimmte USA-basierte Hosting-Lösungen als "ebenso gut wie" EU-basierte Systeme mit Hinsicht auf die DSGVO definiert.
+              Die Übertragung der Daten in Folge der Nutzung der Kommentarfunktion auf www.wandermaids.de erfolgt ausschließlich über sogennante geteilte
+              Secure Sockets Layer (SSL), ein kryptographisches Protokoll.
+</p>
+            <p>
+              Die Betreiber von www.wandermaids.de garantieren nicht für das Veröffentlichen einzelner Kommentare einzelner Nutzer und behalten
+              sich das Recht vor, einzelne bereits veröffentlichte Kommentare zu löschen.
+            </p>
+
 <p>Diese Datenschutzerklärung wurde durch den Datenschutzerklärungs-Generator der DGD Deutsche Gesellschaft für Datenschutz GmbH, die als <a href="https://dg-datenschutz.de/datenschutz-dienstleistungen/externer-datenschutzbeauftragter/">Externer Datenschutzbeauftragter Aschaffenburg</a> tätig ist, in Kooperation mit dem <a href="https://www.wbs-law.de/it-recht/datenschutzrecht/">Anwalt für IT- und Datenschutzrecht</a> Christian Solmecke erstellt.
 </p>
 

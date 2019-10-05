@@ -118,7 +118,7 @@ class Comments extends Component {
         <div className="commentsWrapper">{comments}</div>
         <p />
         <div>
-          <h3>Leave a Comment</h3>
+          <h3>Hinterlasse einen Kommentar</h3>
           <form onSubmit={this.onSubmit}>
             <ul className="formStyle">
               <li>
@@ -153,7 +153,7 @@ class Comments extends Component {
               </li>
               <li>
                 <label>
-                  Message<span className="required">*</span>
+                  Nachricht<span className="required">*</span>
                 </label>
                 <textarea
                   className="field-long field-textarea"
@@ -169,9 +169,9 @@ class Comments extends Component {
                   name="conditions"
                   onClick={this.onCheckbox}
                 />{" "}
-                I agree to our{" "}
-                <Link to="/privacy policy#comments" className="link">
-                  terms and conditions
+                I stimme den{" "}
+                <Link to="/datenschutzerklaerung#comments" className="link">
+                  Teilnahmebedingungen zu
                 </Link>
                 .
               </li>
