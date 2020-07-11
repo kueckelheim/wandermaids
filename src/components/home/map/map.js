@@ -150,7 +150,7 @@ class Map extends Component {
                     }
                   </Geographies>
                   {/* Laos shapes */}
-                  {/* <Geographies geography={require("./maps/laos.json")}>
+                  <Geographies geography={require("./maps/laos.json")}>
                     {(geographies, projection) =>
                       geographies.map(
                         (geography, i) =>
@@ -161,19 +161,19 @@ class Map extends Component {
                               projection={projection}
                               style={{
                                 default: {
-                                  fill: "#bbd8b9",
+                                  fill: "#f7eb89",
                                   stroke: "#607D8B",
                                   strokeWidth: 0.65,
                                   outline: "none"
                                 },
                                 hover: {
-                                  fill: "#bbd8b9",
+                                  fill: "#f7eb89",
                                   stroke: "#607D8B",
                                   strokeWidth: 0.65,
                                   outline: "none"
                                 },
                                 pressed: {
-                                  fill: "#bbd8b9",
+                                  fill: "#f7eb89",
                                   stroke: "#607D8B",
                                   strokeWidth: 0.65,
                                   outline: "none"
@@ -183,7 +183,7 @@ class Map extends Component {
                           )
                       )
                     }
-                  </Geographies> */}
+                  </Geographies>
                   {/* Vietnam shapes */}
                   <Geographies geography={require("./maps/vietnam.json")}>
                     {(geographies, projection) =>
