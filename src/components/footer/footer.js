@@ -9,7 +9,7 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <p>Copyright &copy; 2019</p>
+        <p>Copyright &copy; 2020</p>
         <p>
           <Link
             to="/datenschutzerklaerung"

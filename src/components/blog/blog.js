@@ -5,15 +5,13 @@ import { Helmet } from "react-helmet";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 
-import Comments from "../comments/comments";
-
 class Blog extends Component {
   constructor(props) {
     super(props);
     this.state = {
       imgSelect: 0,
       overlayClass: "overlay",
-      max: 1
+      max: 1,
     };
   }
 
@@ -22,7 +20,7 @@ class Blog extends Component {
     this.setState({ max });
   }
 
-  onClickImg = e => {
+  onClickImg = (e) => {
     const index = e.target.name;
     this.setState({ imgSelect: index, overlayClass: "overlay shown" });
   };
@@ -154,7 +152,6 @@ class Blog extends Component {
                 {Number(this.state.imgSelect) + 1}/{this.state.max}
               </div>
             </div>
-            <Comments title={this.props.blog.title} />
           </div>
         </div>
         <Footer />

@@ -51,6 +51,13 @@ class Impressum extends Component {
                 </a>
               </p>
             </div>
+            <div>
+              <h4>Webmaster:</h4>
+              <div>Erik Kückelheim</div>
+              <a href="https://www.erik-kueckelheim.com">
+                www.erik-kueckelheim.com
+              </a>
+            </div>
           </div>
         </div>
         <Footer />
